@@ -20,18 +20,18 @@
     
     
     <meta name="keywords" content="播放器,Hexo">
-    <meta name="description" content="Unique and powerful application for downloading NetFlix videos fast and for free.">
+    <meta name="description" content="DPlayer 是一个支持弹幕的 html5 视频播放器。支持 Bilibili 视频和 danmaku，实时视频（HTTP Live Streaming，M3U8格式）以及 FLV 格式。">
 <meta name="keywords" content="播放器,Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Dplayer - 网页视频播放器">
 <meta property="og:url" content="https://Brywmzl.github.io/Hexo/Dplayer/index.html">
 <meta property="og:site_name" content="Brywmzl">
-<meta property="og:description" content="Unique and powerful application for downloading NetFlix videos fast and for free.">
+<meta property="og:description" content="DPlayer 是一个支持弹幕的 html5 视频播放器。支持 Bilibili 视频和 danmaku，实时视频（HTTP Live Streaming，M3U8格式）以及 FLV 格式。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-08-05T14:08:12.731Z">
+<meta property="og:updated_time" content="2020-08-07T13:20:09.391Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dplayer - 网页视频播放器">
-<meta name="twitter:description" content="Unique and powerful application for downloading NetFlix videos fast and for free.">
+<meta name="twitter:description" content="DPlayer 是一个支持弹幕的 html5 视频播放器。支持 Bilibili 视频和 danmaku，实时视频（HTTP Live Streaming，M3U8格式）以及 FLV 格式。">
     
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="/css/style.css?v=1.7.0">
@@ -192,17 +192,17 @@
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
 			
-			<p>Unique and powerful application for downloading NetFlix videos fast and for free.</p>
+			<p>DPlayer 是一个支持弹幕的 html5 视频播放器。支持 Bilibili 视频和 danmaku，实时视频（HTTP Live Streaming，M3U8格式）以及 FLV 格式。 </p>
 <a id="more"></a>
 <p><a href="https://dplayer.js.org/" target="_blank" rel="noopener">Homepage</a><br><a href="https://dplayer.js.org/zh/guide.html" target="_blank" rel="noopener">入门指南</a></p>
 <h1 id="npm-install"><a href="#npm-install" class="headerlink" title="npm install"></a>npm install</h1><blockquote>
 <p><a href="https://github.com/MoePlayer/hexo-tag-dplayer" target="_blank" rel="noopener">hexo-tag-dplayer</a></p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-tag-dplayer --save</span><br><span class="line">或</span><br><span class="line">npm install hexo-tag-dplayer -s</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-tag-dplayer --save // 安装</span><br><span class="line">或</span><br><span class="line">npm install hexo-tag-dplayer -s // 安装</span><br><span class="line"></span><br><span class="line">npm uninstall hexo-tag-dplayer // 卸载</span><br></pre></td></tr></table></figure>
 <h1 id="演示"><a href="#演示" class="headerlink" title="演示"></a>演示</h1><div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"theme":"#fa3c33","lang":"en","video":{"url":"https://cnbj1.fds.api.xiaomi.com/console/触屏音箱品牌视频.mp4","pic":"https://land.xiaomi.net/mcfe/ai-xiaoai-fe/static/media/sounbox.62e3351f.png"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 <h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p><a href="https://dplayer.js.org/zh/guide.html#参数" target="_blank" rel="noopener">详细参数</a></p>
 <p><code>_config.yml</code>  不知道为啥不起作用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">hexo-tag-dplayer:</span><br><span class="line">  cdn:</span><br><span class="line">    - https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js</span><br><span class="line">    - https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css</span><br><span class="line">  default: </span><br><span class="line">    api: https://api.prprpr.me/dplayer/</span><br><span class="line">    loop: yes</span><br><span class="line">    screenshot: yes</span><br><span class="line">    theme: #fa3c33</span><br><span class="line">    autoplay: false</span><br><span class="line">    lang: en</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># on _config.yml of hexo-site</span><br><span class="line">hexo-tag-dplayer:</span><br><span class="line">  js_path: /path/to/your/default/path</span><br><span class="line">  css_path: /sth</span><br><span class="line">  default: #default tag argument </span><br><span class="line">    id: somedefid # equals to setting id=somedefid in all &#123;%dplayer%&#125; tags</span><br><span class="line">    api: https://api.prprpr.me/dplayer/</span><br><span class="line">    #and other options...</span><br></pre></td></tr></table></figure>
         </div>
 
         <blockquote class="post-copyright">
@@ -248,9 +248,9 @@
 
   
     <div class="waves-block waves-effect next">
-      <a href="/Rhino/" id="post-next" class="post-nav-link">
+      <a href="/Siemens-NX/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">Rhinoceros - 高级曲面建模软件</h4>
+        <h4 class="title">Siemens NX - 数字化产品开发系统</h4>
       </a>
     </div>
   

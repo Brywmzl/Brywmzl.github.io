@@ -28,7 +28,7 @@
 <meta property="og:site_name" content="Brywmzl">
 <meta property="og:description" content="俗话说的好，Fiddler 学的好，牢饭吃到饱。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-12-15T13:51:44.376Z">
+<meta property="og:updated_time" content="2020-12-20T13:51:20.479Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="下载旧版app（Fiddler版）">
 <meta name="twitter:description" content="俗话说的好，Fiddler 学的好，牢饭吃到饱。">
@@ -204,11 +204,11 @@
 <li>在 iTunse Store 搜索 app</li>
 <li>在 Fiddler 中搜索（如果搜索出不来就先下载一次）<br>找到类似 <code>https://p11-buy.itunes.apple.com/WebObjects/MZBuy.woa/wa/buyProduct</code><br>保存 Response body（响应体来看版本号）</li>
 </ol>
-<p>以上操作目的都是为了查看版本号（838412699）<br>以下操作准备下载</p>
+<p>以上操作目的都是为了查看版本号<br>以下操作准备下载</p>
 <ol start="4">
 <li>Fiddler 关键字断点 <code>bpu MZBuy.woa</code> 回车</li>
 <li>在断点处 Inspectors &gt; TextView</li>
-<li>修改<string>[版本号]</string></li>
+<li>修改&lt; string &gt; [版本号] &lt; /string &gt;</li>
 <li>点击 Run To Completion 就会继续下载了</li>
 </ol>
 

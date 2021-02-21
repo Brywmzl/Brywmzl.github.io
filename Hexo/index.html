@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Hexo搭建与改造 | Brywmzl</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#fa3c33">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="界面调整 部分页面出现渲染不出来的现象 以后将慢慢改进">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo搭建与改造">
+<meta property="og:url" content="https://Brywmzl.github.io/Hexo/index.html">
+<meta property="og:site_name" content="Brywmzl">
+<meta property="og:description" content="界面调整 部分页面出现渲染不出来的现象 以后将慢慢改进">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/smiley.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/fearful.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/-1.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/warning.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/ambulance.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/1234.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/alien.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/alien.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/point_down.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/point_down.png">
+<meta property="og:image" content="https://placekitten.com/50/50">
+<meta property="og:image" content="https://placekitten.com/50/50">
+<meta property="og:image" content="https://placekitten.com/50/50">
+<meta property="og:image" content="https://placekitten.com/50/50">
+<meta property="og:image" content="https://placekitten.com/50/50">
+<meta property="og:image" content="https://placekitten.com/50/50">
+<meta property="og:image" content="https://placekitten.com/50/50">
+<meta property="og:updated_time" content="2020-01-12T02:46:29.694Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo搭建与改造">
+<meta name="twitter:description" content="界面调整 部分页面出现渲染不出来的现象 以后将慢慢改进">
+<meta name="twitter:image" content="https://brywmzl.github.io/images/emojis/smiley.png">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.0">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Brywmzl</h5>
+          <a href="mailto:brywmzl@gmail.com" title="brywmzl@gmail.com" class="mail">brywmzl@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Start
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/Notes/Bookmark"  >
+                <i class="icon icon-lg icon-bookmark"></i>
+                Bookmark
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/gallery"  >
+                <i class="icon icon-lg icon-envira"></i>
+                Gallery
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/brywmzl" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://brywmzl.gitbook.io/document/" target="_blank" >
+                <i class="icon icon-lg icon-book"></i>
+                GitBook
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://brywmzl.us-south.cf.appdomain.cloud/" target="_blank" >
+                <i class="icon icon-lg icon-hdd-o"></i>
+                OneDrive
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main" style="background-image:url(/img/background.jpg)">
+        <header class="top-header" id="header">
+    <div class="flex-row" style="background-image:url(/img/bar.jpg)">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Hexo搭建与改造</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image:url(/img/bar.jpg)">
+
+    <div class="container fade-scale">
+        <h1 class="title">Hexo搭建与改造</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-10-08T16:00:00.000Z" itemprop="datePublished" class="page-time">
+  2018-10-09
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#概述"><span class="post-toc-number">1.</span> <span class="post-toc-text">概述</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#为啥我要换Theme？"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">为啥我要换Theme？</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#相关链接"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">相关链接</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#环境部署"><span class="post-toc-number">2.</span> <span class="post-toc-text">环境部署</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装Git和NodeJs"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">安装Git和NodeJs</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Hexo"><span class="post-toc-number">3.</span> <span class="post-toc-text">Hexo</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装Hexo"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">安装Hexo</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#生成静态页面"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">生成静态页面</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#本地运行"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">本地运行</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#配置Hexo"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">配置Hexo</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#indigo-Theme"><span class="post-toc-number">4.</span> <span class="post-toc-text">indigo Theme</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#配置Theme"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">配置Theme</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#在Github搭建Hexo"><span class="post-toc-number">5.</span> <span class="post-toc-text">在Github搭建Hexo</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#设置Github项目名称"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">设置Github项目名称</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#出现问题"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">出现问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#生成-ssh-密钥"><span class="post-toc-number">5.2.1.</span> <span class="post-toc-text">生成 ssh 密钥</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#附加"><span class="post-toc-number">6.</span> <span class="post-toc-text">附加</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#菜单icon运用"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">菜单icon运用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#emoji插件"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">emoji插件</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#文章加密插件"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">文章加密插件</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#页面"><span class="post-toc-number">7.</span> <span class="post-toc-text">页面</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#页面渲染"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">页面渲染</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#自定义页面"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">自定义页面</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#支持-html-后就是爽"><span class="post-toc-number">7.3.</span> <span class="post-toc-text">支持 html 后就是爽~</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#改造"><span class="post-toc-number">8.</span> <span class="post-toc-text">改造</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-Hexo"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Hexo搭建与改造</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-10-09 00:00:00" datetime="2018-10-08T16:00:00.000Z"  itemprop="datePublished">2018-10-09</time>
+
+            
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+			
+			<p>界面调整 部分页面出现渲染不出来的现象 以后将慢慢改进</p>
+<a id="more"></a>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=234023&auto=1&height=66"></iframe>
+
+<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><h2 id="为啥我要换Theme？"><a href="#为啥我要换Theme？" class="headerlink" title="为啥我要换Theme？"></a>为啥我要换Theme？</h2><p>当我第一次听到<a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>有点懵，后面看了<a href="https://imys.net" target="_blank" rel="noopener">大佬</a>的博客<br>我才意识到Hexo+Theme的强大<br>简单介绍下<br>Hexo是基于NodeJs的静态博客框架，简单、轻量，其生成的静态网页可以托管在Github上。</p>
+<p>比起之前那个。。。。。好太多~<br>之所有我选Hexo主要原因有以下几点：</p>
+<ul>
+<li>1.我选择hexo的最大理由就是可以插入html，就像头上那个网易云音乐（非主流qq空间必备）</li>
+<li>2.Markdown的美观性和自由度远远大过之前那个。。。。</li>
+<li>3.最让我心动的是居然可以自定义页面，在我的about页面里可以看到</li>
+<li>4.对之前Markdownw文件还是兼容的挺好，入乡随俗，就是部分渲染需要稍作调整</li>
+<li>5.丰富的插件，尤其是emoji，太不可思议了<img src="/images/emojis/smiley.png" width="20" height="20" class=" emoji nofancybox" title="smiley"></li>
+<li>6.有了搜索功能，再也不用一个一个找或者用网页的搜索功能</li>
+<li>7.标签和分类都有</li>
+<li>8.对手机界面的适应也是美美哒~</li>
+</ul>
+<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><p><a href="https://hexo.io" target="_blank" rel="noopener">Hexo 官网</a><br><a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank" rel="noopener">indigo Github</a></p>
+<h1 id="环境部署"><a href="#环境部署" class="headerlink" title="环境部署"></a>环境部署</h1><p>我部署是参考<a href="https://github.com/limedroid/HexoLearning" target="_blank" rel="noopener">Hexo 博客搭建指南</a></p>
+<h2 id="安装Git和NodeJs"><a href="#安装Git和NodeJs" class="headerlink" title="安装Git和NodeJs"></a>安装Git和NodeJs</h2><p><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">Git 官网下载</a><br><a href="https://nodejs.org/en/download" target="_blank" rel="noopener">NodeJs 官网下载</a><br><figure class="highlight plain"><figcaption><span>检验NodeJs安装成功（成功会返回版本号）</span><a href="https://hexo.io/docs/#Install-Node-js" target="_blank" rel="noopener">Install Node.js 官方文档</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br></pre></td></tr></table></figure></p>
+<h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><figure class="highlight plain"><figcaption><span>右键 Git Bash Here</span><a href="https://hexo.io/docs/#Installation" target="_blank" rel="noopener">Installation Install Hexo 官方文档</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>注意：Mac系统，则需要</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>Setup</span><a href="https://hexo.io/docs/setup" target="_blank" rel="noopener">Setup 官方文档</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init Brywmzl.github.io # 创建文件夹</span><br><span class="line">$ cd Brywmzl.github.io # 打开文件夹</span><br><span class="line">$ npm install # 安装</span><br></pre></td></tr></table></figure>
+<h2 id="生成静态页面"><a href="#生成静态页面" class="headerlink" title="生成静态页面"></a>生成静态页面</h2><figure class="highlight plain"><figcaption><span>清除 就是删除生成的文件夹 避免出错</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean </span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>生成顾名思义不说了</span><a href="https://hexo.io/docs/generating" target="_blank" rel="noopener">generating 官方文档</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g # generating</span><br></pre></td></tr></table></figure>
+<h2 id="本地运行"><a href="#本地运行" class="headerlink" title="本地运行"></a>本地运行</h2><figure class="highlight plain"><figcaption><span>server 在本地运行（默认：localhost:4000）</span><a href="https://hexo.io/docs/server" target="_blank" rel="noopener">server 官方文档</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s # server</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>如果要更改端口或遇到 EADDRINUSE 错误，请使用该 -p 选项设置其他端口。</span><a href="https://hexo.io/docs/server#Custom-IP" target="_blank" rel="noopener">Custom IP 官方文档</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server -p 5000</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>命令也可以连着</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+<h2 id="配置Hexo"><a href="#配置Hexo" class="headerlink" title="配置Hexo"></a>配置Hexo</h2><p>网站的设置大部分都在<code>_config.yml</code>文件中，详细配置可以查看<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="noopener">官方文档</a></p>
+<ul>
+<li>title -&gt; 网站标题</li>
+<li>subtitle -&gt; 网站副标题</li>
+<li>description -&gt; 网站描述</li>
+<li>author -&gt; 您的名字</li>
+<li>language -&gt; 网站使用的语言(写zh-cn也不起作用，官方文档也没详细说明)</li>
+</ul>
+<h1 id="indigo-Theme"><a href="#indigo-Theme" class="headerlink" title="indigo Theme"></a>indigo Theme</h1><p>运行后你会发现默认的主题很怂，具体有多怂我这里也没法形容<img src="/images/emojis/fearful.png" width="20" height="20" class=" emoji nofancybox" title="fearful"></p>
+<p>1.下载主题 <a href="https://github.com/yscoder/hexo-theme-indigo/releases" target="_blank" rel="noopener">hexo-theme-indigo</a><br>2.解压到Theme文件夹<br>3.在<code>_config.yml</code>文件中改<code>theme: indigo</code>（文件夹的名字）<br>4.<a href="https://github.com/yscoder/hexo-theme-indigo/wiki/%E5%AE%89%E8%A3%85" target="_blank" rel="noopener">安装</a>（执行步骤3在安装里的前两个步骤可以省略）</p>
+<h2 id="配置Theme"><a href="#配置Theme" class="headerlink" title="配置Theme"></a>配置Theme</h2><img src="/images/emojis/-1.png" width="20" height="20" class=" emoji nofancybox" title="-1">
+<figure class="highlight plain"><figcaption><span>新建</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new post # 新建post文章</span><br><span class="line">$ hexo new page pageName # 自定义页面</span><br></pre></td></tr></table></figure>
+<p>前者执行命令后会在你的 Hexo 根目录 <code>source/_posts</code> 的文件夹，生成一个md文件。<br>后者执行命令后会在你的 Hexo 根目录 <code>source/</code> 目录下生成一个与你刚才输入的 <code>pageName</code> 一样的文件夹，里面只有一个 <code>index.md</code>。<br>如果文件存在会变成<code>index-1.md</code></p>
+<p><br><img src="/images/emojis/warning.png" width="48" height="48" class=" emoji nofancybox" title="warning">如果发布后发现文章或页面出现乱码<br>主要原因就是Markdown文件需要以UTF-8编码</p>
+<p>颜色配置<br><a href="https://github.com/yscoder/hexo-theme-indigo/issues/387" target="_blank" rel="noopener">https://github.com/yscoder/hexo-theme-indigo/issues/387</a><br>颜色参考<br><a href="http://www.materialpalette.com/" target="_blank" rel="noopener">http://www.materialpalette.com/</a></p>
+<h1 id="在Github搭建Hexo"><a href="#在Github搭建Hexo" class="headerlink" title="在Github搭建Hexo"></a>在Github搭建Hexo</h1><h2 id="设置Github项目名称"><a href="#设置Github项目名称" class="headerlink" title="设置Github项目名称"></a>设置Github项目名称</h2><p>就是项目名为 <code>用户名.Github.io</code><br>搭建过的都知道，不详细说明</p>
+<h2 id="出现问题"><a href="#出现问题" class="headerlink" title="出现问题"></a>出现问题</h2><p>重装系统后可能导致两个问题<br>一个是github的登录没掉了，还有一个就是git的配置<br>git 只需改环境变量 这个百度有<br>而登录的话发现https登录的时候产生问题了，所以改用生产 ssh密钥<br><a href="http://shomy.top/2017/01/27/hexo-migrate-solution/" target="_blank" rel="noopener">hexo迁移重装</a></p>
+<h3 id="生成-ssh-密钥"><a href="#生成-ssh-密钥" class="headerlink" title="生成 ssh 密钥"></a>生成 ssh 密钥</h3><p><code>ssh-keygen -t rsa -C &quot;用户名&quot;</code><br>生成过程中需要输入两次密码<br>而在git里输入密码时不显示的<br>然后去github自己头像下面有个setting 里添加<br>然后登录的时候<code>_config.yml</code>需要改成<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: ssh://git@github.com/Brywmzl/Brywmzl.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
+<p>提交的时候会提醒输入密码~</p>
+<h1 id="附加"><a href="#附加" class="headerlink" title="附加"></a>附加</h1><h2 id="菜单icon运用"><a href="#菜单icon运用" class="headerlink" title="菜单icon运用"></a>菜单icon运用</h2><p><a href="https://fontawesome.com/icons" target="_blank" rel="noopener">https://fontawesome.com/icons</a><br>名称查看（新版本图标不可用）<br><a href="http://fontawesome.dashgame.com/" target="_blank" rel="noopener">http://fontawesome.dashgame.com/</a></p>
+<h2 id="emoji插件"><a href="#emoji插件" class="headerlink" title="emoji插件"></a>emoji插件</h2><p><a href="https://github.com/sergiolepore/hexo-tag-emojis" target="_blank" rel="noopener">hexo-tag-emojis</a><br>需要在 hexo 的生成阶段把文章中的 emoji 标记渲染为图片或者 emoji 字体图标<br><a href="http://www.emoji-cheat-sheet.com/" target="_blank" rel="noopener">emoji 名称查看</a></p>
+<blockquote>
+<p><img src="/images/emojis/ambulance.png" width="48" height="48" class=" emoji nofancybox" title="ambulance"> <img src="/images/emojis/1234.png" width="48" height="48" class=" emoji nofancybox" title="1234"><br></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% emoji ambulance 48 %&#125; &#123;% emoji 1234 48 %&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+博客界面进行调整 导致部分界面无法按照原来的主题进行渲染 <img width="20" height="20" class=" emoji nofancybox" title="alien" src="/images/emojis/alien.png"><p>
+本次改用Hexo博客 主题是indigo <img width="20" height="20" class=" emoji nofancybox" title="alien" src="/images/emojis/alien.png"><br>
+</p></blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% emoji_block %&#125;</span><br><span class="line">博客界面进行调整 导致部分界面无法按照原来的主题进行渲染 :alien:&lt;p&gt;</span><br><span class="line">本次改用Hexo博客 主题是indigo :alien:</span><br><span class="line">&#123;% endemoji_block %&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="文章加密插件"><a href="#文章加密插件" class="headerlink" title="文章加密插件"></a>文章加密插件</h2><p><strong><em>都不是很好用</em></strong><br><a href="https://github.com/MikeCoder/hexo-blog-encrypt" target="_blank" rel="noopener">https://github.com/MikeCoder/hexo-blog-encrypt</a> （目录渲染不出来）<br><a href="https://github.com/edolphin-ydf/hexo-encrypt" target="_blank" rel="noopener">https://github.com/edolphin-ydf/hexo-encrypt</a></p>
+<h1 id="页面"><a href="#页面" class="headerlink" title="页面"></a>页面</h1><h2 id="页面渲染"><a href="#页面渲染" class="headerlink" title="页面渲染"></a>页面渲染</h2><p><strong>表格</strong></p>
+<table>
+<thead>
+<tr>
+<th>表头1</th>
+<th style="text-align:left">表头2</th>
+<th style="text-align:center">表头3</th>
+<th style="text-align:right">表头4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>默认左对齐</td>
+<td style="text-align:left">左对齐</td>
+<td style="text-align:center">居中对其</td>
+<td style="text-align:right">右对齐</td>
+</tr>
+<tr>
+<td>默认左对齐</td>
+<td style="text-align:left">左对齐</td>
+<td style="text-align:center">居中对其</td>
+<td style="text-align:right">右对齐</td>
+</tr>
+<tr>
+<td>默认左对齐</td>
+<td style="text-align:left">左对齐</td>
+<td style="text-align:center">居中对其</td>
+<td style="text-align:right">右对齐</td>
+</tr>
+</tbody>
+</table>
+<p><strong>图片按钮</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[![Watch the video](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](http://youtu.be/vt5fpE0bzSY)</span><br></pre></td></tr></table></figure>
+<p>被渲染成<img src="/images/emojis/point_down.png" width="30" height="30" class=" emoji nofancybox" title="point_down"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[&lt;figure class=&quot;image-bubble&quot;&gt;</span><br><span class="line">                &lt;div class=&quot;img-lightbox&quot;&gt;</span><br><span class="line">                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;</span><br><span class="line">                    &lt;img src=&quot;http://youtu.be/vt5fpE0bzSY&quot; alt=&quot;Watch the video[Watch the video](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)&quot; title=&quot;&quot;&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">                &lt;div class=&quot;image-caption&quot;&gt;Watch the video[Watch the video](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)&lt;/div&gt;</span><br><span class="line">            &lt;/figure&gt;</span><br></pre></td></tr></table></figure>
+<p>只能选用html替代<img src="/images/emojis/point_down.png" width="30" height="30" class=" emoji nofancybox" title="point_down"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;https://youtube.com&quot;&gt;&lt;img src=&quot;https://placekitten.com/50/50&quot;&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<p><a href="http://www.wibibi.com/info.php?tid=117" target="_blank" rel="noopener">参考</a></p>
+<p><a href="https://youtube.com" target="_blank" rel="noopener"><img src="https://placekitten.com/50/50"></a></p>
+<p><strong>图片</strong></p>
+<img src="https://placekitten.com/50/50" class="cat" width="50" height="50" title="猫 喵喵喵">
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% img cat https://placekitten.com/50/50 50 50 猫 喵喵喵 %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://placekitten.com/50/50" alt="这边没用" title="图片名称">
+                </div>
+                <div class="image-caption">图片名称</div>
+            </figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![这边没用](https://placekitten.com/50/50 图片名称)</span><br></pre></td></tr></table></figure>
+<p><img src="https://placekitten.com/50/50" width="10%" height="auto"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;https://placekitten.com/50/50&quot; width=10% height=auto &gt; // 百分比</span><br><span class="line">&lt;img src=&quot;https://placekitten.com/50/50&quot; width=10% &gt; // 空着为自动，也可以用auto来表示</span><br><span class="line">&lt;img src=&quot;https://placekitten.com/50/50&quot; width=50 height=50 &gt; // 像素</span><br></pre></td></tr></table></figure>
+<div align="center"><br><img src="https://placekitten.com/50/50"><br></div>
+
+<div align="center"><br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://placekitten.com/50/50" alt="=50x50" title="">
+                </div>
+                <div class="image-caption">=50x50</div>
+            </figure><br></div>
+
+<p>标准的markdown，在图片后面加上 “=200x300” (200是宽度，300是高度，也可以之定义宽度)，就能实现下面的效果。但是此版本的hexo不行。</p>
+<figure class="highlight plain"><figcaption><span>图片居中</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;div align=center&gt;</span><br><span class="line">&lt;img src=&quot;https://placekitten.com/50/50&quot; &gt; </span><br><span class="line">&lt;/div&gt;</span><br><span class="line">-</span><br><span class="line">&lt;div align=center&gt;</span><br><span class="line">![](https://placekitten.com/50/50 =200x300)</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<div class="img-lightbox"><br><div class="overlay"></div><br><img src="https://placekitten.com/50/50" alt="" title="" width="8%" height="auto"><br></div><br><div class="image-caption"></div>
+
+<figure class="highlight plain"><figcaption><span>hexo原代码 并成一行效果比较好</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;img-lightbox&quot;&gt; // 支持缩放</span><br><span class="line">&lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt; // 背景（可无）</span><br><span class="line">&lt;img src=&quot;https://placekitten.com/50/50&quot; alt=&quot;&quot; title=&quot;&quot; width=8% height=auto &gt; // 常规图片显示</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;image-caption&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<hr>
+<p><strong>字体</strong></p>
+<p><em>这里是斜体</em><br><strong>这里是粗体</strong><br><strong><em>这里是粗体 + 斜体</em></strong></p>
+<hr>
+<p><strong>注释符号</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;font face=&quot;黑体&quot;&gt;我是黑体字&lt;/font&gt;</span><br><span class="line">&lt;font face=&quot;微软雅黑&quot;&gt;我是微软雅黑&lt;/font&gt;</span><br><span class="line">&lt;font face=&quot;STCAIYUN&quot;&gt;我是华文彩云&lt;/font&gt;</span><br><span class="line">&lt;font color=red&gt;我是红色&lt;/font&gt;</span><br><span class="line">&lt;font color=#008000&gt;我是绿色&lt;/font&gt;</span><br><span class="line">&lt;font color=Blue&gt;我是蓝色&lt;/font&gt;</span><br><span class="line">&lt;font size=5&gt;我是尺寸&lt;/font&gt;</span><br><span class="line">&lt;font face=&quot;黑体&quot; color=green size=5&gt;我是黑体，绿色，尺寸为5&lt;/font&gt;</span><br><span class="line">&lt;strong&gt;&lt;font size=5&gt;我是加粗&lt;/font&gt;&lt;/strong&gt;</span><br><span class="line">&lt;a href=&quot;链接&quot;&gt;&lt;strong&gt;&lt;font color=37668b&gt;标题&lt;/font&gt;&lt;/strong&gt;&lt;/a&gt;</span><br><span class="line">&lt;div align=&quot;right&quot;&gt;&lt;strong&gt;&lt;font size=5 color=0470a1&gt;标题&lt;/font&gt;&lt;/strong&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>left：左对齐内容。<br>right：右对齐内容。<br>center：居中对齐内容。<br>justify：对行进行伸展，这样每行都可以有相等的长度（就像在报纸和杂志中）。</p>
+<p><a href="https://blog.csdn.net/heimu24/article/details/81189700" target="_blank" rel="noopener">原文</a><br><a href="http://www.w3school.com.cn/tags/att_div_align.asp" target="_blank" rel="noopener"></a></p>
+<h2 id="自定义页面"><a href="#自定义页面" class="headerlink" title="自定义页面"></a>自定义页面</h2><p><a href="https://gist.github.com/yscoder/0fd1332c2b8bef21115cbaa20f11d7ce" target="_blank" rel="noopener">自定义页面</a><br>自定义页面还存在很多问题（例如图片被拉伸来强制适应card）</p>
+<h2 id="支持-html-后就是爽"><a href="#支持-html-后就是爽" class="headerlink" title="支持 html 后就是爽~"></a>支持 html 后就是爽~</h2><p>直接复制 html代码直接可用<br><a href="https://fontawesome.com/icons" target="_blank" rel="noopener">https://fontawesome.com/icons</a></p>
+<div class="video-container"><iframe src="//www.youtube.com/embed/MlQoqO7MJ7Q" frameborder="0" allowfullscreen></iframe></div>
+<figure class="highlight plain"><figcaption><span>官方提供的标签</span><a href="https://hexo.io/docs/tag-plugins#YouTube" target="_blank" rel="noopener">官方文档</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% youtube video_id %&#125;</span><br><span class="line">&#123;% vimeo video_id %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>窄屏</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe width=&quot;666&quot; height=&quot;400&quot; src=&quot;https://www.youtube.com/embed/MlQoqO7MJ7Q&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>宽屏</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe width=&quot;900&quot; height=&quot;560&quot; src=&quot;https://www.youtube.com/embed/MlQoqO7MJ7Q&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="改造"><a href="#改造" class="headerlink" title="改造"></a>改造</h1><p><a href="https://starwindy.oschina.io/2015/05/06/Hexo主题配置与优化（二）" target="_blank" rel="noopener">Hexo主题配置与优化（二）</a></p>
+<p>修改标签显示的标题 <code>\themes\indigo\layout\_partial\head.ejs</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;title&gt;&lt;% if (title)&#123; %&gt;&lt;%= title %&gt; | &lt;% &#125; %&gt;&lt;%= config.title %&gt;&lt;% if (config.subtitle)&#123; %&gt; | &lt;%= config.subtitle %&gt;&lt;% &#125; %&gt;&lt;/title&gt;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><figcaption><span>我改这样</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;title&gt;&lt;% if (title)&#123; %&gt;&lt;%= title %&gt; | &lt;% &#125; %&gt;&lt;%= config.title %&gt;&lt;/title&gt;</span><br></pre></td></tr></table></figure>
+<p>修改dark <code>\themes\indigo\layout\_partial\head.ejs</code></p>
+<p>修改配色 <code>\source\css\_partial\variable.less</code></p>
+<blockquote><p>primaryColor: 主色调<br>darkPrimaryColor: dark主色调<br>lightPrimary: 副标题颜色<br>headerH: 头高度<br>accentColor：重点颜色（洋红色）</p>
+<footer><strong>配色</strong><cite><a href="http://www.materialpalette.com" target="_blank" rel="noopener">参考</a></cite></footer></blockquote>
+<p>修改头像大小描边 <code>\source\css\_partial\layout.less</code></p>
+<blockquote><p>border: 描边的粗细<br>border-radius: 描边半径（这里不是半径的意思0%-49%圆角 %50%-100%是圆）</p>
+<footer><strong>.avatar</strong></footer></blockquote>
+<blockquote><p>padding: 头像背景的高度<br>background: （头像后面的背景颜色，不透明度）</p>
+<footer><strong>.brand</strong></footer></blockquote>
+<p>修改自定义页面 <code>\themes\indigo\source\css\_partial\page.less</code></p>
+<blockquote><p>border-bottom: 最底下的分割线<br>img: 改了img的width和height为空就可以解决图片拉伸问题</p>
+</blockquote>
+<blockquote><p>padding: 10px; 最外边距<br>.card(3px); 卡片圆角</p>
+<footer><strong>.page-article</strong></footer></blockquote>
+<blockquote><p>figure {<br>    padding: 20px!important;<br>} 图相框的边距</p>
+<footer><strong>.page-content</strong></footer></blockquote>
+<blockquote><p>content</p>
+<footer><strong>作者</strong><cite><a href="https://brywmzl.github.io">Brywmzl</a></cite></footer></blockquote>
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+
+        
+        本文链接：<a href="/Hexo/" target="_blank" rel="external">https://Brywmzl.github.io/Hexo/</a>
+        
+    </div>
+    <footer>
+        <a href="https://Brywmzl.github.io">
+            <img src="/img/avatar.jpg" alt="Brywmzl">
+            Brywmzl
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/x64dbg/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">x64dbg - 调试工具</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/FontCreator/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">FontCreator</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="bottom">
+        <p><span>Brywmzl &copy; 2015 - 2021</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-arrow-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.0"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.0" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

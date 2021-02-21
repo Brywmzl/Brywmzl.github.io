@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Redshift 笔记 | Brywmzl</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#fa3c33">
+    
+    
+    <meta name="keywords" content="CINEMA 4D,Redshift">
+    <meta name="description" content="https://docs.redshift3d.com/display/RSDOCS">
+<meta name="keywords" content="CINEMA 4D,Redshift">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Redshift 笔记">
+<meta property="og:url" content="https://Brywmzl.github.io/Notes/Redshift/index.html">
+<meta property="og:site_name" content="Brywmzl">
+<meta property="og:description" content="https://docs.redshift3d.com/display/RSDOCS">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://brywmzl.github.io/img/Learn/Redshift/0.png">
+<meta property="og:image" content="https://brywmzl.github.io/img/Learn/Redshift/1.png">
+<meta property="og:updated_time" content="2019-10-05T06:47:22.857Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Redshift 笔记">
+<meta name="twitter:description" content="https://docs.redshift3d.com/display/RSDOCS">
+<meta name="twitter:image" content="https://brywmzl.github.io/img/Learn/Redshift/0.png">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.0">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Brywmzl</h5>
+          <a href="mailto:brywmzl@gmail.com" title="brywmzl@gmail.com" class="mail">brywmzl@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Start
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/Notes/Bookmark"  >
+                <i class="icon icon-lg icon-bookmark"></i>
+                Bookmark
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/gallery"  >
+                <i class="icon icon-lg icon-envira"></i>
+                Gallery
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/brywmzl" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://brywmzl.gitbook.io/document/" target="_blank" >
+                <i class="icon icon-lg icon-book"></i>
+                GitBook
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://brywmzl.us-south.cf.appdomain.cloud/" target="_blank" >
+                <i class="icon icon-lg icon-hdd-o"></i>
+                OneDrive
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main" style="background-image:url(/img/background.jpg)">
+        <header class="top-header" id="header">
+    <div class="flex-row" style="background-image:url(/img/bar.jpg)">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Redshift 笔记</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image:url(/img/bar.jpg)">
+
+    <div class="container fade-scale">
+        <h1 class="title">Redshift 笔记</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-03-31T16:00:00.000Z" itemprop="datePublished" class="page-time">
+  2019-04-01
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Brywmzl/">Brywmzl</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Cameras（摄像机）"><span class="post-toc-number">1.</span> <span class="post-toc-text">Cameras（摄像机）</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Lights（灯光）"><span class="post-toc-number">2.</span> <span class="post-toc-text">Lights（灯光）</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Shader（着色器节点）"><span class="post-toc-number">3.</span> <span class="post-toc-text">Shader（着色器节点）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Material-Shaders（材质）"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">Material Shaders（材质）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Textures-Shaders（纹理）"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">Textures Shaders（纹理）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Color"><span class="post-toc-number">3.2.1.</span> <span class="post-toc-text">Color</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Noise"><span class="post-toc-number">3.2.2.</span> <span class="post-toc-text">Noise</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#General（通用）"><span class="post-toc-number">3.2.2.1.</span> <span class="post-toc-text">General（通用）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Fractal-Turbulence（分形-湍流）"><span class="post-toc-number">3.2.2.2.</span> <span class="post-toc-text">Fractal/Turbulence（分形/湍流）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Time"><span class="post-toc-number">3.2.2.3.</span> <span class="post-toc-text">Time</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Source（源）"><span class="post-toc-number">3.2.2.3.1.</span> <span class="post-toc-text">Source（源）</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Constant"><span class="post-toc-number">3.2.2.3.2.</span> <span class="post-toc-text">Constant</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Consant-Scale"><span class="post-toc-number">3.2.2.3.3.</span> <span class="post-toc-text">Consant Scale</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#User-Time"><span class="post-toc-number">3.2.2.3.4.</span> <span class="post-toc-text">User Time</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Color-1"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">Color</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Color-Layer"><span class="post-toc-number">3.3.1.</span> <span class="post-toc-text">Color Layer</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Volume-Topics"><span class="post-toc-number">4.</span> <span class="post-toc-text">Volume Topics</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Volumetric-Scattering-And-Fog（体积光和雾）"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">Volumetric Scattering And Fog（体积光和雾）</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#渲染设置"><span class="post-toc-number">5.</span> <span class="post-toc-text">渲染设置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基本"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">基本</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#AOV（任意输出变量）"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">AOV（任意输出变量）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Optimization（优化）"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">Optimization（优化）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#GI（全局光照）"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">GI（全局光照）</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-Notes/Redshift"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Redshift 笔记</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-04-01 00:00:00" datetime="2019-03-31T16:00:00.000Z"  itemprop="datePublished">2019-04-01</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Brywmzl/">Brywmzl</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+			
+			<p><a href="https://docs.redshift3d.com/display/RSDOCS" target="_blank" rel="noopener">https://docs.redshift3d.com/display/RSDOCS</a></p>
+<a id="more"></a>
+<h1 id="Cameras（摄像机）"><a href="#Cameras（摄像机）" class="headerlink" title="Cameras（摄像机）"></a><a href="https://docs.redshift3d.com/display/RSDOCS/Cameras" target="_blank" rel="noopener">Cameras（摄像机）</a></h1><h1 id="Lights（灯光）"><a href="#Lights（灯光）" class="headerlink" title="Lights（灯光）"></a><a href="https://docs.redshift3d.com/display/RSDOCS/Lights" target="_blank" rel="noopener">Lights（灯光）</a></h1><iframe src="//player.bilibili.com/player.html?aid=24157471&cid=40486493&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height="530" width="670">&gt; </iframe>
+
+<h1 id="Shader（着色器节点）"><a href="#Shader（着色器节点）" class="headerlink" title="Shader（着色器节点）"></a><a href="https://docs.redshift3d.com/display/RSDOCS/Shaders" target="_blank" rel="noopener">Shader（着色器节点）</a></h1><h2 id="Material-Shaders（材质）"><a href="#Material-Shaders（材质）" class="headerlink" title="Material Shaders（材质）"></a><a href="https://docs.redshift3d.com/display/RSDOCS/Material+Shaders" target="_blank" rel="noopener">Material Shaders（材质）</a></h2><h2 id="Textures-Shaders（纹理）"><a href="#Textures-Shaders（纹理）" class="headerlink" title="Textures Shaders（纹理）"></a><a href="https://docs.redshift3d.com/display/RSDOCS/Noise+Texture" target="_blank" rel="noopener">Textures Shaders（纹理）</a></h2><h3 id="Color"><a href="#Color" class="headerlink" title="Color"></a>Color</h3><p>This tab allows you to control how the internally computed noise is turned into color for output.<br>这个标签允许你控制内部计算的噪波如何转换为输出颜色。</p>
+<h3 id="Noise"><a href="#Noise" class="headerlink" title="Noise"></a>Noise</h3><p>This tab allows you to control how the noise is generated.<br>这个标签允许你控制噪波的生成。</p>
+<h4 id="General（通用）"><a href="#General（通用）" class="headerlink" title="General（通用）"></a>General（通用）</h4><ul>
+<li>Noise Type（噪波类型）<ul>
+<li>Fractal（分形）</li>
+<li>Turbulence（湍流）</li>
+<li>Cell（蜂窝）</li>
+</ul>
+</li>
+</ul>
+<h4 id="Fractal-Turbulence（分形-湍流）"><a href="#Fractal-Turbulence（分形-湍流）" class="headerlink" title="Fractal/Turbulence（分形/湍流）"></a>Fractal/Turbulence（分形/湍流）</h4><ul>
+<li>Complexity（复杂）</li>
+<li>Amplitude Gain（振幅增益）有点像羽化</li>
+<li>Frequency Scale（频率缩放）就是缩放</li>
+<li>Distortion（失真）好像是扭曲又好像移动</li>
+<li>Distortion Scale（失真缩放）</li>
+</ul>
+<h4 id="Time"><a href="#Time" class="headerlink" title="Time"></a>Time</h4><h5 id="Source（源）"><a href="#Source（源）" class="headerlink" title="Source（源）"></a>Source（源）</h5><p>Allows you to control how the noise is affected over time. The options are as follows:</p>
+<ul>
+<li>None - 不考虑时间计算</li>
+<li>Constant（常量） - 当前帧时间来计算</li>
+<li>User - 用户定义的时间来计算</li>
+</ul>
+<h5 id="Constant"><a href="#Constant" class="headerlink" title="Constant"></a>Constant</h5><p>这是应用于当前帧时间的比例。仅在Source设置为“常量”时适用</p>
+<h5 id="Consant-Scale"><a href="#Consant-Scale" class="headerlink" title="Consant Scale"></a>Consant Scale</h5><p>This is a scale that is applied to the current frame time. Only applicable when Source is set to ‘Constant’.</p>
+<h5 id="User-Time"><a href="#User-Time" class="headerlink" title="User Time"></a>User Time</h5><p>This is the user-defined time value. Only applicable when Source is set to ‘User’.</p>
+<h2 id="Color-1"><a href="#Color-1" class="headerlink" title="Color"></a>Color</h2><h3 id="Color-Layer"><a href="#Color-Layer" class="headerlink" title="Color Layer"></a>Color Layer</h3><h1 id="Volume-Topics"><a href="#Volume-Topics" class="headerlink" title="Volume Topics"></a>Volume Topics</h1><h2 id="Volumetric-Scattering-And-Fog（体积光和雾）"><a href="#Volumetric-Scattering-And-Fog（体积光和雾）" class="headerlink" title="Volumetric Scattering And Fog（体积光和雾）"></a><a href="https://docs.redshift3d.com/display/RSDOCS/Volumetric+Scattering+And+Fog" target="_blank" rel="noopener">Volumetric Scattering And Fog（体积光和雾）</a></h2><iframe src="//player.bilibili.com/player.html?aid=24632282&cid=41401990&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height="530" width="670"> </iframe>
+
+<h1 id="渲染设置"><a href="#渲染设置" class="headerlink" title="渲染设置"></a>渲染设置</h1><h2 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h2><p><a href="https://docs.redshift3d.com/display/RSDOCS/Unified+Sampling" target="_blank" rel="noopener"><strong><font face="微软雅黑" size="5" color="ed1c24">Progressive Rendering（渐进式渲染）</font></strong></a></p>
+<p><a href="https://docs.redshift3d.com/display/RSDOCS/Unified+Sampling" target="_blank" rel="noopener"><strong><font face="微软雅黑" size="5" color="ed1c24">Unified Sampling（统一采样）</font></strong></a></p>
+<p><a href="https://docs.redshift3d.com/display/RSDOCS/Unified+Sampling#UnifiedSampling-Min/MaxSamples" target="_blank" rel="noopener"><strong><font face="微软雅黑" size="4" color="ed1c24">Min/Max Samples（最小/最大 采样）</font></strong></a><br>这个选项是每个像素采集主光线的最小和最大数量。<br>Redshift 最开始将每个像素点“最小采样”采集光线，然后，如果它仍然检测到该像素周围的噪点，他将继续采集更多的光线，知道像素足够干净，或者达到“最大采样”采集光线。<br>如果你正在使用景深或者运动模糊，我们建议至少使用8-16的“最小采样”。<br>包含大景深或者长运动模糊的场景，可能需要非常高的“最大采用”，例如说256或更高。</p>
+<p><a href="https://docs.redshift3d.com/display/RSDOCS/Unified+Sampling#UnifiedSampling-AdaptiveErrorThreshold" target="_blank" rel="noopener"><strong><font face="微软雅黑" size="4" color="ed1c24">Adaptive Error Threshold（自适应误差阈值）</font></strong></a><br>这个选项控制了检测噪点算法的识别度。数字越小检测噪点早点的频率越高，这意味着每像素点将采集更多的光线，反之亦然。建议你使用“显示示例”功能可视化设置效果。默认值0.01适用于大多数场景。对于产生的质量结果，我们建议使用较低的设置，如0.003。</p>
+<p><a href="https://docs.redshift3d.com/display/RSDOCS/Unified+Sampling#UnifiedSampling-ShowSamples" target="_blank" rel="noopener"><strong><font face="微软雅黑" size="4" color="ed1c24">Show Samples（显示采样）</font></strong></a><br>这个选项启用调试渲染模式，该显示模式按每个像素点的采集光线数量以灰度的形式呈现。<br>较暗的像素点表示采集的光线数量较少，而较亮的像素点表示采集的光线数量比较多。<br>纯白色意味着该像素点用的是“最大采样”来采集光线。<br>启用渲染模式的时候，图像的嘈杂部分通常会变得更亮，因为统一采样器将采集更多光线来尝试去除噪点。</p>
+<p><a href="https://docs.redshift3d.com/display/RSDOCS/Unified+Sampling#UnifiedSampling-Don'tautomaticallyreducesamplesofothereffects" target="_blank" rel="noopener"><strong><font face="微软雅黑" size="3" color="ed1c24">Don’t automatically reduce samples of other effects（不自动减少其他效果的采样）</font></strong></a><br><a href="https://docs.redshift3d.com/display/RSDOCS/Unified+Sampling#UnifiedSampling-DontAutomaticallyReduce" target="_blank" rel="noopener"><font color="000000">该选项更详细的描述。</font></a>我们不建议使用此选项。Redshift仅为了来自其他渲染器的用户的利益而包含它。将来可能不推荐使用此选项。</p>
+<p><a href="https://docs.redshift3d.com/display/RSDOCS/Unified+Sampling#UnifiedSampling-RandomizePatternOnEachFrame" target="_blank" rel="noopener"><strong><font face="微软雅黑" size="4" color="ed1c24">Randomize Pattern On Each Frame（每帧上的随机化模式）</font></strong></a><br>这个选项做动画务必勾上，否则噪点不动，画面在动。<br>当景深，运动模糊，暴力GI，光泽反射/折射，AO和区域光照明等共用一个共同的采样模式，在默认情况下，在 Redshift 中，每帧一致。当这些效果的采样次数不够高且噪点可见时，在渲染动画时，噪点可能会在相机上卡住。这可能在视觉上分散注意力。启用“每帧上的随机化模式”会使每个帧上的噪点模式随机化，这使得噪点看起来更像移动电视静态或胶片颗粒。在某些情况下，这可能更具有视觉吸引力。</p>
+<p><strong><font face="微软雅黑" size="5" color="ed1c24">Sample Filtering（采样过滤器）</font></strong><br><strong><font face="微软雅黑" size="4" color="ed1c24">Filter Type（过滤类型）</font></strong><br><strong><font face="微软雅黑" size="4" color="ed1c24">Filter Size（过滤大小）</font></strong><br><strong><font face="微软雅黑" size="4" color="ed1c24">Max Subsample Intensity（最大子采样强度）</font></strong><br><strong><font face="微软雅黑" size="4" color="ed1c24">Max Secondary Ray Intensity（最大二次射线强度）</font></strong></p>
+<p><strong><font face="微软雅黑" size="5" color="ed1c24">Sampling Overrides（采样覆写）</font></strong><br>采样覆写 顾名思义，就是把单独的设置的采样统一重写，无需一个一个单独去改。</p>
+<p><a href="https://docs.redshift3d.com/display/RSDOCS/Motion+Blur" target="_blank" rel="noopener"><strong><font face="微软雅黑" size="5" color="ed1c24">Motion Blur（运动模糊）</font></strong></a><br><a href="https://docs.redshift3d.com/display/RSDOCS/Motion+Blur#MotionBlur-EnableDeformationBlur" target="_blank" rel="noopener"><strong><font face="微软雅黑" size="4" color="ed1c24">Enable Deformation Blur（启用变形模糊）</font></strong></a><br>Deformation blur (tracking the motion of vertices) can be memory-intensive especially for high-poly or displaced geometry. For this reason, it has a separate switch to enable/disable. If most of your scene’s motion is due to rigid body animation or camera movement, you can leave this option disabled.<br><strong><font face="微软雅黑" size="4" color="ed1c24">Transformation Steps（转型步幅）</font></strong><br>这个数值越大，过渡约圆滑（如图所示）<br><img src="/img/Learn/Redshift/0.png"></p>
+<hr>
+<p><strong><font face="微软雅黑" size="4" color="ed1c24">Frame Duration（帧持续时间）</font></strong><br>这个参数和Oc的 <font face="微软雅黑" size="3" color="55b103">Shutter[sec.]（快门）</font> 是一样的，越大越模糊</p>
+<hr>
+<p><strong><font face="微软雅黑" size="4" color="ed1c24">Shutter Position（快门位置）</font></strong><br>这个参数和Oc的 <font face="微软雅黑" size="3" color="55b103">Shutter alignment（快门对准）</font>是一样的，就连选项都一样 这个翻译的有点抽象，其实也很好理解</p>
+<table>
+<thead>
+<tr>
+<th>Shutter Position(Reshfit)</th>
+<th>Shutter alignment(Octane)</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><font size="4" color="ed1c24">Center on Frame</font></td>
+<td><font face="微软雅黑" size="3" color="55b103">Centered</font></td>
+<td style="text-align:center">中</td>
+</tr>
+<tr>
+<td><font size="4" color="ed1c24">Start on Frame</font></td>
+<td><font face="微软雅黑" size="3" color="55b103">Before</font></td>
+<td style="text-align:center">前</td>
+</tr>
+<tr>
+<td><font size="4" color="ed1c24">End on Frame</font></td>
+<td><font face="微软雅黑" size="3" color="55b103">After</font></td>
+<td style="text-align:center">后</td>
+</tr>
+</tbody>
+</table>
+<p>不过 Redshift 有一点好就是，可以用 <font face="微软雅黑" size="3" color="ed1c24">Start on Frame</font> 和 <font face="微软雅黑" size="3" color="ed1c24">End on Frame</font> 这两个参数控制开始和结束的多少</p>
+<p><strong><font face="微软雅黑" size="5" color="ed1c24">Photometric Units（光度单位）</font></strong><br><strong><font face="微软雅黑" size="4" color="ed1c24">Units to Meter Scale（单位到米刻度）</font></strong><br>根据工程缩放来修改<br><strong><font face="微软雅黑" size="4" color="ed1c24">cd/m^2 Factor</font></strong></p>
+<p><strong><font face="微软雅黑" size="5" color="ed1c24">Quantization（量化）</font></strong></p>
+<hr>
+<p><a href="https://docs.redshift3d.com/display/RSDOCS/Motion+Blur#MotionBlur-ShutterEfficiency" target="_blank" rel="noopener"><strong><strong><font face="微软雅黑" size="4" color="ed1c24">Shutter Efficiency（快门效率）</font></strong></strong></a><br>这个参数最大值1，比较难解释（如图所示）<br><img src="/img/Learn/Redshift/1.png"></p>
+<p><a href="https://docs.redshift3d.com/display/RSDOCS/Denoising" target="_blank" rel="noopener"><strong><font face="微软雅黑" size="5" color="ed1c24">Denoise（降噪）</font></strong></a><br>降噪功能只有在 Redshift 2.6 版本中！</p>
+<h2 id="AOV（任意输出变量）"><a href="#AOV（任意输出变量）" class="headerlink" title="AOV（任意输出变量）"></a>AOV（任意输出变量）</h2><p>AOV stands for “arbitrary output variables”</p>
+<iframe src="//player.bilibili.com/player.html?aid=24981571&cid=42201458&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height="530" width="670"> </iframe>
+
+<h2 id="Optimization（优化）"><a href="#Optimization（优化）" class="headerlink" title="Optimization（优化）"></a>Optimization（优化）</h2><h2 id="GI（全局光照）"><a href="#GI（全局光照）" class="headerlink" title="GI（全局光照）"></a>GI（全局光照）</h2><p>GI 全称 “Global Illumination”</p>
+<ul>
+<li>66</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+
+        
+        本文链接：<a href="/Notes/Redshift/" target="_blank" rel="external">https://Brywmzl.github.io/Notes/Redshift/</a>
+        
+    </div>
+    <footer>
+        <a href="https://Brywmzl.github.io">
+            <img src="/img/avatar.jpg" alt="Brywmzl">
+            Brywmzl
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CINEMA-4D/">CINEMA 4D</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Redshift/">Redshift</a></li></ul>
+
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/Notes/Octane/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Octane 笔记</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/Microsoft/Digital-License/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Windows 10 数字许可 (HWID) &amp; KMS38™</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="bottom">
+        <p><span>Brywmzl &copy; 2015 - 2021</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-arrow-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.0"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.0" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

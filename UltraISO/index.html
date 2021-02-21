@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>UltraISO - 光盘映像文件制作工具 | Brywmzl</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#fa3c33">
+    
+    
+    <meta name="keywords" content="UltraISO,软碟通">
+    <meta name="description" content="UltraISO 软碟通是光盘映像文件制作/编辑/转换工具,可以编辑ISO文件,从ISO中提取文件和目录,从CD-ROM制作光盘映像或者将硬盘上的文件制作成ISO文件,制作可引导光盘。">
+<meta name="keywords" content="UltraISO,软碟通">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UltraISO - 光盘映像文件制作工具">
+<meta property="og:url" content="https://Brywmzl.github.io/UltraISO/index.html">
+<meta property="og:site_name" content="Brywmzl">
+<meta property="og:description" content="UltraISO 软碟通是光盘映像文件制作/编辑/转换工具,可以编辑ISO文件,从ISO中提取文件和目录,从CD-ROM制作光盘映像或者将硬盘上的文件制作成ISO文件,制作可引导光盘。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://www.ezbsys.net/cimages/uiso6cn.gif">
+<meta property="og:updated_time" content="2019-10-05T06:51:38.220Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="UltraISO - 光盘映像文件制作工具">
+<meta name="twitter:description" content="UltraISO 软碟通是光盘映像文件制作/编辑/转换工具,可以编辑ISO文件,从ISO中提取文件和目录,从CD-ROM制作光盘映像或者将硬盘上的文件制作成ISO文件,制作可引导光盘。">
+<meta name="twitter:image" content="http://www.ezbsys.net/cimages/uiso6cn.gif">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.0">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Brywmzl</h5>
+          <a href="mailto:brywmzl@gmail.com" title="brywmzl@gmail.com" class="mail">brywmzl@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Start
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/Notes/Bookmark"  >
+                <i class="icon icon-lg icon-bookmark"></i>
+                Bookmark
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/gallery"  >
+                <i class="icon icon-lg icon-envira"></i>
+                Gallery
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/brywmzl" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://brywmzl.gitbook.io/document/" target="_blank" >
+                <i class="icon icon-lg icon-book"></i>
+                GitBook
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://brywmzl.us-south.cf.appdomain.cloud/" target="_blank" >
+                <i class="icon icon-lg icon-hdd-o"></i>
+                OneDrive
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main" style="background-image:url(/img/background.jpg)">
+        <header class="top-header" id="header">
+    <div class="flex-row" style="background-image:url(/img/bar.jpg)">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">UltraISO - 光盘映像文件制作工具</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image:url(/img/bar.jpg)">
+
+    <div class="container fade-scale">
+        <h1 class="title">UltraISO - 光盘映像文件制作工具</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-08-29T16:00:00.000Z" itemprop="datePublished" class="page-time">
+  2019-08-30
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/系统工具/">系统工具</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#下载"><span class="post-toc-number">1.</span> <span class="post-toc-text">下载</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#安装说明"><span class="post-toc-number">2.</span> <span class="post-toc-text">安装说明</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-UltraISO"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">UltraISO - 光盘映像文件制作工具</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-08-30 00:00:00" datetime="2019-08-29T16:00:00.000Z"  itemprop="datePublished">2019-08-30</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/系统工具/">系统工具</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+			
+			<p>UltraISO 软碟通是光盘映像文件制作/编辑/转换工具,可以编辑ISO文件,从ISO中提取文件和目录,从CD-ROM制作光盘映像或者将硬盘上的文件制作成ISO文件,制作可引导光盘。</p>
+<a id="more"></a>
+<p><a href="https://cn.ultraiso.net/" target="_blank" rel="noopener">官方网站</a><br><a href="https://cn.ultraiso.net/chanpinjieshao.html" target="_blank" rel="noopener">官方介绍</a><br><a href="https://www.ezbsystems.com/ultraiso/history.htm" target="_blank" rel="noopener">更新历史</a></p>
+<div class="img-lightbox"><div class="overlay"></div><img src="http://www.ezbsys.net/cimages/uiso6cn.gif" alt="" title="UltraISO" width="auto" height="auto"></div><div class="image-caption"></div>
+
+<h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><blockquote>
+<p><a href="https://cn.ezbsystems.com/ultraiso/download.htm" target="_blank" rel="noopener">官方下载</a><br><a href="https://www.nsaneforums.com/topic/351972-ultraiso-premium-edition-972-build-3561/?tab=comments#comment-1503078" target="_blank" rel="noopener">nsaneforums</a><br><a href="https://www.lanzous.com/b942125" target="_blank" rel="noopener">蓝奏云 网盘下载</a><br><a href="https://pan.baidu.com/s/1c1Hzvu4" target="_blank" rel="noopener">百度云 网盘下载</a></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>文件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://dw.ezbsys.net/uiso9_pe.exe" target="_blank" rel="noopener">UltraISO Premium Edition 9</a></td>
+</tr>
+<tr>
+<td><a href="http://reg.ezbsys.com/dl.php?dir=3939p575&amp;file=uiso97pes.exe" target="_blank" rel="noopener">UltraISO Premium Edition 9.7.2 Build 3561 Retail</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="安装说明"><a href="#安装说明" class="headerlink" title="安装说明"></a>安装说明</h1><p><strong>Premium Edition（高级版）</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Version</th>
+<th style="text-align:center">Name</th>
+<th style="text-align:center">Serial</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">9.7.2.3561</td>
+<td style="text-align:center">Brywmzl</td>
+<td style="text-align:center"><code>0B8F-E2B0-0F69-1077</code></td>
+</tr>
+<tr>
+<td style="text-align:center">9.7.2.3561</td>
+<td style="text-align:center">Brywmzl</td>
+<td style="text-align:center"><code>0CD9-9AF3-D27D-66C0</code></td>
+</tr>
+<tr>
+<td style="text-align:center">9.7.2.3561</td>
+<td style="text-align:center">Brywmzl</td>
+<td style="text-align:center"><code>2633-B640-CE83-F9F3</code></td>
+</tr>
+<tr>
+<td style="text-align:center">9.5.5.2960</td>
+<td style="text-align:center">王涛</td>
+<td style="text-align:center"><code>7C81-1689-4046-626F</code></td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><figcaption><span>uikey.ini</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[UltraISO]</span><br><span class="line">UserName=&apos;Brywmzl&apos;</span><br><span class="line">Registration=&apos;1A5C-E47B-EE27-67E3&apos;</span><br><span class="line">Language=&apos;Chinese Simplified&apos;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>注册表</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[HKEY_CURRENT_USER\Software\EasyBoot Systems\UltraISO\5.0]</span><br><span class="line">&quot;UserName&quot;=&quot;Brywmzl&quot;</span><br><span class="line">&quot;Registration&quot;=&quot;e0c4f3dcda9ec081a4cbfab2be8b9cc0&quot;</span><br><span class="line">&quot;Language&quot;=&quot;2052&quot;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>如果目录下有 “uikey.ini” 文件</li>
+<li>就会读取文件夹中的 “UltraISO” 字段下的 “UserName” 和 “Registration” 还有 “Language”</li>
+<li>注册表在 <code>HKEY_CURRENT_USER\Software\EasyBoot Systems\UltraISO\5.0</code></li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+
+        
+        本文链接：<a href="/UltraISO/" target="_blank" rel="external">https://Brywmzl.github.io/UltraISO/</a>
+        
+    </div>
+    <footer>
+        <a href="https://Brywmzl.github.io">
+            <img src="/img/avatar.jpg" alt="Brywmzl">
+            Brywmzl
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UltraISO/">UltraISO</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/软碟通/">软碟通</a></li></ul>
+
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/pingo/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">pingo - 快速批量无损图片压缩</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/Docker/Qiandao/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">N1安装Docker部署签到</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="bottom">
+        <p><span>Brywmzl &copy; 2015 - 2021</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-arrow-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.0"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.0" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

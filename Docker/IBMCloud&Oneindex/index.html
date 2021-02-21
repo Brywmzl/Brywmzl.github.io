@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>IBM Cloud 部署 Oneindex | Brywmzl</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#fa3c33">
+    
+    
+    <meta name="keywords" content="Oneindex">
+    <meta name="description" content="oneindex 和 onelist 相比之下 oneindex 会更丰富些，所以我选择的 oneindex，支持 README.md、HEAD.md 、 .password,等特殊文件以外，还有更多选项，包括主题、隐藏文件名、网格布局。">
+<meta name="keywords" content="Oneindex">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IBM Cloud 部署 Oneindex">
+<meta property="og:url" content="https://Brywmzl.github.io/Docker/IBMCloud&Oneindex/index.html">
+<meta property="og:site_name" content="Brywmzl">
+<meta property="og:description" content="oneindex 和 onelist 相比之下 oneindex 会更丰富些，所以我选择的 oneindex，支持 README.md、HEAD.md 、 .password,等特殊文件以外，还有更多选项，包括主题、隐藏文件名、网格布局。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-06-13T03:40:37.958Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="IBM Cloud 部署 Oneindex">
+<meta name="twitter:description" content="oneindex 和 onelist 相比之下 oneindex 会更丰富些，所以我选择的 oneindex，支持 README.md、HEAD.md 、 .password,等特殊文件以外，还有更多选项，包括主题、隐藏文件名、网格布局。">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.0">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Brywmzl</h5>
+          <a href="mailto:brywmzl@gmail.com" title="brywmzl@gmail.com" class="mail">brywmzl@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Start
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/Notes/Bookmark"  >
+                <i class="icon icon-lg icon-bookmark"></i>
+                Bookmark
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/gallery"  >
+                <i class="icon icon-lg icon-envira"></i>
+                Gallery
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/brywmzl" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://brywmzl.gitbook.io/document/" target="_blank" >
+                <i class="icon icon-lg icon-book"></i>
+                GitBook
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://brywmzl.us-south.cf.appdomain.cloud/" target="_blank" >
+                <i class="icon icon-lg icon-hdd-o"></i>
+                OneDrive
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main" style="background-image:url(/img/background.jpg)">
+        <header class="top-header" id="header">
+    <div class="flex-row" style="background-image:url(/img/bar.jpg)">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">IBM Cloud 部署 Oneindex</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image:url(/img/bar.jpg)">
+
+    <div class="container fade-scale">
+        <h1 class="title">IBM Cloud 部署 Oneindex</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-11-02T16:00:00.000Z" itemprop="datePublished" class="page-time">
+  2019-11-03
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/网络工具/">网络工具</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#IBM注册"><span class="post-toc-number">1.</span> <span class="post-toc-text">IBM注册</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#应用程序创建"><span class="post-toc-number">2.</span> <span class="post-toc-text">应用程序创建</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#配置Git"><span class="post-toc-number">3.</span> <span class="post-toc-text">配置Git</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#配置-Token"><span class="post-toc-number">4.</span> <span class="post-toc-text">配置 Token</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Oneindex"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">Oneindex</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#OneList"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">OneList</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#页面魔改"><span class="post-toc-number">5.</span> <span class="post-toc-text">页面魔改</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-Docker/IBMCloud&amp;Oneindex"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">IBM Cloud 部署 Oneindex</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-11-03 00:00:00" datetime="2019-11-02T16:00:00.000Z"  itemprop="datePublished">2019-11-03</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/网络工具/">网络工具</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+			
+			<p>oneindex 和 onelist 相比之下 oneindex 会更丰富些，所以我选择的 oneindex，支持 README.md、HEAD.md 、 .password,等特殊文件以外，还有更多选项，包括主题、隐藏文件名、网格布局。</p>
+<a id="more"></a>
+<h1 id="IBM注册"><a href="#IBM注册" class="headerlink" title="IBM注册"></a>IBM注册</h1><ul>
+<li>首先注册一个 IBM Cloud 账号</li>
+<li><a href="https://console.ng.bluemix.net/registration/free" target="_blank" rel="noopener">IBM Cloud 注册地址</a></li>
+</ul>
+<h1 id="应用程序创建"><a href="#应用程序创建" class="headerlink" title="应用程序创建"></a>应用程序创建</h1><ul>
+<li>创建 <a href="https://cloud.ibm.com/cloudfoundry/overview" target="_blank" rel="noopener">Cloud Foundry 应用程序</a></li>
+<li>选择 <code>公共应用程序</code> 创建</li>
+<li>选择区域 <code>达拉斯</code>（白嫖）</li>
+<li>选择价格套餐 <code>256 MB</code>（有个Bug，就有选择后，右边的创建按钮会变成升级，刷新一下就好了）</li>
+<li>配置资源 oneindex 选 <code>.php</code> ，onelist 选 <code>.go</code></li>
+<li>应用程序名称（不撞车就行）</li>
+<li>主机名会自己生成，域名建议 <code>.us-south.cf.appdomain.cloud</code>（国内能够访问）</li>
+<li>点击创建，等待。。。</li>
+</ul>
+<h1 id="配置Git"><a href="#配置Git" class="headerlink" title="配置Git"></a>配置Git</h1><ul>
+<li>进入应用程序，最右下角有个 <code>持续交付</code> 点下 <code>查看工具链</code></li>
+<li>服务器 就一个没得选</li>
+<li>存储库类型，如果有就选 <code>现有</code>，如果没有，就选 <code>克隆</code></li>
+<li>源存储库 URL 下面选（oneindex 和 onelist 的部署方式不同，当前是以 oneindex 为例）</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Name</th>
+<th style="text-align:center">Type</th>
+<th style="text-align:center">Git（源存储库 URL）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Oneindex</td>
+<td style="text-align:center">.php</td>
+<td style="text-align:center"><a href="https://github.com/donwa/oneindex.git" target="_blank" rel="noopener">https://github.com/donwa/oneindex.git</a></td>
+</tr>
+<tr>
+<td style="text-align:center">OneList</td>
+<td style="text-align:center">.go .py</td>
+<td style="text-align:center"><a href="https://github.com/0oVicero0/OneList.git" target="_blank" rel="noopener">https://github.com/0oVicero0/OneList.git</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="配置-Token"><a href="#配置-Token" class="headerlink" title="配置 Token"></a>配置 Token</h1><h2 id="Oneindex"><a href="#Oneindex" class="headerlink" title="Oneindex"></a>Oneindex</h2><ul>
+<li><p>通过docker上的部署，复制出这两个文件<br><code>/var/www/html/config/base.php</code><br><code>/var/www/html/config/token.php</code></p>
+</li>
+<li><p>上传到 Git <code>/web/config/</code> 下</p>
+</li>
+<li><p>Git每次提交，应用程序都会重新启动</p>
+</li>
+<li><p><a href="https://oneindex-gettoken.us-south.cf.appdomain.cloud/" target="_blank" rel="noopener">get token</a></p>
+</li>
+</ul>
+<h2 id="OneList"><a href="#OneList" class="headerlink" title="OneList"></a>OneList</h2><ul>
+<li>切换到 <code>AWS-Cloud-Foundry</code> 分支</li>
+<li><a href="https://login.microsoftonline.com/common/oauth2/authorize?response_type=code&amp;client_id=ea2b36f6-b8ad-40be-bc0f-e5e4a4a7d4fa&amp;redirect_uri=https://api.moeclub.org/onedrive-login" target="_blank" rel="noopener">点击访问，登录账号！授权许可！</a></li>
+<li>复制到 <code>config.json</code> 的 <code>token</code> 字段</li>
+</ul>
+<hr>
+<ul>
+<li>参考 <a href="https://51.ruyo.net/12396.html" target="_blank" rel="noopener">OneList-最简洁的OneDrive目录索引部署教程</a></li>
+</ul>
+<h1 id="页面魔改"><a href="#页面魔改" class="headerlink" title="页面魔改"></a>页面魔改</h1><p>顶部的图标和标题 <code>/web/view/{主题名称}/layout.php</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;title&gt;Microsoft OneDrive&lt;/title&gt;</span><br><span class="line">&lt;link rel=&quot;icon&quot; href=&quot;https://p.sfx.ms/images/favicon.ico&quot; type=&quot;image/x-icon&quot;&gt;</span><br></pre></td></tr></table></figure></p>
+<p>列表图标和文案 <code>/web/view/nexmoe/list.php</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">folder_open 替换成 folder（空心换实心图标）</span><br></pre></td></tr></table></figure></p>
+<p>密码页面 <code>/web/view/{主题名称}/password.php</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php view::layout(&apos;layout&apos;)?&gt;</span><br><span class="line"></span><br><span class="line">&lt;?php view::begin(&apos;content&apos;);?&gt;</span><br><span class="line">	</span><br><span class="line">&lt;div class=&quot;mdui-container-fluid&quot;&gt;</span><br><span class="line">	&lt;div class=&quot;mdui-col-md-6 mdui-col-offset-md-3&quot;&gt;</span><br><span class="line">	  &lt;center&gt;&lt;h1 class=&quot;mdui-typo-display-2-opacity&quot;&gt;&lt;strong&gt;&lt;font size=4 color=6f7073&gt;Please enter the password to view.&lt;/font&gt;&lt;/strong&gt;&lt;/h1&gt;&lt;/center&gt;</span><br><span class="line">	  &lt;form action=&quot;&quot; method=&quot;post&quot;&gt;</span><br><span class="line">		  &lt;div class=&quot;mdui-textfield mdui-textfield-floating-label&quot;&gt;</span><br><span class="line">		    &lt;i class=&quot;mdui-icon material-icons&quot;&gt;https&lt;/i&gt;</span><br><span class="line">		    &lt;label class=&quot;mdui-textfield-label&quot;&gt;Password&lt;/label&gt;</span><br><span class="line">		    &lt;input name=&quot;password&quot; class=&quot;mdui-textfield-input&quot; type=&quot;password&quot;/&gt;</span><br><span class="line">		  &lt;/div&gt;</span><br><span class="line">		  &lt;br&gt;</span><br><span class="line">		  &lt;button type=&quot;submit&quot; class=&quot;mdui-center mdui-btn mdui-ripple mdui-color-theme-accent&quot;&gt;</span><br><span class="line">		  	&lt;i class=&quot;mdui-icon material-icons&quot;&gt;fingerprint&lt;/i&gt;</span><br><span class="line">		  	view</span><br><span class="line">		  &lt;/button&gt;</span><br><span class="line">	  &lt;/form&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">	</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;?php view::end(&apos;content&apos;);?&gt;</span><br></pre></td></tr></table></figure></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+
+        
+        本文链接：<a href="/Docker/IBMCloud&amp;Oneindex/" target="_blank" rel="external">https://Brywmzl.github.io/Docker/IBMCloud&amp;Oneindex/</a>
+        
+    </div>
+    <footer>
+        <a href="https://Brywmzl.github.io">
+            <img src="/img/avatar.jpg" alt="Brywmzl">
+            Brywmzl
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Oneindex/">Oneindex</a></li></ul>
+
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/KeyShot/Keyshot-Material-Rename-Tool/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Keyshot Material Rename Tool - 材质球批量重命名工具</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/TeamViewer/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">TeamViewer - 远程协助</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="bottom">
+        <p><span>Brywmzl &copy; 2015 - 2021</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-arrow-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.0"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.0" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

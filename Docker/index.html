@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Docker - 应用容器引擎 | Brywmzl</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#fa3c33">
+    
+    
+    <meta name="keywords" content="Docker">
+    <meta name="description" content="Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的镜像中，然后发布到任何流行的 Linux或Windows 机器上，也可以实现虚拟化。">
+<meta name="keywords" content="Docker">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker - 应用容器引擎">
+<meta property="og:url" content="https://Brywmzl.github.io/Docker/index.html">
+<meta property="og:site_name" content="Brywmzl">
+<meta property="og:description" content="Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的镜像中，然后发布到任何流行的 Linux或Windows 机器上，也可以实现虚拟化。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-05T06:59:47.401Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Docker - 应用容器引擎">
+<meta name="twitter:description" content="Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的镜像中，然后发布到任何流行的 Linux或Windows 机器上，也可以实现虚拟化。">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.0">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Brywmzl</h5>
+          <a href="mailto:brywmzl@gmail.com" title="brywmzl@gmail.com" class="mail">brywmzl@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Start
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/Notes/Bookmark"  >
+                <i class="icon icon-lg icon-bookmark"></i>
+                Bookmark
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/gallery"  >
+                <i class="icon icon-lg icon-envira"></i>
+                Gallery
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/brywmzl" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://brywmzl.gitbook.io/document/" target="_blank" >
+                <i class="icon icon-lg icon-book"></i>
+                GitBook
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://brywmzl.us-south.cf.appdomain.cloud/" target="_blank" >
+                <i class="icon icon-lg icon-hdd-o"></i>
+                OneDrive
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main" style="background-image:url(/img/background.jpg)">
+        <header class="top-header" id="header">
+    <div class="flex-row" style="background-image:url(/img/bar.jpg)">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Docker - 应用容器引擎</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image:url(/img/bar.jpg)">
+
+    <div class="container fade-scale">
+        <h1 class="title">Docker - 应用容器引擎</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-10-04T16:00:00.000Z" itemprop="datePublished" class="page-time">
+  2019-10-05
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/网络工具/">网络工具</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#install"><span class="post-toc-number">1.</span> <span class="post-toc-text">install</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#command"><span class="post-toc-number">2.</span> <span class="post-toc-text">command</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-Docker"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Docker - 应用容器引擎</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-10-05 00:00:00" datetime="2019-10-04T16:00:00.000Z"  itemprop="datePublished">2019-10-05</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/网络工具/">网络工具</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+			
+			<p>Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的镜像中，然后发布到任何流行的 Linux或Windows 机器上，也可以实现虚拟化。</p>
+<a id="more"></a>
+<p><a href="https://hub.docker.com" target="_blank" rel="noopener">Docker Hub</a></p>
+<h1 id="install"><a href="#install" class="headerlink" title="install"></a>install</h1><h1 id="command"><a href="#command" class="headerlink" title="command"></a>command</h1><blockquote>
+<p><a href="https://www.cnblogs.com/moxiaoan/p/9299404.html" target="_blank" rel="noopener">Docker-compose 常用命令</a></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>command</th>
+<th>remark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>build</td>
+<td>Build or rebuild services</td>
+</tr>
+<tr>
+<td>bundle</td>
+<td>Generate a Docker bundle from the Compose file</td>
+</tr>
+<tr>
+<td>config</td>
+<td>Validate and view the Compose file</td>
+</tr>
+<tr>
+<td>create</td>
+<td>Create services</td>
+</tr>
+<tr>
+<td>down</td>
+<td>Stop and remove containers, networks, images, and volumes</td>
+</tr>
+<tr>
+<td>events</td>
+<td>Receive real time events from containers</td>
+</tr>
+<tr>
+<td>exec</td>
+<td>Execute a command in a running container</td>
+</tr>
+<tr>
+<td>help</td>
+<td>Get help on a command</td>
+</tr>
+<tr>
+<td>images</td>
+<td>List images</td>
+</tr>
+<tr>
+<td>kill</td>
+<td>Kill containers</td>
+</tr>
+<tr>
+<td>logs</td>
+<td>View output from containers</td>
+</tr>
+<tr>
+<td>pause</td>
+<td>Pause services</td>
+</tr>
+<tr>
+<td>port</td>
+<td>Print the public port for a port binding</td>
+</tr>
+<tr>
+<td>ps</td>
+<td>List containers</td>
+</tr>
+<tr>
+<td>pull</td>
+<td>Pull service images</td>
+</tr>
+<tr>
+<td>push</td>
+<td>Push service images</td>
+</tr>
+<tr>
+<td>restart</td>
+<td>Restart services</td>
+</tr>
+<tr>
+<td>rm</td>
+<td>Remove stopped containers</td>
+</tr>
+<tr>
+<td>run</td>
+<td>Run a one-off command</td>
+</tr>
+<tr>
+<td>scale</td>
+<td>Set number of containers for a service</td>
+</tr>
+<tr>
+<td>start</td>
+<td>Start services</td>
+</tr>
+<tr>
+<td>stop</td>
+<td>Stop services</td>
+</tr>
+<tr>
+<td>top</td>
+<td>Display the running processes</td>
+</tr>
+<tr>
+<td>unpause</td>
+<td>Unpause services</td>
+</tr>
+<tr>
+<td>up</td>
+<td>Create and start containers</td>
+</tr>
+<tr>
+<td>version</td>
+<td>Show the Docker-Compose version information</td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+
+        
+        本文链接：<a href="/Docker/" target="_blank" rel="external">https://Brywmzl.github.io/Docker/</a>
+        
+    </div>
+    <footer>
+        <a href="https://Brywmzl.github.io">
+            <img src="/img/avatar.jpg" alt="Brywmzl">
+            Brywmzl
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li></ul>
+
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/Apple/iMazing/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">iMazing - 下载下架应用</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/Docker/OpenWrt/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">OpenWrt - 路由固件</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="bottom">
+        <p><span>Brywmzl &copy; 2015 - 2021</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-arrow-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.0"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.0" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

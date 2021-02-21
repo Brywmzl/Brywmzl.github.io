@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Patcher Cloud | Brywmzl</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#fa3c33">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="这是一个我一直很想写的补丁工具，但是一直没想到用什么好方法呈现出来，后来我写了Json Flow，但是感觉还是远远不够，后面是zer0cod3大神补丁给我带来的启发，因为Adobe CC2019的补丁贼大的原因（约200MB）做成集成补丁相当庞大，下载也也相当麻烦，所以我想说做一个在线补丁，尽可能做到精确定位以及，自动化识别路径，一键通杀，敬请期待吧！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Patcher Cloud">
+<meta property="og:url" content="https://Brywmzl.github.io/Patcher-Cloud/index.html">
+<meta property="og:site_name" content="Brywmzl">
+<meta property="og:description" content="这是一个我一直很想写的补丁工具，但是一直没想到用什么好方法呈现出来，后来我写了Json Flow，但是感觉还是远远不够，后面是zer0cod3大神补丁给我带来的启发，因为Adobe CC2019的补丁贼大的原因（约200MB）做成集成补丁相当庞大，下载也也相当麻烦，所以我想说做一个在线补丁，尽可能做到精确定位以及，自动化识别路径，一键通杀，敬请期待吧！">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://brywmzl.github.io/img/Brywmzl/PatcherCloud.png">
+<meta property="og:image" content="https://brywmzl.github.io/img/Brywmzl/PatcherCloud_work.png">
+<meta property="og:updated_time" content="2019-01-29T06:52:49.382Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Patcher Cloud">
+<meta name="twitter:description" content="这是一个我一直很想写的补丁工具，但是一直没想到用什么好方法呈现出来，后来我写了Json Flow，但是感觉还是远远不够，后面是zer0cod3大神补丁给我带来的启发，因为Adobe CC2019的补丁贼大的原因（约200MB）做成集成补丁相当庞大，下载也也相当麻烦，所以我想说做一个在线补丁，尽可能做到精确定位以及，自动化识别路径，一键通杀，敬请期待吧！">
+<meta name="twitter:image" content="https://brywmzl.github.io/img/Brywmzl/PatcherCloud.png">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.0">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Brywmzl</h5>
+          <a href="mailto:brywmzl@gmail.com" title="brywmzl@gmail.com" class="mail">brywmzl@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Start
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/Notes/Bookmark"  >
+                <i class="icon icon-lg icon-bookmark"></i>
+                Bookmark
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/gallery"  >
+                <i class="icon icon-lg icon-envira"></i>
+                Gallery
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/brywmzl" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://brywmzl.gitbook.io/document/" target="_blank" >
+                <i class="icon icon-lg icon-book"></i>
+                GitBook
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://brywmzl.us-south.cf.appdomain.cloud/" target="_blank" >
+                <i class="icon icon-lg icon-hdd-o"></i>
+                OneDrive
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main" style="background-image:url(/img/background.jpg)">
+        <header class="top-header" id="header">
+    <div class="flex-row" style="background-image:url(/img/bar.jpg)">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Patcher Cloud</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image:url(/img/bar.jpg)">
+
+    <div class="container fade-scale">
+        <h1 class="title">Patcher Cloud</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-01-28T16:00:00.000Z" itemprop="datePublished" class="page-time">
+  2019-01-29
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Brywmzl/">Brywmzl</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#工作流程图"><span class="post-toc-number">1.</span> <span class="post-toc-text">工作流程图</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#更新说明"><span class="post-toc-number">2.</span> <span class="post-toc-text">更新说明</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-Patcher-Cloud"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Patcher Cloud</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-01-29 00:00:00" datetime="2019-01-28T16:00:00.000Z"  itemprop="datePublished">2019-01-29</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Brywmzl/">Brywmzl</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+			
+			<p>这是一个我一直很想写的补丁工具，但是一直没想到用什么好方法呈现出来，后来我写了Json Flow，但是感觉还是远远不够，后面是zer0cod3大神补丁给我带来的启发，因为Adobe CC2019的补丁贼大的原因（约200MB）做成集成补丁相当庞大，下载也也相当麻烦，所以我想说做一个在线补丁，尽可能做到精确定位以及，自动化识别路径，一键通杀，敬请期待吧！</p>
+<a id="more"></a>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/Brywmzl/PatcherCloud.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h1 id="工作流程图"><a href="#工作流程图" class="headerlink" title="工作流程图"></a>工作流程图</h1><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/Brywmzl/PatcherCloud_work.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h1 id="更新说明"><a href="#更新说明" class="headerlink" title="更新说明"></a>更新说明</h1><ul>
+<li>基本框架已定</li>
+<li>支持本地和url的json文件</li>
+<li>支持属性复写(name不会被复写以外 其他都靠自觉)</li>
+<li>支持数组目录</li>
+<li>支持rar zip解压</li>
+<li>可自定义缓存路径（默认:_Temp）</li>
+<li>json数据<ul>
+<li>name（名称）</li>
+<li>updat_date（更新时间）</li>
+<li>remarks（备注说明内容）</li>
+<li>install_path（和 json flow 一样支持用变量）</li>
+<li>md5（文件md5用来作为唯一的标志认证如果已经补丁过了就没有必要在此下载）</li>
+<li>process_end（补丁前需要杀掉的进程，目前只支持单个）</li>
+<li>patch（补丁位置，目前只支持单个）</li>
+<li>之后再考虑要不要加一个action可以做到备份和恢复补丁功能 目前就先这样吧</li>
+</ul>
+</li>
+<li><p>还有明天再写吧</p>
+</li>
+<li><p>今天突发奇想 构造稍微改了下 做成了安装包的形式，考虑到多重补丁，需要设置多个变量为路径，并且支持action节点，后面将会陆续改良，敬请期待吧！~</p>
+</li>
+<li><p>[2019-01-29]<br>近期的更新主要还是对逻辑的升级和优化<br>支持设定全局变量还有局部变量，二者有何差异呢，后者优先，如果局部为空则设为全局变量<br>还有action主要分成了三部分<br>第一部分 next_action，也就是按下”Next”所执行的（通常用于：提前缓存，初始化 等…）<br>第二部分 install_action，就是在安装页面所要执行的，进行特殊加载，当路径识别错误或无法识别的时候，可以手动进行更改<br>第三部分 end_action，顾名思义就也就是当 install_action 结束后所执行的（通常用于：清除缓存，删除临时文件  等…）</p>
+</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+
+        
+        本文链接：<a href="/Patcher-Cloud/" target="_blank" rel="external">https://Brywmzl.github.io/Patcher-Cloud/</a>
+        
+    </div>
+    <footer>
+        <a href="https://Brywmzl.github.io">
+            <img src="/img/avatar.jpg" alt="Brywmzl">
+            Brywmzl
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/T-Splines/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">T-Splines</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/Breed/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Breed Web</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="bottom">
+        <p><span>Brywmzl &copy; 2015 - 2021</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-arrow-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.0"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.0" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

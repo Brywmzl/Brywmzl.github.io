@@ -1,0 +1,2069 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>hexo-tag-emojis - 博客表情符号 | Brywmzl</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#fa3c33">
+    
+    
+    <meta name="keywords" content="Hexo">
+    <meta name="description" content="This is a hexo tag plugin which allows you to insert emojis on your blog posts.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo-tag-emojis - 博客表情符号">
+<meta property="og:url" content="https://brywmzl.github.io/Hexo/hexo-tag-emojis/index.html">
+<meta property="og:site_name" content="Brywmzl">
+<meta property="og:description" content="This is a hexo tag plugin which allows you to insert emojis on your blog posts.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/smile.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/trollface.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/alien.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/alien.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/bowtie.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/smile.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/laughing.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/blush.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/smiley.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/relaxed.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/smirk.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/heart_eyes.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/kissing_heart.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/kissing_closed_eyes.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/flushed.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/relieved.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/satisfied.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/grin.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/wink.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/stuck_out_tongue_winking_eye.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/stuck_out_tongue_closed_eyes.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/grinning.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/kissing.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/kissing_smiling_eyes.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/stuck_out_tongue.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/sleeping.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/worried.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/frowning.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/anguished.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/open_mouth.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/grimacing.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/confused.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/hushed.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/expressionless.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/unamused.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/sweat_smile.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/sweat.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/disappointed_relieved.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/weary.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/pensive.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/disappointed.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/confounded.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/fearful.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/cold_sweat.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/persevere.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/cry.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/sob.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/joy.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/astonished.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/scream.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/neckbeard.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/tired_face.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/angry.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/rage.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/triumph.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/sleepy.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/yum.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/mask.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/sunglasses.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/dizzy_face.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/imp.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/smiling_imp.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/neutral_face.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/no_mouth.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/innocent.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/alien.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/yellow_heart.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/blue_heart.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/purple_heart.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/heart.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/green_heart.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/broken_heart.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/heartbeat.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/heartpulse.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/two_hearts.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/revolving_hearts.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/cupid.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/sparkling_heart.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/sparkles.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/star.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/star2.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/dizzy.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/boom.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/collision.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/anger.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/exclamation.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/question.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/grey_exclamation.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/grey_question.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/zzz.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/dash.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/sweat_drops.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/notes.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/musical_note.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/fire.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/hankey.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/poop.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/shit.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/plus1.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/thumbsup.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/-1.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/thumbsdown.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/ok_hand.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/punch.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/facepunch.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/fist.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/v.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/wave.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/hand.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/raised_hand.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/open_hands.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/point_up.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/point_down.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/point_left.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/point_right.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/raised_hands.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/pray.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/point_up_2.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/clap.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/muscle.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/metal.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/fu.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/runner.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/running.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/couple.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/family.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/two_men_holding_hands.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/two_women_holding_hands.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/dancer.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/dancers.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/ok_woman.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/no_good.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/information_desk_person.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/raising_hand.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/bride_with_veil.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/person_with_pouting_face.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/person_frowning.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/bow.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/couplekiss.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/couple_with_heart.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/massage.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/haircut.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/nail_care.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/boy.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/girl.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/woman.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/man.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/baby.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/older_woman.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/older_man.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/person_with_blond_hair.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/man_with_gua_pi_mao.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/man_with_turban.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/construction_worker.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/cop.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/angel.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/princess.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/smiley_cat.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/smile_cat.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/heart_eyes_cat.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/kissing_cat.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/smirk_cat.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/scream_cat.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/crying_cat_face.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/joy_cat.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/pouting_cat.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/japanese_ogre.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/japanese_goblin.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/see_no_evil.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/hear_no_evil.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/speak_no_evil.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/guardsman.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/skull.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/feet.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/lips.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/kiss.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/droplet.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/ear.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/eyes.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/nose.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/tongue.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/love_letter.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/bust_in_silhouette.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/busts_in_silhouette.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/speech_balloon.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/thought_balloon.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/feelsgood.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/finnadie.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/goberserk.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/godmode.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/hurtrealbad.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/rage1.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/rage2.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/rage3.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/rage4.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/suspect.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/trollface.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/sunny.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/umbrella.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/cloud.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/snowflake.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/snowman.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/zap.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/cyclone.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/foggy.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/ocean.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/cat.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/dog.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/mouse.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/hamster.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/rabbit.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/wolf.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/frog.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/tiger.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/koala.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/bear.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/pig.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/pig_nose.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/cow.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/boar.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/monkey_face.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/monkey.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/horse.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/racehorse.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/camel.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/sheep.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/elephant.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/panda_face.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/snake.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/bird.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/baby_chick.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/hatched_chick.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/hatching_chick.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/chicken.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/penguin.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/turtle.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/bug.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/honeybee.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/ant.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/beetle.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/snail.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/octopus.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/tropical_fish.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/fish.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/whale.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/whale2.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/dolphin.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/cow2.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/ram.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/rat.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/water_buffalo.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/tiger2.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/rabbit2.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/dragon.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/goat.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/rooster.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/dog2.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/pig2.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/mouse2.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/ox.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/dragon_face.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/blowfish.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/crocodile.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/dromedary_camel.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/leopard.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/cat2.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/poodle.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/paw_prints.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/bouquet.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/cherry_blossom.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/tulip.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/four_leaf_clover.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/rose.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/sunflower.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/hibiscus.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/maple_leaf.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/leaves.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/fallen_leaf.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/herb.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/mushroom.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/cactus.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/palm_tree.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/evergreen_tree.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/deciduous_tree.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/chestnut.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/seedling.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/blossom.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/ear_of_rice.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/shell.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/globe_with_meridians.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/sun_with_face.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/full_moon_with_face.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/new_moon_with_face.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/new_moon.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/waxing_crescent_moon.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/first_quarter_moon.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/waxing_gibbous_moon.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/full_moon.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/waning_gibbous_moon.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/last_quarter_moon.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/waning_crescent_moon.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/last_quarter_moon_with_face.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/first_quarter_moon_with_face.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/crescent_moon.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/earth_africa.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/earth_americas.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/earth_asia.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/volcano.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/milky_way.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/partly_sunny.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/octocat.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/squirrel.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/bamboo.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/gift_heart.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/dolls.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/school_satchel.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/mortar_board.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/flags.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/fireworks.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/sparkler.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/wind_chime.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/rice_scene.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/jack_o_lantern.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/ghost.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/santa.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/christmas_tree.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/gift.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/bell.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/no_bell.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/tanabata_tree.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/tada.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/confetti_ball.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/balloon.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/crystal_ball.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/cd.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/dvd.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/floppy_disk.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/camera.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/video_camera.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/movie_camera.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/computer.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/tv.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/iphone.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/phone.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/telephone.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/telephone_receiver.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/pager.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/fax.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/minidisc.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/vhs.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/sound.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/speaker.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/mute.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/loudspeaker.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/mega.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/hourglass.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/hourglass_flowing_sand.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/alarm_clock.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/watch.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/radio.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/satellite.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/loop.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/mag.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/mag_right.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/unlock.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/lock.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/lock_with_ink_pen.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/closed_lock_with_key.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/key.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/bulb.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/flashlight.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/high_brightness.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/low_brightness.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/electric_plug.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/battery.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/calling.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/email.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/mailbox.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/postbox.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/bath.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/bathtub.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/shower.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/toilet.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/wrench.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/nut_and_bolt.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/hammer.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/seat.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/moneybag.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/yen.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/dollar.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/pound.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/euro.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/credit_card.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/money_with_wings.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/e-mail.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/inbox_tray.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/outbox_tray.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/envelope.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/incoming_envelope.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/postal_horn.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/mailbox_closed.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/mailbox_with_mail.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/mailbox_with_no_mail.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/package.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/door.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/smoking.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/bomb.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/gun.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/hocho.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/pill.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/syringe.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/page_facing_up.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/page_with_curl.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/bookmark_tabs.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/bar_chart.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/chart_with_upwards_trend.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/chart_with_downwards_trend.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/scroll.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/clipboard.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/calendar.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/date.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/card_index.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/file_folder.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/open_file_folder.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/scissors.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/pushpin.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/paperclip.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/black_nib.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/pencil2.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/straight_ruler.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/triangular_ruler.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/closed_book.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/green_book.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/blue_book.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/orange_book.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/notebook.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/notebook_with_decorative_cover.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/ledger.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/books.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/bookmark.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/name_badge.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/microscope.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/telescope.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/newspaper.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/football.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/basketball.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/soccer.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/baseball.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/tennis.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/8ball.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/rugby_football.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/bowling.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/golf.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/mountain_bicyclist.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/bicyclist.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/horse_racing.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/snowboarder.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/swimmer.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/surfer.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/ski.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/spades.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/hearts.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/clubs.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/diamonds.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/gem.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/ring.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/trophy.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/musical_score.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/musical_keyboard.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/violin.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/space_invader.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/video_game.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/black_joker.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/flower_playing_cards.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/game_die.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/dart.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/mahjong.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/clapper.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/memo.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/pencil.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/book.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/art.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/microphone.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/headphones.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/trumpet.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/saxophone.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/guitar.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/shoe.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/sandal.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/high_heel.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/lipstick.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/boot.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/shirt.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/tshirt.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/necktie.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/womans_clothes.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/dress.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/running_shirt_with_sash.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/jeans.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/kimono.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/bikini.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/ribbon.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/tophat.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/crown.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/womans_hat.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/mans_shoe.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/closed_umbrella.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/briefcase.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/handbag.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/pouch.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/purse.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/eyeglasses.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/fishing_pole_and_fish.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/coffee.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/tea.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/sake.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/baby_bottle.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/beer.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/beers.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/cocktail.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/tropical_drink.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/wine_glass.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/fork_and_knife.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/pizza.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/hamburger.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/fries.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/poultry_leg.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/meat_on_bone.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/spaghetti.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/curry.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/fried_shrimp.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/bento.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/sushi.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/fish_cake.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/rice_ball.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/rice_cracker.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/rice.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/ramen.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/stew.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/oden.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/dango.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/egg.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/bread.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/doughnut.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/custard.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/icecream.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/ice_cream.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/shaved_ice.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/birthday.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/cake.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/cookie.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/chocolate_bar.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/candy.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/lollipop.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/honey_pot.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/apple.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/green_apple.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/tangerine.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/lemon.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/cherries.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/grapes.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/watermelon.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/strawberry.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/peach.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/melon.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/banana.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/pear.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/pineapple.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/sweet_potato.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/eggplant.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/tomato.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/corn.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/house.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/house_with_garden.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/school.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/office.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/post_office.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/hospital.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/bank.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/convenience_store.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/love_hotel.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/hotel.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/wedding.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/church.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/department_store.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/european_post_office.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/city_sunrise.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/city_sunset.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/japanese_castle.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/european_castle.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/tent.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/factory.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/tokyo_tower.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/japan.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/mount_fuji.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/sunrise_over_mountains.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/sunrise.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/stars.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/statue_of_liberty.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/bridge_at_night.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/carousel_horse.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/rainbow.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/ferris_wheel.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/fountain.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/roller_coaster.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/ship.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/speedboat.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/boat.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/sailboat.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/rowboat.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/anchor.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/rocket.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/airplane.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/helicopter.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/steam_locomotive.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/tram.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/mountain_railway.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/bike.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/aerial_tramway.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/suspension_railway.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/mountain_cableway.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/tractor.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/blue_car.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/oncoming_automobile.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/car.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/red_car.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/taxi.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/oncoming_taxi.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/articulated_lorry.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/bus.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/oncoming_bus.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/rotating_light.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/police_car.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/oncoming_police_car.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/fire_engine.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/ambulance.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/minibus.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/truck.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/train.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/station.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/train2.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/bullettrain_front.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/bullettrain_side.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/light_rail.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/monorail.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/railway_car.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/trolleybus.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/ticket.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/fuelpump.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/vertical_traffic_light.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/traffic_light.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/warning.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/construction.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/beginner.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/atm.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/slot_machine.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/busstop.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/barber.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/hotsprings.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/checkered_flag.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/crossed_flags.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/izakaya_lantern.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/moyai.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/circus_tent.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/performing_arts.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/round_pushpin.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/triangular_flag_on_post.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/jp.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/kr.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/cn.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/us.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/fr.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/es.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/it.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/ru.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/gb.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/uk.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/de.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/one.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/two.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/three.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/four.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/five.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/six.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/seven.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/eight.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/nine.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/keycap_ten.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/1234.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/zero.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/hash.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/symbols.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/arrow_backward.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/arrow_down.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/arrow_forward.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/arrow_left.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/capital_abcd.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/abcd.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/abc.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/arrow_lower_left.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/arrow_lower_right.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/arrow_right.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/arrow_up.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/arrow_upper_left.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/arrow_upper_right.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/arrow_double_down.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/arrow_double_up.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/arrow_down_small.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/arrow_heading_down.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/arrow_heading_up.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/leftwards_arrow_with_hook.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/arrow_right_hook.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/left_right_arrow.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/arrow_up_down.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/arrow_up_small.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/arrows_clockwise.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/arrows_counterclockwise.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/rewind.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/fast_forward.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/information_source.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/ok.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/twisted_rightwards_arrows.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/repeat.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/repeat_one.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/new.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/top.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/up.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/cool.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/free.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/ng.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/cinema.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/koko.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/signal_strength.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/u5272.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/u5408.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/u55b6.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/u6307.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/u6708.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/u6709.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/u6e80.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/u7121.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/u7533.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/u7a7a.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/u7981.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/sa.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/restroom.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/mens.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/womens.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/baby_symbol.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/no_smoking.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/parking.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/wheelchair.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/metro.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/baggage_claim.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/accept.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/wc.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/potable_water.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/put_litter_in_its_place.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/secret.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/congratulations.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/m.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/passport_control.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/left_luggage.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/customs.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/ideograph_advantage.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/cl.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/sos.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/id.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/no_entry_sign.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/underage.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/no_mobile_phones.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/do_not_litter.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/non-potable_water.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/no_bicycles.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/no_pedestrians.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/children_crossing.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/no_entry.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/eight_spoked_asterisk.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/sparkle.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/eight_pointed_black_star.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/heart_decoration.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/vs.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/vibration_mode.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/mobile_phone_off.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/chart.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/currency_exchange.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/aries.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/taurus.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/gemini.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/cancer.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/leo.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/virgo.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/libra.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/scorpius.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/sagittarius.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/capricorn.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/aquarius.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/pisces.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/ophiuchus.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/six_pointed_star.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/negative_squared_cross_mark.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/a.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/b.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/ab.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/o2.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/diamond_shape_with_a_dot_inside.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/recycle.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/end.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/back.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/on.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/soon.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/clock1.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/clock130.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/clock10.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/clock1030.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/clock11.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/clock1130.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/clock12.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/clock1230.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/clock2.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/clock230.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/clock3.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/clock330.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/clock4.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/clock430.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/clock5.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/clock530.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/clock6.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/clock630.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/clock7.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/clock730.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/clock8.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/clock830.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/clock9.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/clock930.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/heavy_dollar_sign.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/copyright.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/registered.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/tm.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/x.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/heavy_exclamation_mark.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/bangbang.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/interrobang.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/o.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/heavy_multiplication_x.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/heavy_plus_sign.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/heavy_minus_sign.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/heavy_division_sign.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/white_flower.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/100.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/heavy_check_mark.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/ballot_box_with_check.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/radio_button.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/link.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/curly_loop.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/wavy_dash.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/part_alternation_mark.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/trident.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/black_small_square.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/white_small_square.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/black_medium_small_square.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/white_medium_small_square.png">
+<meta property="og:image" content="https://brywmzl.github.io/images/emojis/black_medium_square.png">
+<meta property="article:published_time" content="2021-03-26T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-09-21T04:43:12.728Z">
+<meta property="article:author" content="Brywmzl">
+<meta property="article:tag" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://brywmzl.github.io/images/emojis/smile.png">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.0">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Brywmzl</h5>
+          <a href="mailto:brywmzl@gmail.com" title="brywmzl@gmail.com" class="mail">brywmzl@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Start
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/Notes/Bookmark"  >
+                <i class="icon icon-lg icon-bookmark"></i>
+                Bookmark
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/gallery"  >
+                <i class="icon icon-lg icon-envira"></i>
+                Gallery
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/Hexo/Aplayer"  >
+                <i class="icon icon-lg icon-music"></i>
+                Music
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/brywmzl" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://brywmzl.gitbook.io/document/" target="_blank" >
+                <i class="icon icon-lg icon-book"></i>
+                GitBook
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://brywmzl.mybluemix.net/" target="_blank" >
+                <i class="icon icon-lg icon-hdd-o"></i>
+                OneDrive
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main" style="background-image:url(/img/background.jpg)">
+        <header class="top-header" id="header">
+    <div class="flex-row" style="background-image:url(/img/bar.jpg)">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">hexo-tag-emojis - 博客表情符号</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image:url(/img/bar.jpg)">
+
+    <div class="container fade-scale">
+        <h1 class="title">hexo-tag-emojis - 博客表情符号</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2021-03-26T16:00:00.000Z" itemprop="datePublished" class="page-time">
+  2021-03-27
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#emoji插件"><span class="post-toc-number">1.</span> <span class="post-toc-text">emoji插件</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-Hexo/hexo-tag-emojis"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">hexo-tag-emojis - 博客表情符号</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2021-03-27 00:00:00" datetime="2021-03-26T16:00:00.000Z"  itemprop="datePublished">2021-03-27</time>
+
+            
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+			<p>This is a hexo tag plugin which allows you to insert emojis on your blog posts.</p>
+<a id="more"></a>
+<p><a href="https://github.com/sergiolepore/hexo-tag-emojis" target="_blank" rel="noopener">hexo-tag-emojis</a></p>
+<figure class="highlight plain"><figcaption><span>Then run this command:</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo emojis install</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>To uninstall:</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo emojis remove</span><br></pre></td></tr></table></figure>
+<h2 id="emoji插件"><a href="#emoji插件" class="headerlink" title="emoji插件"></a>emoji插件</h2><p>需要在 hexo 的生成阶段把文章中的 emoji 标记渲染为图片或者 emoji 字体图标<br><a href="http://www.emoji-cheat-sheet.com/" target="_blank" rel="noopener">emoji 名称查看</a></p>
+<blockquote>
+<p><img src="/images/emojis/smile.png" width="64" height="64" class=" emoji nofancybox" title="smile"> <img src="/images/emojis/trollface.png" width="64" height="64" class=" emoji nofancybox" title="trollface"><br></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% emoji smile 64 %&#125; &#123;% emoji trollface 64 %&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+博客界面进行调整 导致部分界面无法按照原来的主题进行渲染 <img width="20" height="20" class=" emoji nofancybox" title="alien" src="/images/emojis/alien.png"><p>
+本次改用Hexo博客 主题是indigo <img width="20" height="20" class=" emoji nofancybox" title="alien" src="/images/emojis/alien.png"><br>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% emoji_block %&#125;</span><br><span class="line">博客界面进行调整 导致部分界面无法按照原来的主题进行渲染 :alien:&lt;p&gt;</span><br><span class="line">本次改用Hexo博客 主题是indigo :alien:</span><br><span class="line">&#123;% endemoji_block %&#125;</span><br></pre></td></tr></table></figure>
+<img width="64" height="64" class=" emoji nofancybox" title="bowtie" src="/images/emojis/bowtie.png">
+<img width="64" height="64" class=" emoji nofancybox" title="smile" src="/images/emojis/smile.png">
+<img width="64" height="64" class=" emoji nofancybox" title="laughing" src="/images/emojis/laughing.png">
+<img width="64" height="64" class=" emoji nofancybox" title="blush" src="/images/emojis/blush.png">
+<img width="64" height="64" class=" emoji nofancybox" title="smiley" src="/images/emojis/smiley.png">
+<img width="64" height="64" class=" emoji nofancybox" title="relaxed" src="/images/emojis/relaxed.png">
+<img width="64" height="64" class=" emoji nofancybox" title="smirk" src="/images/emojis/smirk.png">
+<img width="64" height="64" class=" emoji nofancybox" title="heart_eyes" src="/images/emojis/heart_eyes.png">
+<img width="64" height="64" class=" emoji nofancybox" title="kissing_heart" src="/images/emojis/kissing_heart.png">
+<img width="64" height="64" class=" emoji nofancybox" title="kissing_closed_eyes" src="/images/emojis/kissing_closed_eyes.png">
+<img width="64" height="64" class=" emoji nofancybox" title="flushed" src="/images/emojis/flushed.png">
+<img width="64" height="64" class=" emoji nofancybox" title="relieved" src="/images/emojis/relieved.png">
+<img width="64" height="64" class=" emoji nofancybox" title="satisfied" src="/images/emojis/satisfied.png">
+<img width="64" height="64" class=" emoji nofancybox" title="grin" src="/images/emojis/grin.png">
+<img width="64" height="64" class=" emoji nofancybox" title="wink" src="/images/emojis/wink.png">
+<img width="64" height="64" class=" emoji nofancybox" title="stuck_out_tongue_winking_eye" src="/images/emojis/stuck_out_tongue_winking_eye.png">
+<img width="64" height="64" class=" emoji nofancybox" title="stuck_out_tongue_closed_eyes" src="/images/emojis/stuck_out_tongue_closed_eyes.png">
+<img width="64" height="64" class=" emoji nofancybox" title="grinning" src="/images/emojis/grinning.png">
+<img width="64" height="64" class=" emoji nofancybox" title="kissing" src="/images/emojis/kissing.png">
+<img width="64" height="64" class=" emoji nofancybox" title="kissing_smiling_eyes" src="/images/emojis/kissing_smiling_eyes.png">
+<img width="64" height="64" class=" emoji nofancybox" title="stuck_out_tongue" src="/images/emojis/stuck_out_tongue.png">
+<img width="64" height="64" class=" emoji nofancybox" title="sleeping" src="/images/emojis/sleeping.png">
+<img width="64" height="64" class=" emoji nofancybox" title="worried" src="/images/emojis/worried.png">
+<img width="64" height="64" class=" emoji nofancybox" title="frowning" src="/images/emojis/frowning.png">
+<img width="64" height="64" class=" emoji nofancybox" title="anguished" src="/images/emojis/anguished.png">
+<img width="64" height="64" class=" emoji nofancybox" title="open_mouth" src="/images/emojis/open_mouth.png">
+<img width="64" height="64" class=" emoji nofancybox" title="grimacing" src="/images/emojis/grimacing.png">
+<img width="64" height="64" class=" emoji nofancybox" title="confused" src="/images/emojis/confused.png">
+<img width="64" height="64" class=" emoji nofancybox" title="hushed" src="/images/emojis/hushed.png">
+<img width="64" height="64" class=" emoji nofancybox" title="expressionless" src="/images/emojis/expressionless.png">
+<img width="64" height="64" class=" emoji nofancybox" title="unamused" src="/images/emojis/unamused.png">
+<img width="64" height="64" class=" emoji nofancybox" title="sweat_smile" src="/images/emojis/sweat_smile.png">
+<img width="64" height="64" class=" emoji nofancybox" title="sweat" src="/images/emojis/sweat.png">
+<img width="64" height="64" class=" emoji nofancybox" title="disappointed_relieved" src="/images/emojis/disappointed_relieved.png">
+<img width="64" height="64" class=" emoji nofancybox" title="weary" src="/images/emojis/weary.png">
+<img width="64" height="64" class=" emoji nofancybox" title="pensive" src="/images/emojis/pensive.png">
+<img width="64" height="64" class=" emoji nofancybox" title="disappointed" src="/images/emojis/disappointed.png">
+<img width="64" height="64" class=" emoji nofancybox" title="confounded" src="/images/emojis/confounded.png">
+<img width="64" height="64" class=" emoji nofancybox" title="fearful" src="/images/emojis/fearful.png">
+<img width="64" height="64" class=" emoji nofancybox" title="cold_sweat" src="/images/emojis/cold_sweat.png">
+<img width="64" height="64" class=" emoji nofancybox" title="persevere" src="/images/emojis/persevere.png">
+<img width="64" height="64" class=" emoji nofancybox" title="cry" src="/images/emojis/cry.png">
+<img width="64" height="64" class=" emoji nofancybox" title="sob" src="/images/emojis/sob.png">
+<img width="64" height="64" class=" emoji nofancybox" title="joy" src="/images/emojis/joy.png">
+<img width="64" height="64" class=" emoji nofancybox" title="astonished" src="/images/emojis/astonished.png">
+<img width="64" height="64" class=" emoji nofancybox" title="scream" src="/images/emojis/scream.png">
+<img width="64" height="64" class=" emoji nofancybox" title="neckbeard" src="/images/emojis/neckbeard.png">
+<img width="64" height="64" class=" emoji nofancybox" title="tired_face" src="/images/emojis/tired_face.png">
+<img width="64" height="64" class=" emoji nofancybox" title="angry" src="/images/emojis/angry.png">
+<img width="64" height="64" class=" emoji nofancybox" title="rage" src="/images/emojis/rage.png">
+<img width="64" height="64" class=" emoji nofancybox" title="triumph" src="/images/emojis/triumph.png">
+<img width="64" height="64" class=" emoji nofancybox" title="sleepy" src="/images/emojis/sleepy.png">
+<img width="64" height="64" class=" emoji nofancybox" title="yum" src="/images/emojis/yum.png">
+<img width="64" height="64" class=" emoji nofancybox" title="mask" src="/images/emojis/mask.png">
+<img width="64" height="64" class=" emoji nofancybox" title="sunglasses" src="/images/emojis/sunglasses.png">
+<img width="64" height="64" class=" emoji nofancybox" title="dizzy_face" src="/images/emojis/dizzy_face.png">
+<img width="64" height="64" class=" emoji nofancybox" title="imp" src="/images/emojis/imp.png">
+<img width="64" height="64" class=" emoji nofancybox" title="smiling_imp" src="/images/emojis/smiling_imp.png">
+<img width="64" height="64" class=" emoji nofancybox" title="neutral_face" src="/images/emojis/neutral_face.png">
+<img width="64" height="64" class=" emoji nofancybox" title="no_mouth" src="/images/emojis/no_mouth.png">
+<img width="64" height="64" class=" emoji nofancybox" title="innocent" src="/images/emojis/innocent.png">
+<img width="64" height="64" class=" emoji nofancybox" title="alien" src="/images/emojis/alien.png">
+<img width="64" height="64" class=" emoji nofancybox" title="yellow_heart" src="/images/emojis/yellow_heart.png">
+<img width="64" height="64" class=" emoji nofancybox" title="blue_heart" src="/images/emojis/blue_heart.png">
+<img width="64" height="64" class=" emoji nofancybox" title="purple_heart" src="/images/emojis/purple_heart.png">
+<img width="64" height="64" class=" emoji nofancybox" title="heart" src="/images/emojis/heart.png">
+<img width="64" height="64" class=" emoji nofancybox" title="green_heart" src="/images/emojis/green_heart.png">
+<img width="64" height="64" class=" emoji nofancybox" title="broken_heart" src="/images/emojis/broken_heart.png">
+<img width="64" height="64" class=" emoji nofancybox" title="heartbeat" src="/images/emojis/heartbeat.png">
+<img width="64" height="64" class=" emoji nofancybox" title="heartpulse" src="/images/emojis/heartpulse.png">
+<img width="64" height="64" class=" emoji nofancybox" title="two_hearts" src="/images/emojis/two_hearts.png">
+<img width="64" height="64" class=" emoji nofancybox" title="revolving_hearts" src="/images/emojis/revolving_hearts.png">
+<img width="64" height="64" class=" emoji nofancybox" title="cupid" src="/images/emojis/cupid.png">
+<img width="64" height="64" class=" emoji nofancybox" title="sparkling_heart" src="/images/emojis/sparkling_heart.png">
+<img width="64" height="64" class=" emoji nofancybox" title="sparkles" src="/images/emojis/sparkles.png">
+<img width="64" height="64" class=" emoji nofancybox" title="star" src="/images/emojis/star.png">
+<img width="64" height="64" class=" emoji nofancybox" title="star2" src="/images/emojis/star2.png">
+<img width="64" height="64" class=" emoji nofancybox" title="dizzy" src="/images/emojis/dizzy.png">
+<img width="64" height="64" class=" emoji nofancybox" title="boom" src="/images/emojis/boom.png">
+<img width="64" height="64" class=" emoji nofancybox" title="collision" src="/images/emojis/collision.png">
+<img width="64" height="64" class=" emoji nofancybox" title="anger" src="/images/emojis/anger.png">
+<img width="64" height="64" class=" emoji nofancybox" title="exclamation" src="/images/emojis/exclamation.png">
+<img width="64" height="64" class=" emoji nofancybox" title="question" src="/images/emojis/question.png">
+<img width="64" height="64" class=" emoji nofancybox" title="grey_exclamation" src="/images/emojis/grey_exclamation.png">
+<img width="64" height="64" class=" emoji nofancybox" title="grey_question" src="/images/emojis/grey_question.png">
+<img width="64" height="64" class=" emoji nofancybox" title="zzz" src="/images/emojis/zzz.png">
+<img width="64" height="64" class=" emoji nofancybox" title="dash" src="/images/emojis/dash.png">
+<img width="64" height="64" class=" emoji nofancybox" title="sweat_drops" src="/images/emojis/sweat_drops.png">
+<img width="64" height="64" class=" emoji nofancybox" title="notes" src="/images/emojis/notes.png">
+<img width="64" height="64" class=" emoji nofancybox" title="musical_note" src="/images/emojis/musical_note.png">
+<img width="64" height="64" class=" emoji nofancybox" title="fire" src="/images/emojis/fire.png">
+<img width="64" height="64" class=" emoji nofancybox" title="hankey" src="/images/emojis/hankey.png">
+<img width="64" height="64" class=" emoji nofancybox" title="poop" src="/images/emojis/poop.png">
+<img width="64" height="64" class=" emoji nofancybox" title="shit" src="/images/emojis/shit.png">
+<img width="64" height="64" class=" emoji nofancybox" title="plus1" src="/images/emojis/plus1.png">
+<img width="64" height="64" class=" emoji nofancybox" title="thumbsup" src="/images/emojis/thumbsup.png">
+<img width="64" height="64" class=" emoji nofancybox" title="-1" src="/images/emojis/-1.png">
+<img width="64" height="64" class=" emoji nofancybox" title="thumbsdown" src="/images/emojis/thumbsdown.png">
+<img width="64" height="64" class=" emoji nofancybox" title="ok_hand" src="/images/emojis/ok_hand.png">
+<img width="64" height="64" class=" emoji nofancybox" title="punch" src="/images/emojis/punch.png">
+<img width="64" height="64" class=" emoji nofancybox" title="facepunch" src="/images/emojis/facepunch.png">
+<img width="64" height="64" class=" emoji nofancybox" title="fist" src="/images/emojis/fist.png">
+<img width="64" height="64" class=" emoji nofancybox" title="v" src="/images/emojis/v.png">
+<img width="64" height="64" class=" emoji nofancybox" title="wave" src="/images/emojis/wave.png">
+<img width="64" height="64" class=" emoji nofancybox" title="hand" src="/images/emojis/hand.png">
+<img width="64" height="64" class=" emoji nofancybox" title="raised_hand" src="/images/emojis/raised_hand.png">
+<img width="64" height="64" class=" emoji nofancybox" title="open_hands" src="/images/emojis/open_hands.png">
+<img width="64" height="64" class=" emoji nofancybox" title="point_up" src="/images/emojis/point_up.png">
+<img width="64" height="64" class=" emoji nofancybox" title="point_down" src="/images/emojis/point_down.png">
+<img width="64" height="64" class=" emoji nofancybox" title="point_left" src="/images/emojis/point_left.png">
+<img width="64" height="64" class=" emoji nofancybox" title="point_right" src="/images/emojis/point_right.png">
+<img width="64" height="64" class=" emoji nofancybox" title="raised_hands" src="/images/emojis/raised_hands.png">
+<img width="64" height="64" class=" emoji nofancybox" title="pray" src="/images/emojis/pray.png">
+<img width="64" height="64" class=" emoji nofancybox" title="point_up_2" src="/images/emojis/point_up_2.png">
+<img width="64" height="64" class=" emoji nofancybox" title="clap" src="/images/emojis/clap.png">
+<img width="64" height="64" class=" emoji nofancybox" title="muscle" src="/images/emojis/muscle.png">
+<img width="64" height="64" class=" emoji nofancybox" title="metal" src="/images/emojis/metal.png">
+<img width="64" height="64" class=" emoji nofancybox" title="fu" src="/images/emojis/fu.png">
+<img width="64" height="64" class=" emoji nofancybox" title="runner" src="/images/emojis/runner.png">
+<img width="64" height="64" class=" emoji nofancybox" title="running" src="/images/emojis/running.png">
+<img width="64" height="64" class=" emoji nofancybox" title="couple" src="/images/emojis/couple.png">
+<img width="64" height="64" class=" emoji nofancybox" title="family" src="/images/emojis/family.png">
+<img width="64" height="64" class=" emoji nofancybox" title="two_men_holding_hands" src="/images/emojis/two_men_holding_hands.png">
+<img width="64" height="64" class=" emoji nofancybox" title="two_women_holding_hands" src="/images/emojis/two_women_holding_hands.png">
+<img width="64" height="64" class=" emoji nofancybox" title="dancer" src="/images/emojis/dancer.png">
+<img width="64" height="64" class=" emoji nofancybox" title="dancers" src="/images/emojis/dancers.png">
+<img width="64" height="64" class=" emoji nofancybox" title="ok_woman" src="/images/emojis/ok_woman.png">
+<img width="64" height="64" class=" emoji nofancybox" title="no_good" src="/images/emojis/no_good.png">
+<img width="64" height="64" class=" emoji nofancybox" title="information_desk_person" src="/images/emojis/information_desk_person.png">
+<img width="64" height="64" class=" emoji nofancybox" title="raising_hand" src="/images/emojis/raising_hand.png">
+<img width="64" height="64" class=" emoji nofancybox" title="bride_with_veil" src="/images/emojis/bride_with_veil.png">
+<img width="64" height="64" class=" emoji nofancybox" title="person_with_pouting_face" src="/images/emojis/person_with_pouting_face.png">
+<img width="64" height="64" class=" emoji nofancybox" title="person_frowning" src="/images/emojis/person_frowning.png">
+<img width="64" height="64" class=" emoji nofancybox" title="bow" src="/images/emojis/bow.png">
+<img width="64" height="64" class=" emoji nofancybox" title="couplekiss" src="/images/emojis/couplekiss.png">
+<img width="64" height="64" class=" emoji nofancybox" title="couple_with_heart" src="/images/emojis/couple_with_heart.png">
+<img width="64" height="64" class=" emoji nofancybox" title="massage" src="/images/emojis/massage.png">
+<img width="64" height="64" class=" emoji nofancybox" title="haircut" src="/images/emojis/haircut.png">
+<img width="64" height="64" class=" emoji nofancybox" title="nail_care" src="/images/emojis/nail_care.png">
+<img width="64" height="64" class=" emoji nofancybox" title="boy" src="/images/emojis/boy.png">
+<img width="64" height="64" class=" emoji nofancybox" title="girl" src="/images/emojis/girl.png">
+<img width="64" height="64" class=" emoji nofancybox" title="woman" src="/images/emojis/woman.png">
+<img width="64" height="64" class=" emoji nofancybox" title="man" src="/images/emojis/man.png">
+<img width="64" height="64" class=" emoji nofancybox" title="baby" src="/images/emojis/baby.png">
+<img width="64" height="64" class=" emoji nofancybox" title="older_woman" src="/images/emojis/older_woman.png">
+<img width="64" height="64" class=" emoji nofancybox" title="older_man" src="/images/emojis/older_man.png">
+<img width="64" height="64" class=" emoji nofancybox" title="person_with_blond_hair" src="/images/emojis/person_with_blond_hair.png">
+<img width="64" height="64" class=" emoji nofancybox" title="man_with_gua_pi_mao" src="/images/emojis/man_with_gua_pi_mao.png">
+<img width="64" height="64" class=" emoji nofancybox" title="man_with_turban" src="/images/emojis/man_with_turban.png">
+<img width="64" height="64" class=" emoji nofancybox" title="construction_worker" src="/images/emojis/construction_worker.png">
+<img width="64" height="64" class=" emoji nofancybox" title="cop" src="/images/emojis/cop.png">
+<img width="64" height="64" class=" emoji nofancybox" title="angel" src="/images/emojis/angel.png">
+<img width="64" height="64" class=" emoji nofancybox" title="princess" src="/images/emojis/princess.png">
+<img width="64" height="64" class=" emoji nofancybox" title="smiley_cat" src="/images/emojis/smiley_cat.png">
+<img width="64" height="64" class=" emoji nofancybox" title="smile_cat" src="/images/emojis/smile_cat.png">
+<img width="64" height="64" class=" emoji nofancybox" title="heart_eyes_cat" src="/images/emojis/heart_eyes_cat.png">
+<img width="64" height="64" class=" emoji nofancybox" title="kissing_cat" src="/images/emojis/kissing_cat.png">
+<img width="64" height="64" class=" emoji nofancybox" title="smirk_cat" src="/images/emojis/smirk_cat.png">
+<img width="64" height="64" class=" emoji nofancybox" title="scream_cat" src="/images/emojis/scream_cat.png">
+<img width="64" height="64" class=" emoji nofancybox" title="crying_cat_face" src="/images/emojis/crying_cat_face.png">
+<img width="64" height="64" class=" emoji nofancybox" title="joy_cat" src="/images/emojis/joy_cat.png">
+<img width="64" height="64" class=" emoji nofancybox" title="pouting_cat" src="/images/emojis/pouting_cat.png">
+<img width="64" height="64" class=" emoji nofancybox" title="japanese_ogre" src="/images/emojis/japanese_ogre.png">
+<img width="64" height="64" class=" emoji nofancybox" title="japanese_goblin" src="/images/emojis/japanese_goblin.png">
+<img width="64" height="64" class=" emoji nofancybox" title="see_no_evil" src="/images/emojis/see_no_evil.png">
+<img width="64" height="64" class=" emoji nofancybox" title="hear_no_evil" src="/images/emojis/hear_no_evil.png">
+<img width="64" height="64" class=" emoji nofancybox" title="speak_no_evil" src="/images/emojis/speak_no_evil.png">
+<img width="64" height="64" class=" emoji nofancybox" title="guardsman" src="/images/emojis/guardsman.png">
+<img width="64" height="64" class=" emoji nofancybox" title="skull" src="/images/emojis/skull.png">
+<img width="64" height="64" class=" emoji nofancybox" title="feet" src="/images/emojis/feet.png">
+<img width="64" height="64" class=" emoji nofancybox" title="lips" src="/images/emojis/lips.png">
+<img width="64" height="64" class=" emoji nofancybox" title="kiss" src="/images/emojis/kiss.png">
+<img width="64" height="64" class=" emoji nofancybox" title="droplet" src="/images/emojis/droplet.png">
+<img width="64" height="64" class=" emoji nofancybox" title="ear" src="/images/emojis/ear.png">
+<img width="64" height="64" class=" emoji nofancybox" title="eyes" src="/images/emojis/eyes.png">
+<img width="64" height="64" class=" emoji nofancybox" title="nose" src="/images/emojis/nose.png">
+<img width="64" height="64" class=" emoji nofancybox" title="tongue" src="/images/emojis/tongue.png">
+<img width="64" height="64" class=" emoji nofancybox" title="love_letter" src="/images/emojis/love_letter.png">
+<img width="64" height="64" class=" emoji nofancybox" title="bust_in_silhouette" src="/images/emojis/bust_in_silhouette.png">
+<img width="64" height="64" class=" emoji nofancybox" title="busts_in_silhouette" src="/images/emojis/busts_in_silhouette.png">
+<img width="64" height="64" class=" emoji nofancybox" title="speech_balloon" src="/images/emojis/speech_balloon.png">
+<img width="64" height="64" class=" emoji nofancybox" title="thought_balloon" src="/images/emojis/thought_balloon.png">
+<img width="64" height="64" class=" emoji nofancybox" title="feelsgood" src="/images/emojis/feelsgood.png">
+<img width="64" height="64" class=" emoji nofancybox" title="finnadie" src="/images/emojis/finnadie.png">
+<img width="64" height="64" class=" emoji nofancybox" title="goberserk" src="/images/emojis/goberserk.png">
+<img width="64" height="64" class=" emoji nofancybox" title="godmode" src="/images/emojis/godmode.png">
+<img width="64" height="64" class=" emoji nofancybox" title="hurtrealbad" src="/images/emojis/hurtrealbad.png">
+<img width="64" height="64" class=" emoji nofancybox" title="rage1" src="/images/emojis/rage1.png">
+<img width="64" height="64" class=" emoji nofancybox" title="rage2" src="/images/emojis/rage2.png">
+<img width="64" height="64" class=" emoji nofancybox" title="rage3" src="/images/emojis/rage3.png">
+<img width="64" height="64" class=" emoji nofancybox" title="rage4" src="/images/emojis/rage4.png">
+<img width="64" height="64" class=" emoji nofancybox" title="suspect" src="/images/emojis/suspect.png">
+<img width="64" height="64" class=" emoji nofancybox" title="trollface" src="/images/emojis/trollface.png">
+<img width="64" height="64" class=" emoji nofancybox" title="sunny" src="/images/emojis/sunny.png">
+<img width="64" height="64" class=" emoji nofancybox" title="umbrella" src="/images/emojis/umbrella.png">
+<img width="64" height="64" class=" emoji nofancybox" title="cloud" src="/images/emojis/cloud.png">
+<img width="64" height="64" class=" emoji nofancybox" title="snowflake" src="/images/emojis/snowflake.png">
+<img width="64" height="64" class=" emoji nofancybox" title="snowman" src="/images/emojis/snowman.png">
+<img width="64" height="64" class=" emoji nofancybox" title="zap" src="/images/emojis/zap.png">
+<img width="64" height="64" class=" emoji nofancybox" title="cyclone" src="/images/emojis/cyclone.png">
+<img width="64" height="64" class=" emoji nofancybox" title="foggy" src="/images/emojis/foggy.png">
+<img width="64" height="64" class=" emoji nofancybox" title="ocean" src="/images/emojis/ocean.png">
+<img width="64" height="64" class=" emoji nofancybox" title="cat" src="/images/emojis/cat.png">
+<img width="64" height="64" class=" emoji nofancybox" title="dog" src="/images/emojis/dog.png">
+<img width="64" height="64" class=" emoji nofancybox" title="mouse" src="/images/emojis/mouse.png">
+<img width="64" height="64" class=" emoji nofancybox" title="hamster" src="/images/emojis/hamster.png">
+<img width="64" height="64" class=" emoji nofancybox" title="rabbit" src="/images/emojis/rabbit.png">
+<img width="64" height="64" class=" emoji nofancybox" title="wolf" src="/images/emojis/wolf.png">
+<img width="64" height="64" class=" emoji nofancybox" title="frog" src="/images/emojis/frog.png">
+<img width="64" height="64" class=" emoji nofancybox" title="tiger" src="/images/emojis/tiger.png">
+<img width="64" height="64" class=" emoji nofancybox" title="koala" src="/images/emojis/koala.png">
+<img width="64" height="64" class=" emoji nofancybox" title="bear" src="/images/emojis/bear.png">
+<img width="64" height="64" class=" emoji nofancybox" title="pig" src="/images/emojis/pig.png">
+<img width="64" height="64" class=" emoji nofancybox" title="pig_nose" src="/images/emojis/pig_nose.png">
+<img width="64" height="64" class=" emoji nofancybox" title="cow" src="/images/emojis/cow.png">
+<img width="64" height="64" class=" emoji nofancybox" title="boar" src="/images/emojis/boar.png">
+<img width="64" height="64" class=" emoji nofancybox" title="monkey_face" src="/images/emojis/monkey_face.png">
+<img width="64" height="64" class=" emoji nofancybox" title="monkey" src="/images/emojis/monkey.png">
+<img width="64" height="64" class=" emoji nofancybox" title="horse" src="/images/emojis/horse.png">
+<img width="64" height="64" class=" emoji nofancybox" title="racehorse" src="/images/emojis/racehorse.png">
+<img width="64" height="64" class=" emoji nofancybox" title="camel" src="/images/emojis/camel.png">
+<img width="64" height="64" class=" emoji nofancybox" title="sheep" src="/images/emojis/sheep.png">
+<img width="64" height="64" class=" emoji nofancybox" title="elephant" src="/images/emojis/elephant.png">
+<img width="64" height="64" class=" emoji nofancybox" title="panda_face" src="/images/emojis/panda_face.png">
+<img width="64" height="64" class=" emoji nofancybox" title="snake" src="/images/emojis/snake.png">
+<img width="64" height="64" class=" emoji nofancybox" title="bird" src="/images/emojis/bird.png">
+<img width="64" height="64" class=" emoji nofancybox" title="baby_chick" src="/images/emojis/baby_chick.png">
+<img width="64" height="64" class=" emoji nofancybox" title="hatched_chick" src="/images/emojis/hatched_chick.png">
+<img width="64" height="64" class=" emoji nofancybox" title="hatching_chick" src="/images/emojis/hatching_chick.png">
+<img width="64" height="64" class=" emoji nofancybox" title="chicken" src="/images/emojis/chicken.png">
+<img width="64" height="64" class=" emoji nofancybox" title="penguin" src="/images/emojis/penguin.png">
+<img width="64" height="64" class=" emoji nofancybox" title="turtle" src="/images/emojis/turtle.png">
+<img width="64" height="64" class=" emoji nofancybox" title="bug" src="/images/emojis/bug.png">
+<img width="64" height="64" class=" emoji nofancybox" title="honeybee" src="/images/emojis/honeybee.png">
+<img width="64" height="64" class=" emoji nofancybox" title="ant" src="/images/emojis/ant.png">
+<img width="64" height="64" class=" emoji nofancybox" title="beetle" src="/images/emojis/beetle.png">
+<img width="64" height="64" class=" emoji nofancybox" title="snail" src="/images/emojis/snail.png">
+<img width="64" height="64" class=" emoji nofancybox" title="octopus" src="/images/emojis/octopus.png">
+<img width="64" height="64" class=" emoji nofancybox" title="tropical_fish" src="/images/emojis/tropical_fish.png">
+<img width="64" height="64" class=" emoji nofancybox" title="fish" src="/images/emojis/fish.png">
+<img width="64" height="64" class=" emoji nofancybox" title="whale" src="/images/emojis/whale.png">
+<img width="64" height="64" class=" emoji nofancybox" title="whale2" src="/images/emojis/whale2.png">
+<img width="64" height="64" class=" emoji nofancybox" title="dolphin" src="/images/emojis/dolphin.png">
+<img width="64" height="64" class=" emoji nofancybox" title="cow2" src="/images/emojis/cow2.png">
+<img width="64" height="64" class=" emoji nofancybox" title="ram" src="/images/emojis/ram.png">
+<img width="64" height="64" class=" emoji nofancybox" title="rat" src="/images/emojis/rat.png">
+<img width="64" height="64" class=" emoji nofancybox" title="water_buffalo" src="/images/emojis/water_buffalo.png">
+<img width="64" height="64" class=" emoji nofancybox" title="tiger2" src="/images/emojis/tiger2.png">
+<img width="64" height="64" class=" emoji nofancybox" title="rabbit2" src="/images/emojis/rabbit2.png">
+<img width="64" height="64" class=" emoji nofancybox" title="dragon" src="/images/emojis/dragon.png">
+<img width="64" height="64" class=" emoji nofancybox" title="goat" src="/images/emojis/goat.png">
+<img width="64" height="64" class=" emoji nofancybox" title="rooster" src="/images/emojis/rooster.png">
+<img width="64" height="64" class=" emoji nofancybox" title="dog2" src="/images/emojis/dog2.png">
+<img width="64" height="64" class=" emoji nofancybox" title="pig2" src="/images/emojis/pig2.png">
+<img width="64" height="64" class=" emoji nofancybox" title="mouse2" src="/images/emojis/mouse2.png">
+<img width="64" height="64" class=" emoji nofancybox" title="ox" src="/images/emojis/ox.png">
+<img width="64" height="64" class=" emoji nofancybox" title="dragon_face" src="/images/emojis/dragon_face.png">
+<img width="64" height="64" class=" emoji nofancybox" title="blowfish" src="/images/emojis/blowfish.png">
+<img width="64" height="64" class=" emoji nofancybox" title="crocodile" src="/images/emojis/crocodile.png">
+<img width="64" height="64" class=" emoji nofancybox" title="dromedary_camel" src="/images/emojis/dromedary_camel.png">
+<img width="64" height="64" class=" emoji nofancybox" title="leopard" src="/images/emojis/leopard.png">
+<img width="64" height="64" class=" emoji nofancybox" title="cat2" src="/images/emojis/cat2.png">
+<img width="64" height="64" class=" emoji nofancybox" title="poodle" src="/images/emojis/poodle.png">
+<img width="64" height="64" class=" emoji nofancybox" title="paw_prints" src="/images/emojis/paw_prints.png">
+<img width="64" height="64" class=" emoji nofancybox" title="bouquet" src="/images/emojis/bouquet.png">
+<img width="64" height="64" class=" emoji nofancybox" title="cherry_blossom" src="/images/emojis/cherry_blossom.png">
+<img width="64" height="64" class=" emoji nofancybox" title="tulip" src="/images/emojis/tulip.png">
+<img width="64" height="64" class=" emoji nofancybox" title="four_leaf_clover" src="/images/emojis/four_leaf_clover.png">
+<img width="64" height="64" class=" emoji nofancybox" title="rose" src="/images/emojis/rose.png">
+<img width="64" height="64" class=" emoji nofancybox" title="sunflower" src="/images/emojis/sunflower.png">
+<img width="64" height="64" class=" emoji nofancybox" title="hibiscus" src="/images/emojis/hibiscus.png">
+<img width="64" height="64" class=" emoji nofancybox" title="maple_leaf" src="/images/emojis/maple_leaf.png">
+<img width="64" height="64" class=" emoji nofancybox" title="leaves" src="/images/emojis/leaves.png">
+<img width="64" height="64" class=" emoji nofancybox" title="fallen_leaf" src="/images/emojis/fallen_leaf.png">
+<img width="64" height="64" class=" emoji nofancybox" title="herb" src="/images/emojis/herb.png">
+<img width="64" height="64" class=" emoji nofancybox" title="mushroom" src="/images/emojis/mushroom.png">
+<img width="64" height="64" class=" emoji nofancybox" title="cactus" src="/images/emojis/cactus.png">
+<img width="64" height="64" class=" emoji nofancybox" title="palm_tree" src="/images/emojis/palm_tree.png">
+<img width="64" height="64" class=" emoji nofancybox" title="evergreen_tree" src="/images/emojis/evergreen_tree.png">
+<img width="64" height="64" class=" emoji nofancybox" title="deciduous_tree" src="/images/emojis/deciduous_tree.png">
+<img width="64" height="64" class=" emoji nofancybox" title="chestnut" src="/images/emojis/chestnut.png">
+<img width="64" height="64" class=" emoji nofancybox" title="seedling" src="/images/emojis/seedling.png">
+<img width="64" height="64" class=" emoji nofancybox" title="blossom" src="/images/emojis/blossom.png">
+<img width="64" height="64" class=" emoji nofancybox" title="ear_of_rice" src="/images/emojis/ear_of_rice.png">
+<img width="64" height="64" class=" emoji nofancybox" title="shell" src="/images/emojis/shell.png">
+<img width="64" height="64" class=" emoji nofancybox" title="globe_with_meridians" src="/images/emojis/globe_with_meridians.png">
+<img width="64" height="64" class=" emoji nofancybox" title="sun_with_face" src="/images/emojis/sun_with_face.png">
+<img width="64" height="64" class=" emoji nofancybox" title="full_moon_with_face" src="/images/emojis/full_moon_with_face.png">
+<img width="64" height="64" class=" emoji nofancybox" title="new_moon_with_face" src="/images/emojis/new_moon_with_face.png">
+<img width="64" height="64" class=" emoji nofancybox" title="new_moon" src="/images/emojis/new_moon.png">
+<img width="64" height="64" class=" emoji nofancybox" title="waxing_crescent_moon" src="/images/emojis/waxing_crescent_moon.png">
+<img width="64" height="64" class=" emoji nofancybox" title="first_quarter_moon" src="/images/emojis/first_quarter_moon.png">
+<img width="64" height="64" class=" emoji nofancybox" title="waxing_gibbous_moon" src="/images/emojis/waxing_gibbous_moon.png">
+<img width="64" height="64" class=" emoji nofancybox" title="full_moon" src="/images/emojis/full_moon.png">
+<img width="64" height="64" class=" emoji nofancybox" title="waning_gibbous_moon" src="/images/emojis/waning_gibbous_moon.png">
+<img width="64" height="64" class=" emoji nofancybox" title="last_quarter_moon" src="/images/emojis/last_quarter_moon.png">
+<img width="64" height="64" class=" emoji nofancybox" title="waning_crescent_moon" src="/images/emojis/waning_crescent_moon.png">
+<img width="64" height="64" class=" emoji nofancybox" title="last_quarter_moon_with_face" src="/images/emojis/last_quarter_moon_with_face.png">
+<img width="64" height="64" class=" emoji nofancybox" title="first_quarter_moon_with_face" src="/images/emojis/first_quarter_moon_with_face.png">
+<img width="64" height="64" class=" emoji nofancybox" title="crescent_moon" src="/images/emojis/crescent_moon.png">
+<img width="64" height="64" class=" emoji nofancybox" title="earth_africa" src="/images/emojis/earth_africa.png">
+<img width="64" height="64" class=" emoji nofancybox" title="earth_americas" src="/images/emojis/earth_americas.png">
+<img width="64" height="64" class=" emoji nofancybox" title="earth_asia" src="/images/emojis/earth_asia.png">
+<img width="64" height="64" class=" emoji nofancybox" title="volcano" src="/images/emojis/volcano.png">
+<img width="64" height="64" class=" emoji nofancybox" title="milky_way" src="/images/emojis/milky_way.png">
+<img width="64" height="64" class=" emoji nofancybox" title="partly_sunny" src="/images/emojis/partly_sunny.png">
+<img width="64" height="64" class=" emoji nofancybox" title="octocat" src="/images/emojis/octocat.png">
+<img width="64" height="64" class=" emoji nofancybox" title="squirrel" src="/images/emojis/squirrel.png">
+<img width="64" height="64" class=" emoji nofancybox" title="bamboo" src="/images/emojis/bamboo.png">
+<img width="64" height="64" class=" emoji nofancybox" title="gift_heart" src="/images/emojis/gift_heart.png">
+<img width="64" height="64" class=" emoji nofancybox" title="dolls" src="/images/emojis/dolls.png">
+<img width="64" height="64" class=" emoji nofancybox" title="school_satchel" src="/images/emojis/school_satchel.png">
+<img width="64" height="64" class=" emoji nofancybox" title="mortar_board" src="/images/emojis/mortar_board.png">
+<img width="64" height="64" class=" emoji nofancybox" title="flags" src="/images/emojis/flags.png">
+<img width="64" height="64" class=" emoji nofancybox" title="fireworks" src="/images/emojis/fireworks.png">
+<img width="64" height="64" class=" emoji nofancybox" title="sparkler" src="/images/emojis/sparkler.png">
+<img width="64" height="64" class=" emoji nofancybox" title="wind_chime" src="/images/emojis/wind_chime.png">
+<img width="64" height="64" class=" emoji nofancybox" title="rice_scene" src="/images/emojis/rice_scene.png">
+<img width="64" height="64" class=" emoji nofancybox" title="jack_o_lantern" src="/images/emojis/jack_o_lantern.png">
+<img width="64" height="64" class=" emoji nofancybox" title="ghost" src="/images/emojis/ghost.png">
+<img width="64" height="64" class=" emoji nofancybox" title="santa" src="/images/emojis/santa.png">
+<img width="64" height="64" class=" emoji nofancybox" title="christmas_tree" src="/images/emojis/christmas_tree.png">
+<img width="64" height="64" class=" emoji nofancybox" title="gift" src="/images/emojis/gift.png">
+<img width="64" height="64" class=" emoji nofancybox" title="bell" src="/images/emojis/bell.png">
+<img width="64" height="64" class=" emoji nofancybox" title="no_bell" src="/images/emojis/no_bell.png">
+<img width="64" height="64" class=" emoji nofancybox" title="tanabata_tree" src="/images/emojis/tanabata_tree.png">
+<img width="64" height="64" class=" emoji nofancybox" title="tada" src="/images/emojis/tada.png">
+<img width="64" height="64" class=" emoji nofancybox" title="confetti_ball" src="/images/emojis/confetti_ball.png">
+<img width="64" height="64" class=" emoji nofancybox" title="balloon" src="/images/emojis/balloon.png">
+<img width="64" height="64" class=" emoji nofancybox" title="crystal_ball" src="/images/emojis/crystal_ball.png">
+<img width="64" height="64" class=" emoji nofancybox" title="cd" src="/images/emojis/cd.png">
+<img width="64" height="64" class=" emoji nofancybox" title="dvd" src="/images/emojis/dvd.png">
+<img width="64" height="64" class=" emoji nofancybox" title="floppy_disk" src="/images/emojis/floppy_disk.png">
+<img width="64" height="64" class=" emoji nofancybox" title="camera" src="/images/emojis/camera.png">
+<img width="64" height="64" class=" emoji nofancybox" title="video_camera" src="/images/emojis/video_camera.png">
+<img width="64" height="64" class=" emoji nofancybox" title="movie_camera" src="/images/emojis/movie_camera.png">
+<img width="64" height="64" class=" emoji nofancybox" title="computer" src="/images/emojis/computer.png">
+<img width="64" height="64" class=" emoji nofancybox" title="tv" src="/images/emojis/tv.png">
+<img width="64" height="64" class=" emoji nofancybox" title="iphone" src="/images/emojis/iphone.png">
+<img width="64" height="64" class=" emoji nofancybox" title="phone" src="/images/emojis/phone.png">
+<img width="64" height="64" class=" emoji nofancybox" title="telephone" src="/images/emojis/telephone.png">
+<img width="64" height="64" class=" emoji nofancybox" title="telephone_receiver" src="/images/emojis/telephone_receiver.png">
+<img width="64" height="64" class=" emoji nofancybox" title="pager" src="/images/emojis/pager.png">
+<img width="64" height="64" class=" emoji nofancybox" title="fax" src="/images/emojis/fax.png">
+<img width="64" height="64" class=" emoji nofancybox" title="minidisc" src="/images/emojis/minidisc.png">
+<img width="64" height="64" class=" emoji nofancybox" title="vhs" src="/images/emojis/vhs.png">
+<img width="64" height="64" class=" emoji nofancybox" title="sound" src="/images/emojis/sound.png">
+<img width="64" height="64" class=" emoji nofancybox" title="speaker" src="/images/emojis/speaker.png">
+<img width="64" height="64" class=" emoji nofancybox" title="mute" src="/images/emojis/mute.png">
+<img width="64" height="64" class=" emoji nofancybox" title="loudspeaker" src="/images/emojis/loudspeaker.png">
+<img width="64" height="64" class=" emoji nofancybox" title="mega" src="/images/emojis/mega.png">
+<img width="64" height="64" class=" emoji nofancybox" title="hourglass" src="/images/emojis/hourglass.png">
+<img width="64" height="64" class=" emoji nofancybox" title="hourglass_flowing_sand" src="/images/emojis/hourglass_flowing_sand.png">
+<img width="64" height="64" class=" emoji nofancybox" title="alarm_clock" src="/images/emojis/alarm_clock.png">
+<img width="64" height="64" class=" emoji nofancybox" title="watch" src="/images/emojis/watch.png">
+<img width="64" height="64" class=" emoji nofancybox" title="radio" src="/images/emojis/radio.png">
+<img width="64" height="64" class=" emoji nofancybox" title="satellite" src="/images/emojis/satellite.png">
+<img width="64" height="64" class=" emoji nofancybox" title="loop" src="/images/emojis/loop.png">
+<img width="64" height="64" class=" emoji nofancybox" title="mag" src="/images/emojis/mag.png">
+<img width="64" height="64" class=" emoji nofancybox" title="mag_right" src="/images/emojis/mag_right.png">
+<img width="64" height="64" class=" emoji nofancybox" title="unlock" src="/images/emojis/unlock.png">
+<img width="64" height="64" class=" emoji nofancybox" title="lock" src="/images/emojis/lock.png">
+<img width="64" height="64" class=" emoji nofancybox" title="lock_with_ink_pen" src="/images/emojis/lock_with_ink_pen.png">
+<img width="64" height="64" class=" emoji nofancybox" title="closed_lock_with_key" src="/images/emojis/closed_lock_with_key.png">
+<img width="64" height="64" class=" emoji nofancybox" title="key" src="/images/emojis/key.png">
+<img width="64" height="64" class=" emoji nofancybox" title="bulb" src="/images/emojis/bulb.png">
+<img width="64" height="64" class=" emoji nofancybox" title="flashlight" src="/images/emojis/flashlight.png">
+<img width="64" height="64" class=" emoji nofancybox" title="high_brightness" src="/images/emojis/high_brightness.png">
+<img width="64" height="64" class=" emoji nofancybox" title="low_brightness" src="/images/emojis/low_brightness.png">
+<img width="64" height="64" class=" emoji nofancybox" title="electric_plug" src="/images/emojis/electric_plug.png">
+<img width="64" height="64" class=" emoji nofancybox" title="battery" src="/images/emojis/battery.png">
+<img width="64" height="64" class=" emoji nofancybox" title="calling" src="/images/emojis/calling.png">
+<img width="64" height="64" class=" emoji nofancybox" title="email" src="/images/emojis/email.png">
+<img width="64" height="64" class=" emoji nofancybox" title="mailbox" src="/images/emojis/mailbox.png">
+<img width="64" height="64" class=" emoji nofancybox" title="postbox" src="/images/emojis/postbox.png">
+<img width="64" height="64" class=" emoji nofancybox" title="bath" src="/images/emojis/bath.png">
+<img width="64" height="64" class=" emoji nofancybox" title="bathtub" src="/images/emojis/bathtub.png">
+<img width="64" height="64" class=" emoji nofancybox" title="shower" src="/images/emojis/shower.png">
+<img width="64" height="64" class=" emoji nofancybox" title="toilet" src="/images/emojis/toilet.png">
+<img width="64" height="64" class=" emoji nofancybox" title="wrench" src="/images/emojis/wrench.png">
+<img width="64" height="64" class=" emoji nofancybox" title="nut_and_bolt" src="/images/emojis/nut_and_bolt.png">
+<img width="64" height="64" class=" emoji nofancybox" title="hammer" src="/images/emojis/hammer.png">
+<img width="64" height="64" class=" emoji nofancybox" title="seat" src="/images/emojis/seat.png">
+<img width="64" height="64" class=" emoji nofancybox" title="moneybag" src="/images/emojis/moneybag.png">
+<img width="64" height="64" class=" emoji nofancybox" title="yen" src="/images/emojis/yen.png">
+<img width="64" height="64" class=" emoji nofancybox" title="dollar" src="/images/emojis/dollar.png">
+<img width="64" height="64" class=" emoji nofancybox" title="pound" src="/images/emojis/pound.png">
+<img width="64" height="64" class=" emoji nofancybox" title="euro" src="/images/emojis/euro.png">
+<img width="64" height="64" class=" emoji nofancybox" title="credit_card" src="/images/emojis/credit_card.png">
+<img width="64" height="64" class=" emoji nofancybox" title="money_with_wings" src="/images/emojis/money_with_wings.png">
+<img width="64" height="64" class=" emoji nofancybox" title="e-mail" src="/images/emojis/e-mail.png">
+<img width="64" height="64" class=" emoji nofancybox" title="inbox_tray" src="/images/emojis/inbox_tray.png">
+<img width="64" height="64" class=" emoji nofancybox" title="outbox_tray" src="/images/emojis/outbox_tray.png">
+<img width="64" height="64" class=" emoji nofancybox" title="envelope" src="/images/emojis/envelope.png">
+<img width="64" height="64" class=" emoji nofancybox" title="incoming_envelope" src="/images/emojis/incoming_envelope.png">
+<img width="64" height="64" class=" emoji nofancybox" title="postal_horn" src="/images/emojis/postal_horn.png">
+<img width="64" height="64" class=" emoji nofancybox" title="mailbox_closed" src="/images/emojis/mailbox_closed.png">
+<img width="64" height="64" class=" emoji nofancybox" title="mailbox_with_mail" src="/images/emojis/mailbox_with_mail.png">
+<img width="64" height="64" class=" emoji nofancybox" title="mailbox_with_no_mail" src="/images/emojis/mailbox_with_no_mail.png">
+<img width="64" height="64" class=" emoji nofancybox" title="package" src="/images/emojis/package.png">
+<img width="64" height="64" class=" emoji nofancybox" title="door" src="/images/emojis/door.png">
+<img width="64" height="64" class=" emoji nofancybox" title="smoking" src="/images/emojis/smoking.png">
+<img width="64" height="64" class=" emoji nofancybox" title="bomb" src="/images/emojis/bomb.png">
+<img width="64" height="64" class=" emoji nofancybox" title="gun" src="/images/emojis/gun.png">
+<img width="64" height="64" class=" emoji nofancybox" title="hocho" src="/images/emojis/hocho.png">
+<img width="64" height="64" class=" emoji nofancybox" title="pill" src="/images/emojis/pill.png">
+<img width="64" height="64" class=" emoji nofancybox" title="syringe" src="/images/emojis/syringe.png">
+<img width="64" height="64" class=" emoji nofancybox" title="page_facing_up" src="/images/emojis/page_facing_up.png">
+<img width="64" height="64" class=" emoji nofancybox" title="page_with_curl" src="/images/emojis/page_with_curl.png">
+<img width="64" height="64" class=" emoji nofancybox" title="bookmark_tabs" src="/images/emojis/bookmark_tabs.png">
+<img width="64" height="64" class=" emoji nofancybox" title="bar_chart" src="/images/emojis/bar_chart.png">
+<img width="64" height="64" class=" emoji nofancybox" title="chart_with_upwards_trend" src="/images/emojis/chart_with_upwards_trend.png">
+<img width="64" height="64" class=" emoji nofancybox" title="chart_with_downwards_trend" src="/images/emojis/chart_with_downwards_trend.png">
+<img width="64" height="64" class=" emoji nofancybox" title="scroll" src="/images/emojis/scroll.png">
+<img width="64" height="64" class=" emoji nofancybox" title="clipboard" src="/images/emojis/clipboard.png">
+<img width="64" height="64" class=" emoji nofancybox" title="calendar" src="/images/emojis/calendar.png">
+<img width="64" height="64" class=" emoji nofancybox" title="date" src="/images/emojis/date.png">
+<img width="64" height="64" class=" emoji nofancybox" title="card_index" src="/images/emojis/card_index.png">
+<img width="64" height="64" class=" emoji nofancybox" title="file_folder" src="/images/emojis/file_folder.png">
+<img width="64" height="64" class=" emoji nofancybox" title="open_file_folder" src="/images/emojis/open_file_folder.png">
+<img width="64" height="64" class=" emoji nofancybox" title="scissors" src="/images/emojis/scissors.png">
+<img width="64" height="64" class=" emoji nofancybox" title="pushpin" src="/images/emojis/pushpin.png">
+<img width="64" height="64" class=" emoji nofancybox" title="paperclip" src="/images/emojis/paperclip.png">
+<img width="64" height="64" class=" emoji nofancybox" title="black_nib" src="/images/emojis/black_nib.png">
+<img width="64" height="64" class=" emoji nofancybox" title="pencil2" src="/images/emojis/pencil2.png">
+<img width="64" height="64" class=" emoji nofancybox" title="straight_ruler" src="/images/emojis/straight_ruler.png">
+<img width="64" height="64" class=" emoji nofancybox" title="triangular_ruler" src="/images/emojis/triangular_ruler.png">
+<img width="64" height="64" class=" emoji nofancybox" title="closed_book" src="/images/emojis/closed_book.png">
+<img width="64" height="64" class=" emoji nofancybox" title="green_book" src="/images/emojis/green_book.png">
+<img width="64" height="64" class=" emoji nofancybox" title="blue_book" src="/images/emojis/blue_book.png">
+<img width="64" height="64" class=" emoji nofancybox" title="orange_book" src="/images/emojis/orange_book.png">
+<img width="64" height="64" class=" emoji nofancybox" title="notebook" src="/images/emojis/notebook.png">
+<img width="64" height="64" class=" emoji nofancybox" title="notebook_with_decorative_cover" src="/images/emojis/notebook_with_decorative_cover.png">
+<img width="64" height="64" class=" emoji nofancybox" title="ledger" src="/images/emojis/ledger.png">
+<img width="64" height="64" class=" emoji nofancybox" title="books" src="/images/emojis/books.png">
+<img width="64" height="64" class=" emoji nofancybox" title="bookmark" src="/images/emojis/bookmark.png">
+<img width="64" height="64" class=" emoji nofancybox" title="name_badge" src="/images/emojis/name_badge.png">
+<img width="64" height="64" class=" emoji nofancybox" title="microscope" src="/images/emojis/microscope.png">
+<img width="64" height="64" class=" emoji nofancybox" title="telescope" src="/images/emojis/telescope.png">
+<img width="64" height="64" class=" emoji nofancybox" title="newspaper" src="/images/emojis/newspaper.png">
+<img width="64" height="64" class=" emoji nofancybox" title="football" src="/images/emojis/football.png">
+<img width="64" height="64" class=" emoji nofancybox" title="basketball" src="/images/emojis/basketball.png">
+<img width="64" height="64" class=" emoji nofancybox" title="soccer" src="/images/emojis/soccer.png">
+<img width="64" height="64" class=" emoji nofancybox" title="baseball" src="/images/emojis/baseball.png">
+<img width="64" height="64" class=" emoji nofancybox" title="tennis" src="/images/emojis/tennis.png">
+<img width="64" height="64" class=" emoji nofancybox" title="8ball" src="/images/emojis/8ball.png">
+<img width="64" height="64" class=" emoji nofancybox" title="rugby_football" src="/images/emojis/rugby_football.png">
+<img width="64" height="64" class=" emoji nofancybox" title="bowling" src="/images/emojis/bowling.png">
+<img width="64" height="64" class=" emoji nofancybox" title="golf" src="/images/emojis/golf.png">
+<img width="64" height="64" class=" emoji nofancybox" title="mountain_bicyclist" src="/images/emojis/mountain_bicyclist.png">
+<img width="64" height="64" class=" emoji nofancybox" title="bicyclist" src="/images/emojis/bicyclist.png">
+<img width="64" height="64" class=" emoji nofancybox" title="horse_racing" src="/images/emojis/horse_racing.png">
+<img width="64" height="64" class=" emoji nofancybox" title="snowboarder" src="/images/emojis/snowboarder.png">
+<img width="64" height="64" class=" emoji nofancybox" title="swimmer" src="/images/emojis/swimmer.png">
+<img width="64" height="64" class=" emoji nofancybox" title="surfer" src="/images/emojis/surfer.png">
+<img width="64" height="64" class=" emoji nofancybox" title="ski" src="/images/emojis/ski.png">
+<img width="64" height="64" class=" emoji nofancybox" title="spades" src="/images/emojis/spades.png">
+<img width="64" height="64" class=" emoji nofancybox" title="hearts" src="/images/emojis/hearts.png">
+<img width="64" height="64" class=" emoji nofancybox" title="clubs" src="/images/emojis/clubs.png">
+<img width="64" height="64" class=" emoji nofancybox" title="diamonds" src="/images/emojis/diamonds.png">
+<img width="64" height="64" class=" emoji nofancybox" title="gem" src="/images/emojis/gem.png">
+<img width="64" height="64" class=" emoji nofancybox" title="ring" src="/images/emojis/ring.png">
+<img width="64" height="64" class=" emoji nofancybox" title="trophy" src="/images/emojis/trophy.png">
+<img width="64" height="64" class=" emoji nofancybox" title="musical_score" src="/images/emojis/musical_score.png">
+<img width="64" height="64" class=" emoji nofancybox" title="musical_keyboard" src="/images/emojis/musical_keyboard.png">
+<img width="64" height="64" class=" emoji nofancybox" title="violin" src="/images/emojis/violin.png">
+<img width="64" height="64" class=" emoji nofancybox" title="space_invader" src="/images/emojis/space_invader.png">
+<img width="64" height="64" class=" emoji nofancybox" title="video_game" src="/images/emojis/video_game.png">
+<img width="64" height="64" class=" emoji nofancybox" title="black_joker" src="/images/emojis/black_joker.png">
+<img width="64" height="64" class=" emoji nofancybox" title="flower_playing_cards" src="/images/emojis/flower_playing_cards.png">
+<img width="64" height="64" class=" emoji nofancybox" title="game_die" src="/images/emojis/game_die.png">
+<img width="64" height="64" class=" emoji nofancybox" title="dart" src="/images/emojis/dart.png">
+<img width="64" height="64" class=" emoji nofancybox" title="mahjong" src="/images/emojis/mahjong.png">
+<img width="64" height="64" class=" emoji nofancybox" title="clapper" src="/images/emojis/clapper.png">
+<img width="64" height="64" class=" emoji nofancybox" title="memo" src="/images/emojis/memo.png">
+<img width="64" height="64" class=" emoji nofancybox" title="pencil" src="/images/emojis/pencil.png">
+<img width="64" height="64" class=" emoji nofancybox" title="book" src="/images/emojis/book.png">
+<img width="64" height="64" class=" emoji nofancybox" title="art" src="/images/emojis/art.png">
+<img width="64" height="64" class=" emoji nofancybox" title="microphone" src="/images/emojis/microphone.png">
+<img width="64" height="64" class=" emoji nofancybox" title="headphones" src="/images/emojis/headphones.png">
+<img width="64" height="64" class=" emoji nofancybox" title="trumpet" src="/images/emojis/trumpet.png">
+<img width="64" height="64" class=" emoji nofancybox" title="saxophone" src="/images/emojis/saxophone.png">
+<img width="64" height="64" class=" emoji nofancybox" title="guitar" src="/images/emojis/guitar.png">
+<img width="64" height="64" class=" emoji nofancybox" title="shoe" src="/images/emojis/shoe.png">
+<img width="64" height="64" class=" emoji nofancybox" title="sandal" src="/images/emojis/sandal.png">
+<img width="64" height="64" class=" emoji nofancybox" title="high_heel" src="/images/emojis/high_heel.png">
+<img width="64" height="64" class=" emoji nofancybox" title="lipstick" src="/images/emojis/lipstick.png">
+<img width="64" height="64" class=" emoji nofancybox" title="boot" src="/images/emojis/boot.png">
+<img width="64" height="64" class=" emoji nofancybox" title="shirt" src="/images/emojis/shirt.png">
+<img width="64" height="64" class=" emoji nofancybox" title="tshirt" src="/images/emojis/tshirt.png">
+<img width="64" height="64" class=" emoji nofancybox" title="necktie" src="/images/emojis/necktie.png">
+<img width="64" height="64" class=" emoji nofancybox" title="womans_clothes" src="/images/emojis/womans_clothes.png">
+<img width="64" height="64" class=" emoji nofancybox" title="dress" src="/images/emojis/dress.png">
+<img width="64" height="64" class=" emoji nofancybox" title="running_shirt_with_sash" src="/images/emojis/running_shirt_with_sash.png">
+<img width="64" height="64" class=" emoji nofancybox" title="jeans" src="/images/emojis/jeans.png">
+<img width="64" height="64" class=" emoji nofancybox" title="kimono" src="/images/emojis/kimono.png">
+<img width="64" height="64" class=" emoji nofancybox" title="bikini" src="/images/emojis/bikini.png">
+<img width="64" height="64" class=" emoji nofancybox" title="ribbon" src="/images/emojis/ribbon.png">
+<img width="64" height="64" class=" emoji nofancybox" title="tophat" src="/images/emojis/tophat.png">
+<img width="64" height="64" class=" emoji nofancybox" title="crown" src="/images/emojis/crown.png">
+<img width="64" height="64" class=" emoji nofancybox" title="womans_hat" src="/images/emojis/womans_hat.png">
+<img width="64" height="64" class=" emoji nofancybox" title="mans_shoe" src="/images/emojis/mans_shoe.png">
+<img width="64" height="64" class=" emoji nofancybox" title="closed_umbrella" src="/images/emojis/closed_umbrella.png">
+<img width="64" height="64" class=" emoji nofancybox" title="briefcase" src="/images/emojis/briefcase.png">
+<img width="64" height="64" class=" emoji nofancybox" title="handbag" src="/images/emojis/handbag.png">
+<img width="64" height="64" class=" emoji nofancybox" title="pouch" src="/images/emojis/pouch.png">
+<img width="64" height="64" class=" emoji nofancybox" title="purse" src="/images/emojis/purse.png">
+<img width="64" height="64" class=" emoji nofancybox" title="eyeglasses" src="/images/emojis/eyeglasses.png">
+<img width="64" height="64" class=" emoji nofancybox" title="fishing_pole_and_fish" src="/images/emojis/fishing_pole_and_fish.png">
+<img width="64" height="64" class=" emoji nofancybox" title="coffee" src="/images/emojis/coffee.png">
+<img width="64" height="64" class=" emoji nofancybox" title="tea" src="/images/emojis/tea.png">
+<img width="64" height="64" class=" emoji nofancybox" title="sake" src="/images/emojis/sake.png">
+<img width="64" height="64" class=" emoji nofancybox" title="baby_bottle" src="/images/emojis/baby_bottle.png">
+<img width="64" height="64" class=" emoji nofancybox" title="beer" src="/images/emojis/beer.png">
+<img width="64" height="64" class=" emoji nofancybox" title="beers" src="/images/emojis/beers.png">
+<img width="64" height="64" class=" emoji nofancybox" title="cocktail" src="/images/emojis/cocktail.png">
+<img width="64" height="64" class=" emoji nofancybox" title="tropical_drink" src="/images/emojis/tropical_drink.png">
+<img width="64" height="64" class=" emoji nofancybox" title="wine_glass" src="/images/emojis/wine_glass.png">
+<img width="64" height="64" class=" emoji nofancybox" title="fork_and_knife" src="/images/emojis/fork_and_knife.png">
+<img width="64" height="64" class=" emoji nofancybox" title="pizza" src="/images/emojis/pizza.png">
+<img width="64" height="64" class=" emoji nofancybox" title="hamburger" src="/images/emojis/hamburger.png">
+<img width="64" height="64" class=" emoji nofancybox" title="fries" src="/images/emojis/fries.png">
+<img width="64" height="64" class=" emoji nofancybox" title="poultry_leg" src="/images/emojis/poultry_leg.png">
+<img width="64" height="64" class=" emoji nofancybox" title="meat_on_bone" src="/images/emojis/meat_on_bone.png">
+<img width="64" height="64" class=" emoji nofancybox" title="spaghetti" src="/images/emojis/spaghetti.png">
+<img width="64" height="64" class=" emoji nofancybox" title="curry" src="/images/emojis/curry.png">
+<img width="64" height="64" class=" emoji nofancybox" title="fried_shrimp" src="/images/emojis/fried_shrimp.png">
+<img width="64" height="64" class=" emoji nofancybox" title="bento" src="/images/emojis/bento.png">
+<img width="64" height="64" class=" emoji nofancybox" title="sushi" src="/images/emojis/sushi.png">
+<img width="64" height="64" class=" emoji nofancybox" title="fish_cake" src="/images/emojis/fish_cake.png">
+<img width="64" height="64" class=" emoji nofancybox" title="rice_ball" src="/images/emojis/rice_ball.png">
+<img width="64" height="64" class=" emoji nofancybox" title="rice_cracker" src="/images/emojis/rice_cracker.png">
+<img width="64" height="64" class=" emoji nofancybox" title="rice" src="/images/emojis/rice.png">
+<img width="64" height="64" class=" emoji nofancybox" title="ramen" src="/images/emojis/ramen.png">
+<img width="64" height="64" class=" emoji nofancybox" title="stew" src="/images/emojis/stew.png">
+<img width="64" height="64" class=" emoji nofancybox" title="oden" src="/images/emojis/oden.png">
+<img width="64" height="64" class=" emoji nofancybox" title="dango" src="/images/emojis/dango.png">
+<img width="64" height="64" class=" emoji nofancybox" title="egg" src="/images/emojis/egg.png">
+<img width="64" height="64" class=" emoji nofancybox" title="bread" src="/images/emojis/bread.png">
+<img width="64" height="64" class=" emoji nofancybox" title="doughnut" src="/images/emojis/doughnut.png">
+<img width="64" height="64" class=" emoji nofancybox" title="custard" src="/images/emojis/custard.png">
+<img width="64" height="64" class=" emoji nofancybox" title="icecream" src="/images/emojis/icecream.png">
+<img width="64" height="64" class=" emoji nofancybox" title="ice_cream" src="/images/emojis/ice_cream.png">
+<img width="64" height="64" class=" emoji nofancybox" title="shaved_ice" src="/images/emojis/shaved_ice.png">
+<img width="64" height="64" class=" emoji nofancybox" title="birthday" src="/images/emojis/birthday.png">
+<img width="64" height="64" class=" emoji nofancybox" title="cake" src="/images/emojis/cake.png">
+<img width="64" height="64" class=" emoji nofancybox" title="cookie" src="/images/emojis/cookie.png">
+<img width="64" height="64" class=" emoji nofancybox" title="chocolate_bar" src="/images/emojis/chocolate_bar.png">
+<img width="64" height="64" class=" emoji nofancybox" title="candy" src="/images/emojis/candy.png">
+<img width="64" height="64" class=" emoji nofancybox" title="lollipop" src="/images/emojis/lollipop.png">
+<img width="64" height="64" class=" emoji nofancybox" title="honey_pot" src="/images/emojis/honey_pot.png">
+<img width="64" height="64" class=" emoji nofancybox" title="apple" src="/images/emojis/apple.png">
+<img width="64" height="64" class=" emoji nofancybox" title="green_apple" src="/images/emojis/green_apple.png">
+<img width="64" height="64" class=" emoji nofancybox" title="tangerine" src="/images/emojis/tangerine.png">
+<img width="64" height="64" class=" emoji nofancybox" title="lemon" src="/images/emojis/lemon.png">
+<img width="64" height="64" class=" emoji nofancybox" title="cherries" src="/images/emojis/cherries.png">
+<img width="64" height="64" class=" emoji nofancybox" title="grapes" src="/images/emojis/grapes.png">
+<img width="64" height="64" class=" emoji nofancybox" title="watermelon" src="/images/emojis/watermelon.png">
+<img width="64" height="64" class=" emoji nofancybox" title="strawberry" src="/images/emojis/strawberry.png">
+<img width="64" height="64" class=" emoji nofancybox" title="peach" src="/images/emojis/peach.png">
+<img width="64" height="64" class=" emoji nofancybox" title="melon" src="/images/emojis/melon.png">
+<img width="64" height="64" class=" emoji nofancybox" title="banana" src="/images/emojis/banana.png">
+<img width="64" height="64" class=" emoji nofancybox" title="pear" src="/images/emojis/pear.png">
+<img width="64" height="64" class=" emoji nofancybox" title="pineapple" src="/images/emojis/pineapple.png">
+<img width="64" height="64" class=" emoji nofancybox" title="sweet_potato" src="/images/emojis/sweet_potato.png">
+<img width="64" height="64" class=" emoji nofancybox" title="eggplant" src="/images/emojis/eggplant.png">
+<img width="64" height="64" class=" emoji nofancybox" title="tomato" src="/images/emojis/tomato.png">
+<img width="64" height="64" class=" emoji nofancybox" title="corn" src="/images/emojis/corn.png">
+<img width="64" height="64" class=" emoji nofancybox" title="house" src="/images/emojis/house.png">
+<img width="64" height="64" class=" emoji nofancybox" title="house_with_garden" src="/images/emojis/house_with_garden.png">
+<img width="64" height="64" class=" emoji nofancybox" title="school" src="/images/emojis/school.png">
+<img width="64" height="64" class=" emoji nofancybox" title="office" src="/images/emojis/office.png">
+<img width="64" height="64" class=" emoji nofancybox" title="post_office" src="/images/emojis/post_office.png">
+<img width="64" height="64" class=" emoji nofancybox" title="hospital" src="/images/emojis/hospital.png">
+<img width="64" height="64" class=" emoji nofancybox" title="bank" src="/images/emojis/bank.png">
+<img width="64" height="64" class=" emoji nofancybox" title="convenience_store" src="/images/emojis/convenience_store.png">
+<img width="64" height="64" class=" emoji nofancybox" title="love_hotel" src="/images/emojis/love_hotel.png">
+<img width="64" height="64" class=" emoji nofancybox" title="hotel" src="/images/emojis/hotel.png">
+<img width="64" height="64" class=" emoji nofancybox" title="wedding" src="/images/emojis/wedding.png">
+<img width="64" height="64" class=" emoji nofancybox" title="church" src="/images/emojis/church.png">
+<img width="64" height="64" class=" emoji nofancybox" title="department_store" src="/images/emojis/department_store.png">
+<img width="64" height="64" class=" emoji nofancybox" title="european_post_office" src="/images/emojis/european_post_office.png">
+<img width="64" height="64" class=" emoji nofancybox" title="city_sunrise" src="/images/emojis/city_sunrise.png">
+<img width="64" height="64" class=" emoji nofancybox" title="city_sunset" src="/images/emojis/city_sunset.png">
+<img width="64" height="64" class=" emoji nofancybox" title="japanese_castle" src="/images/emojis/japanese_castle.png">
+<img width="64" height="64" class=" emoji nofancybox" title="european_castle" src="/images/emojis/european_castle.png">
+<img width="64" height="64" class=" emoji nofancybox" title="tent" src="/images/emojis/tent.png">
+<img width="64" height="64" class=" emoji nofancybox" title="factory" src="/images/emojis/factory.png">
+<img width="64" height="64" class=" emoji nofancybox" title="tokyo_tower" src="/images/emojis/tokyo_tower.png">
+<img width="64" height="64" class=" emoji nofancybox" title="japan" src="/images/emojis/japan.png">
+<img width="64" height="64" class=" emoji nofancybox" title="mount_fuji" src="/images/emojis/mount_fuji.png">
+<img width="64" height="64" class=" emoji nofancybox" title="sunrise_over_mountains" src="/images/emojis/sunrise_over_mountains.png">
+<img width="64" height="64" class=" emoji nofancybox" title="sunrise" src="/images/emojis/sunrise.png">
+<img width="64" height="64" class=" emoji nofancybox" title="stars" src="/images/emojis/stars.png">
+<img width="64" height="64" class=" emoji nofancybox" title="statue_of_liberty" src="/images/emojis/statue_of_liberty.png">
+<img width="64" height="64" class=" emoji nofancybox" title="bridge_at_night" src="/images/emojis/bridge_at_night.png">
+<img width="64" height="64" class=" emoji nofancybox" title="carousel_horse" src="/images/emojis/carousel_horse.png">
+<img width="64" height="64" class=" emoji nofancybox" title="rainbow" src="/images/emojis/rainbow.png">
+<img width="64" height="64" class=" emoji nofancybox" title="ferris_wheel" src="/images/emojis/ferris_wheel.png">
+<img width="64" height="64" class=" emoji nofancybox" title="fountain" src="/images/emojis/fountain.png">
+<img width="64" height="64" class=" emoji nofancybox" title="roller_coaster" src="/images/emojis/roller_coaster.png">
+<img width="64" height="64" class=" emoji nofancybox" title="ship" src="/images/emojis/ship.png">
+<img width="64" height="64" class=" emoji nofancybox" title="speedboat" src="/images/emojis/speedboat.png">
+<img width="64" height="64" class=" emoji nofancybox" title="boat" src="/images/emojis/boat.png">
+<img width="64" height="64" class=" emoji nofancybox" title="sailboat" src="/images/emojis/sailboat.png">
+<img width="64" height="64" class=" emoji nofancybox" title="rowboat" src="/images/emojis/rowboat.png">
+<img width="64" height="64" class=" emoji nofancybox" title="anchor" src="/images/emojis/anchor.png">
+<img width="64" height="64" class=" emoji nofancybox" title="rocket" src="/images/emojis/rocket.png">
+<img width="64" height="64" class=" emoji nofancybox" title="airplane" src="/images/emojis/airplane.png">
+<img width="64" height="64" class=" emoji nofancybox" title="helicopter" src="/images/emojis/helicopter.png">
+<img width="64" height="64" class=" emoji nofancybox" title="steam_locomotive" src="/images/emojis/steam_locomotive.png">
+<img width="64" height="64" class=" emoji nofancybox" title="tram" src="/images/emojis/tram.png">
+<img width="64" height="64" class=" emoji nofancybox" title="mountain_railway" src="/images/emojis/mountain_railway.png">
+<img width="64" height="64" class=" emoji nofancybox" title="bike" src="/images/emojis/bike.png">
+<img width="64" height="64" class=" emoji nofancybox" title="aerial_tramway" src="/images/emojis/aerial_tramway.png">
+<img width="64" height="64" class=" emoji nofancybox" title="suspension_railway" src="/images/emojis/suspension_railway.png">
+<img width="64" height="64" class=" emoji nofancybox" title="mountain_cableway" src="/images/emojis/mountain_cableway.png">
+<img width="64" height="64" class=" emoji nofancybox" title="tractor" src="/images/emojis/tractor.png">
+<img width="64" height="64" class=" emoji nofancybox" title="blue_car" src="/images/emojis/blue_car.png">
+<img width="64" height="64" class=" emoji nofancybox" title="oncoming_automobile" src="/images/emojis/oncoming_automobile.png">
+<img width="64" height="64" class=" emoji nofancybox" title="car" src="/images/emojis/car.png">
+<img width="64" height="64" class=" emoji nofancybox" title="red_car" src="/images/emojis/red_car.png">
+<img width="64" height="64" class=" emoji nofancybox" title="taxi" src="/images/emojis/taxi.png">
+<img width="64" height="64" class=" emoji nofancybox" title="oncoming_taxi" src="/images/emojis/oncoming_taxi.png">
+<img width="64" height="64" class=" emoji nofancybox" title="articulated_lorry" src="/images/emojis/articulated_lorry.png">
+<img width="64" height="64" class=" emoji nofancybox" title="bus" src="/images/emojis/bus.png">
+<img width="64" height="64" class=" emoji nofancybox" title="oncoming_bus" src="/images/emojis/oncoming_bus.png">
+<img width="64" height="64" class=" emoji nofancybox" title="rotating_light" src="/images/emojis/rotating_light.png">
+<img width="64" height="64" class=" emoji nofancybox" title="police_car" src="/images/emojis/police_car.png">
+<img width="64" height="64" class=" emoji nofancybox" title="oncoming_police_car" src="/images/emojis/oncoming_police_car.png">
+<img width="64" height="64" class=" emoji nofancybox" title="fire_engine" src="/images/emojis/fire_engine.png">
+<img width="64" height="64" class=" emoji nofancybox" title="ambulance" src="/images/emojis/ambulance.png">
+<img width="64" height="64" class=" emoji nofancybox" title="minibus" src="/images/emojis/minibus.png">
+<img width="64" height="64" class=" emoji nofancybox" title="truck" src="/images/emojis/truck.png">
+<img width="64" height="64" class=" emoji nofancybox" title="train" src="/images/emojis/train.png">
+<img width="64" height="64" class=" emoji nofancybox" title="station" src="/images/emojis/station.png">
+<img width="64" height="64" class=" emoji nofancybox" title="train2" src="/images/emojis/train2.png">
+<img width="64" height="64" class=" emoji nofancybox" title="bullettrain_front" src="/images/emojis/bullettrain_front.png">
+<img width="64" height="64" class=" emoji nofancybox" title="bullettrain_side" src="/images/emojis/bullettrain_side.png">
+<img width="64" height="64" class=" emoji nofancybox" title="light_rail" src="/images/emojis/light_rail.png">
+<img width="64" height="64" class=" emoji nofancybox" title="monorail" src="/images/emojis/monorail.png">
+<img width="64" height="64" class=" emoji nofancybox" title="railway_car" src="/images/emojis/railway_car.png">
+<img width="64" height="64" class=" emoji nofancybox" title="trolleybus" src="/images/emojis/trolleybus.png">
+<img width="64" height="64" class=" emoji nofancybox" title="ticket" src="/images/emojis/ticket.png">
+<img width="64" height="64" class=" emoji nofancybox" title="fuelpump" src="/images/emojis/fuelpump.png">
+<img width="64" height="64" class=" emoji nofancybox" title="vertical_traffic_light" src="/images/emojis/vertical_traffic_light.png">
+<img width="64" height="64" class=" emoji nofancybox" title="traffic_light" src="/images/emojis/traffic_light.png">
+<img width="64" height="64" class=" emoji nofancybox" title="warning" src="/images/emojis/warning.png">
+<img width="64" height="64" class=" emoji nofancybox" title="construction" src="/images/emojis/construction.png">
+<img width="64" height="64" class=" emoji nofancybox" title="beginner" src="/images/emojis/beginner.png">
+<img width="64" height="64" class=" emoji nofancybox" title="atm" src="/images/emojis/atm.png">
+<img width="64" height="64" class=" emoji nofancybox" title="slot_machine" src="/images/emojis/slot_machine.png">
+<img width="64" height="64" class=" emoji nofancybox" title="busstop" src="/images/emojis/busstop.png">
+<img width="64" height="64" class=" emoji nofancybox" title="barber" src="/images/emojis/barber.png">
+<img width="64" height="64" class=" emoji nofancybox" title="hotsprings" src="/images/emojis/hotsprings.png">
+<img width="64" height="64" class=" emoji nofancybox" title="checkered_flag" src="/images/emojis/checkered_flag.png">
+<img width="64" height="64" class=" emoji nofancybox" title="crossed_flags" src="/images/emojis/crossed_flags.png">
+<img width="64" height="64" class=" emoji nofancybox" title="izakaya_lantern" src="/images/emojis/izakaya_lantern.png">
+<img width="64" height="64" class=" emoji nofancybox" title="moyai" src="/images/emojis/moyai.png">
+<img width="64" height="64" class=" emoji nofancybox" title="circus_tent" src="/images/emojis/circus_tent.png">
+<img width="64" height="64" class=" emoji nofancybox" title="performing_arts" src="/images/emojis/performing_arts.png">
+<img width="64" height="64" class=" emoji nofancybox" title="round_pushpin" src="/images/emojis/round_pushpin.png">
+<img width="64" height="64" class=" emoji nofancybox" title="triangular_flag_on_post" src="/images/emojis/triangular_flag_on_post.png">
+<img width="64" height="64" class=" emoji nofancybox" title="jp" src="/images/emojis/jp.png">
+<img width="64" height="64" class=" emoji nofancybox" title="kr" src="/images/emojis/kr.png">
+<img width="64" height="64" class=" emoji nofancybox" title="cn" src="/images/emojis/cn.png">
+<img width="64" height="64" class=" emoji nofancybox" title="us" src="/images/emojis/us.png">
+<img width="64" height="64" class=" emoji nofancybox" title="fr" src="/images/emojis/fr.png">
+<img width="64" height="64" class=" emoji nofancybox" title="es" src="/images/emojis/es.png">
+<img width="64" height="64" class=" emoji nofancybox" title="it" src="/images/emojis/it.png">
+<img width="64" height="64" class=" emoji nofancybox" title="ru" src="/images/emojis/ru.png">
+<img width="64" height="64" class=" emoji nofancybox" title="gb" src="/images/emojis/gb.png">
+<img width="64" height="64" class=" emoji nofancybox" title="uk" src="/images/emojis/uk.png">
+<img width="64" height="64" class=" emoji nofancybox" title="de" src="/images/emojis/de.png">
+<img width="64" height="64" class=" emoji nofancybox" title="one" src="/images/emojis/one.png">
+<img width="64" height="64" class=" emoji nofancybox" title="two" src="/images/emojis/two.png">
+<img width="64" height="64" class=" emoji nofancybox" title="three" src="/images/emojis/three.png">
+<img width="64" height="64" class=" emoji nofancybox" title="four" src="/images/emojis/four.png">
+<img width="64" height="64" class=" emoji nofancybox" title="five" src="/images/emojis/five.png">
+<img width="64" height="64" class=" emoji nofancybox" title="six" src="/images/emojis/six.png">
+<img width="64" height="64" class=" emoji nofancybox" title="seven" src="/images/emojis/seven.png">
+<img width="64" height="64" class=" emoji nofancybox" title="eight" src="/images/emojis/eight.png">
+<img width="64" height="64" class=" emoji nofancybox" title="nine" src="/images/emojis/nine.png">
+<img width="64" height="64" class=" emoji nofancybox" title="keycap_ten" src="/images/emojis/keycap_ten.png">
+<img width="64" height="64" class=" emoji nofancybox" title="1234" src="/images/emojis/1234.png">
+<img width="64" height="64" class=" emoji nofancybox" title="zero" src="/images/emojis/zero.png">
+<img width="64" height="64" class=" emoji nofancybox" title="hash" src="/images/emojis/hash.png">
+<img width="64" height="64" class=" emoji nofancybox" title="symbols" src="/images/emojis/symbols.png">
+<img width="64" height="64" class=" emoji nofancybox" title="arrow_backward" src="/images/emojis/arrow_backward.png">
+<img width="64" height="64" class=" emoji nofancybox" title="arrow_down" src="/images/emojis/arrow_down.png">
+<img width="64" height="64" class=" emoji nofancybox" title="arrow_forward" src="/images/emojis/arrow_forward.png">
+<img width="64" height="64" class=" emoji nofancybox" title="arrow_left" src="/images/emojis/arrow_left.png">
+<img width="64" height="64" class=" emoji nofancybox" title="capital_abcd" src="/images/emojis/capital_abcd.png">
+<img width="64" height="64" class=" emoji nofancybox" title="abcd" src="/images/emojis/abcd.png">
+<img width="64" height="64" class=" emoji nofancybox" title="abc" src="/images/emojis/abc.png">
+<img width="64" height="64" class=" emoji nofancybox" title="arrow_lower_left" src="/images/emojis/arrow_lower_left.png">
+<img width="64" height="64" class=" emoji nofancybox" title="arrow_lower_right" src="/images/emojis/arrow_lower_right.png">
+<img width="64" height="64" class=" emoji nofancybox" title="arrow_right" src="/images/emojis/arrow_right.png">
+<img width="64" height="64" class=" emoji nofancybox" title="arrow_up" src="/images/emojis/arrow_up.png">
+<img width="64" height="64" class=" emoji nofancybox" title="arrow_upper_left" src="/images/emojis/arrow_upper_left.png">
+<img width="64" height="64" class=" emoji nofancybox" title="arrow_upper_right" src="/images/emojis/arrow_upper_right.png">
+<img width="64" height="64" class=" emoji nofancybox" title="arrow_double_down" src="/images/emojis/arrow_double_down.png">
+<img width="64" height="64" class=" emoji nofancybox" title="arrow_double_up" src="/images/emojis/arrow_double_up.png">
+<img width="64" height="64" class=" emoji nofancybox" title="arrow_down_small" src="/images/emojis/arrow_down_small.png">
+<img width="64" height="64" class=" emoji nofancybox" title="arrow_heading_down" src="/images/emojis/arrow_heading_down.png">
+<img width="64" height="64" class=" emoji nofancybox" title="arrow_heading_up" src="/images/emojis/arrow_heading_up.png">
+<img width="64" height="64" class=" emoji nofancybox" title="leftwards_arrow_with_hook" src="/images/emojis/leftwards_arrow_with_hook.png">
+<img width="64" height="64" class=" emoji nofancybox" title="arrow_right_hook" src="/images/emojis/arrow_right_hook.png">
+<img width="64" height="64" class=" emoji nofancybox" title="left_right_arrow" src="/images/emojis/left_right_arrow.png">
+<img width="64" height="64" class=" emoji nofancybox" title="arrow_up_down" src="/images/emojis/arrow_up_down.png">
+<img width="64" height="64" class=" emoji nofancybox" title="arrow_up_small" src="/images/emojis/arrow_up_small.png">
+<img width="64" height="64" class=" emoji nofancybox" title="arrows_clockwise" src="/images/emojis/arrows_clockwise.png">
+<img width="64" height="64" class=" emoji nofancybox" title="arrows_counterclockwise" src="/images/emojis/arrows_counterclockwise.png">
+<img width="64" height="64" class=" emoji nofancybox" title="rewind" src="/images/emojis/rewind.png">
+<img width="64" height="64" class=" emoji nofancybox" title="fast_forward" src="/images/emojis/fast_forward.png">
+<img width="64" height="64" class=" emoji nofancybox" title="information_source" src="/images/emojis/information_source.png">
+<img width="64" height="64" class=" emoji nofancybox" title="ok" src="/images/emojis/ok.png">
+<img width="64" height="64" class=" emoji nofancybox" title="twisted_rightwards_arrows" src="/images/emojis/twisted_rightwards_arrows.png">
+<img width="64" height="64" class=" emoji nofancybox" title="repeat" src="/images/emojis/repeat.png">
+<img width="64" height="64" class=" emoji nofancybox" title="repeat_one" src="/images/emojis/repeat_one.png">
+<img width="64" height="64" class=" emoji nofancybox" title="new" src="/images/emojis/new.png">
+<img width="64" height="64" class=" emoji nofancybox" title="top" src="/images/emojis/top.png">
+<img width="64" height="64" class=" emoji nofancybox" title="up" src="/images/emojis/up.png">
+<img width="64" height="64" class=" emoji nofancybox" title="cool" src="/images/emojis/cool.png">
+<img width="64" height="64" class=" emoji nofancybox" title="free" src="/images/emojis/free.png">
+<img width="64" height="64" class=" emoji nofancybox" title="ng" src="/images/emojis/ng.png">
+<img width="64" height="64" class=" emoji nofancybox" title="cinema" src="/images/emojis/cinema.png">
+<img width="64" height="64" class=" emoji nofancybox" title="koko" src="/images/emojis/koko.png">
+<img width="64" height="64" class=" emoji nofancybox" title="signal_strength" src="/images/emojis/signal_strength.png">
+<img width="64" height="64" class=" emoji nofancybox" title="u5272" src="/images/emojis/u5272.png">
+<img width="64" height="64" class=" emoji nofancybox" title="u5408" src="/images/emojis/u5408.png">
+<img width="64" height="64" class=" emoji nofancybox" title="u55b6" src="/images/emojis/u55b6.png">
+<img width="64" height="64" class=" emoji nofancybox" title="u6307" src="/images/emojis/u6307.png">
+<img width="64" height="64" class=" emoji nofancybox" title="u6708" src="/images/emojis/u6708.png">
+<img width="64" height="64" class=" emoji nofancybox" title="u6709" src="/images/emojis/u6709.png">
+<img width="64" height="64" class=" emoji nofancybox" title="u6e80" src="/images/emojis/u6e80.png">
+<img width="64" height="64" class=" emoji nofancybox" title="u7121" src="/images/emojis/u7121.png">
+<img width="64" height="64" class=" emoji nofancybox" title="u7533" src="/images/emojis/u7533.png">
+<img width="64" height="64" class=" emoji nofancybox" title="u7a7a" src="/images/emojis/u7a7a.png">
+<img width="64" height="64" class=" emoji nofancybox" title="u7981" src="/images/emojis/u7981.png">
+<img width="64" height="64" class=" emoji nofancybox" title="sa" src="/images/emojis/sa.png">
+<img width="64" height="64" class=" emoji nofancybox" title="restroom" src="/images/emojis/restroom.png">
+<img width="64" height="64" class=" emoji nofancybox" title="mens" src="/images/emojis/mens.png">
+<img width="64" height="64" class=" emoji nofancybox" title="womens" src="/images/emojis/womens.png">
+<img width="64" height="64" class=" emoji nofancybox" title="baby_symbol" src="/images/emojis/baby_symbol.png">
+<img width="64" height="64" class=" emoji nofancybox" title="no_smoking" src="/images/emojis/no_smoking.png">
+<img width="64" height="64" class=" emoji nofancybox" title="parking" src="/images/emojis/parking.png">
+<img width="64" height="64" class=" emoji nofancybox" title="wheelchair" src="/images/emojis/wheelchair.png">
+<img width="64" height="64" class=" emoji nofancybox" title="metro" src="/images/emojis/metro.png">
+<img width="64" height="64" class=" emoji nofancybox" title="baggage_claim" src="/images/emojis/baggage_claim.png">
+<img width="64" height="64" class=" emoji nofancybox" title="accept" src="/images/emojis/accept.png">
+<img width="64" height="64" class=" emoji nofancybox" title="wc" src="/images/emojis/wc.png">
+<img width="64" height="64" class=" emoji nofancybox" title="potable_water" src="/images/emojis/potable_water.png">
+<img width="64" height="64" class=" emoji nofancybox" title="put_litter_in_its_place" src="/images/emojis/put_litter_in_its_place.png">
+<img width="64" height="64" class=" emoji nofancybox" title="secret" src="/images/emojis/secret.png">
+<img width="64" height="64" class=" emoji nofancybox" title="congratulations" src="/images/emojis/congratulations.png">
+<img width="64" height="64" class=" emoji nofancybox" title="m" src="/images/emojis/m.png">
+<img width="64" height="64" class=" emoji nofancybox" title="passport_control" src="/images/emojis/passport_control.png">
+<img width="64" height="64" class=" emoji nofancybox" title="left_luggage" src="/images/emojis/left_luggage.png">
+<img width="64" height="64" class=" emoji nofancybox" title="customs" src="/images/emojis/customs.png">
+<img width="64" height="64" class=" emoji nofancybox" title="ideograph_advantage" src="/images/emojis/ideograph_advantage.png">
+<img width="64" height="64" class=" emoji nofancybox" title="cl" src="/images/emojis/cl.png">
+<img width="64" height="64" class=" emoji nofancybox" title="sos" src="/images/emojis/sos.png">
+<img width="64" height="64" class=" emoji nofancybox" title="id" src="/images/emojis/id.png">
+<img width="64" height="64" class=" emoji nofancybox" title="no_entry_sign" src="/images/emojis/no_entry_sign.png">
+<img width="64" height="64" class=" emoji nofancybox" title="underage" src="/images/emojis/underage.png">
+<img width="64" height="64" class=" emoji nofancybox" title="no_mobile_phones" src="/images/emojis/no_mobile_phones.png">
+<img width="64" height="64" class=" emoji nofancybox" title="do_not_litter" src="/images/emojis/do_not_litter.png">
+<img width="64" height="64" class=" emoji nofancybox" title="non-potable_water" src="/images/emojis/non-potable_water.png">
+<img width="64" height="64" class=" emoji nofancybox" title="no_bicycles" src="/images/emojis/no_bicycles.png">
+<img width="64" height="64" class=" emoji nofancybox" title="no_pedestrians" src="/images/emojis/no_pedestrians.png">
+<img width="64" height="64" class=" emoji nofancybox" title="children_crossing" src="/images/emojis/children_crossing.png">
+<img width="64" height="64" class=" emoji nofancybox" title="no_entry" src="/images/emojis/no_entry.png">
+<img width="64" height="64" class=" emoji nofancybox" title="eight_spoked_asterisk" src="/images/emojis/eight_spoked_asterisk.png">
+<img width="64" height="64" class=" emoji nofancybox" title="sparkle" src="/images/emojis/sparkle.png">
+<img width="64" height="64" class=" emoji nofancybox" title="eight_pointed_black_star" src="/images/emojis/eight_pointed_black_star.png">
+<img width="64" height="64" class=" emoji nofancybox" title="heart_decoration" src="/images/emojis/heart_decoration.png">
+<img width="64" height="64" class=" emoji nofancybox" title="vs" src="/images/emojis/vs.png">
+<img width="64" height="64" class=" emoji nofancybox" title="vibration_mode" src="/images/emojis/vibration_mode.png">
+<img width="64" height="64" class=" emoji nofancybox" title="mobile_phone_off" src="/images/emojis/mobile_phone_off.png">
+<img width="64" height="64" class=" emoji nofancybox" title="chart" src="/images/emojis/chart.png">
+<img width="64" height="64" class=" emoji nofancybox" title="currency_exchange" src="/images/emojis/currency_exchange.png">
+<img width="64" height="64" class=" emoji nofancybox" title="aries" src="/images/emojis/aries.png">
+<img width="64" height="64" class=" emoji nofancybox" title="taurus" src="/images/emojis/taurus.png">
+<img width="64" height="64" class=" emoji nofancybox" title="gemini" src="/images/emojis/gemini.png">
+<img width="64" height="64" class=" emoji nofancybox" title="cancer" src="/images/emojis/cancer.png">
+<img width="64" height="64" class=" emoji nofancybox" title="leo" src="/images/emojis/leo.png">
+<img width="64" height="64" class=" emoji nofancybox" title="virgo" src="/images/emojis/virgo.png">
+<img width="64" height="64" class=" emoji nofancybox" title="libra" src="/images/emojis/libra.png">
+<img width="64" height="64" class=" emoji nofancybox" title="scorpius" src="/images/emojis/scorpius.png">
+<img width="64" height="64" class=" emoji nofancybox" title="sagittarius" src="/images/emojis/sagittarius.png">
+<img width="64" height="64" class=" emoji nofancybox" title="capricorn" src="/images/emojis/capricorn.png">
+<img width="64" height="64" class=" emoji nofancybox" title="aquarius" src="/images/emojis/aquarius.png">
+<img width="64" height="64" class=" emoji nofancybox" title="pisces" src="/images/emojis/pisces.png">
+<img width="64" height="64" class=" emoji nofancybox" title="ophiuchus" src="/images/emojis/ophiuchus.png">
+<img width="64" height="64" class=" emoji nofancybox" title="six_pointed_star" src="/images/emojis/six_pointed_star.png">
+<img width="64" height="64" class=" emoji nofancybox" title="negative_squared_cross_mark" src="/images/emojis/negative_squared_cross_mark.png">
+<img width="64" height="64" class=" emoji nofancybox" title="a" src="/images/emojis/a.png">
+<img width="64" height="64" class=" emoji nofancybox" title="b" src="/images/emojis/b.png">
+<img width="64" height="64" class=" emoji nofancybox" title="ab" src="/images/emojis/ab.png">
+<img width="64" height="64" class=" emoji nofancybox" title="o2" src="/images/emojis/o2.png">
+<img width="64" height="64" class=" emoji nofancybox" title="diamond_shape_with_a_dot_inside" src="/images/emojis/diamond_shape_with_a_dot_inside.png">
+<img width="64" height="64" class=" emoji nofancybox" title="recycle" src="/images/emojis/recycle.png">
+<img width="64" height="64" class=" emoji nofancybox" title="end" src="/images/emojis/end.png">
+<img width="64" height="64" class=" emoji nofancybox" title="back" src="/images/emojis/back.png">
+<img width="64" height="64" class=" emoji nofancybox" title="on" src="/images/emojis/on.png">
+<img width="64" height="64" class=" emoji nofancybox" title="soon" src="/images/emojis/soon.png">
+<img width="64" height="64" class=" emoji nofancybox" title="clock1" src="/images/emojis/clock1.png">
+<img width="64" height="64" class=" emoji nofancybox" title="clock130" src="/images/emojis/clock130.png">
+<img width="64" height="64" class=" emoji nofancybox" title="clock10" src="/images/emojis/clock10.png">
+<img width="64" height="64" class=" emoji nofancybox" title="clock1030" src="/images/emojis/clock1030.png">
+<img width="64" height="64" class=" emoji nofancybox" title="clock11" src="/images/emojis/clock11.png">
+<img width="64" height="64" class=" emoji nofancybox" title="clock1130" src="/images/emojis/clock1130.png">
+<img width="64" height="64" class=" emoji nofancybox" title="clock12" src="/images/emojis/clock12.png">
+<img width="64" height="64" class=" emoji nofancybox" title="clock1230" src="/images/emojis/clock1230.png">
+<img width="64" height="64" class=" emoji nofancybox" title="clock2" src="/images/emojis/clock2.png">
+<img width="64" height="64" class=" emoji nofancybox" title="clock230" src="/images/emojis/clock230.png">
+<img width="64" height="64" class=" emoji nofancybox" title="clock3" src="/images/emojis/clock3.png">
+<img width="64" height="64" class=" emoji nofancybox" title="clock330" src="/images/emojis/clock330.png">
+<img width="64" height="64" class=" emoji nofancybox" title="clock4" src="/images/emojis/clock4.png">
+<img width="64" height="64" class=" emoji nofancybox" title="clock430" src="/images/emojis/clock430.png">
+<img width="64" height="64" class=" emoji nofancybox" title="clock5" src="/images/emojis/clock5.png">
+<img width="64" height="64" class=" emoji nofancybox" title="clock530" src="/images/emojis/clock530.png">
+<img width="64" height="64" class=" emoji nofancybox" title="clock6" src="/images/emojis/clock6.png">
+<img width="64" height="64" class=" emoji nofancybox" title="clock630" src="/images/emojis/clock630.png">
+<img width="64" height="64" class=" emoji nofancybox" title="clock7" src="/images/emojis/clock7.png">
+<img width="64" height="64" class=" emoji nofancybox" title="clock730" src="/images/emojis/clock730.png">
+<img width="64" height="64" class=" emoji nofancybox" title="clock8" src="/images/emojis/clock8.png">
+<img width="64" height="64" class=" emoji nofancybox" title="clock830" src="/images/emojis/clock830.png">
+<img width="64" height="64" class=" emoji nofancybox" title="clock9" src="/images/emojis/clock9.png">
+<img width="64" height="64" class=" emoji nofancybox" title="clock930" src="/images/emojis/clock930.png">
+<img width="64" height="64" class=" emoji nofancybox" title="heavy_dollar_sign" src="/images/emojis/heavy_dollar_sign.png">
+<img width="64" height="64" class=" emoji nofancybox" title="copyright" src="/images/emojis/copyright.png">
+<img width="64" height="64" class=" emoji nofancybox" title="registered" src="/images/emojis/registered.png">
+<img width="64" height="64" class=" emoji nofancybox" title="tm" src="/images/emojis/tm.png">
+<img width="64" height="64" class=" emoji nofancybox" title="x" src="/images/emojis/x.png">
+<img width="64" height="64" class=" emoji nofancybox" title="heavy_exclamation_mark" src="/images/emojis/heavy_exclamation_mark.png">
+<img width="64" height="64" class=" emoji nofancybox" title="bangbang" src="/images/emojis/bangbang.png">
+<img width="64" height="64" class=" emoji nofancybox" title="interrobang" src="/images/emojis/interrobang.png">
+<img width="64" height="64" class=" emoji nofancybox" title="o" src="/images/emojis/o.png">
+<img width="64" height="64" class=" emoji nofancybox" title="heavy_multiplication_x" src="/images/emojis/heavy_multiplication_x.png">
+<img width="64" height="64" class=" emoji nofancybox" title="heavy_plus_sign" src="/images/emojis/heavy_plus_sign.png">
+<img width="64" height="64" class=" emoji nofancybox" title="heavy_minus_sign" src="/images/emojis/heavy_minus_sign.png">
+<img width="64" height="64" class=" emoji nofancybox" title="heavy_division_sign" src="/images/emojis/heavy_division_sign.png">
+<img width="64" height="64" class=" emoji nofancybox" title="white_flower" src="/images/emojis/white_flower.png">
+<img width="64" height="64" class=" emoji nofancybox" title="100" src="/images/emojis/100.png">
+<img width="64" height="64" class=" emoji nofancybox" title="heavy_check_mark" src="/images/emojis/heavy_check_mark.png">
+<img width="64" height="64" class=" emoji nofancybox" title="ballot_box_with_check" src="/images/emojis/ballot_box_with_check.png">
+<img width="64" height="64" class=" emoji nofancybox" title="radio_button" src="/images/emojis/radio_button.png">
+<img width="64" height="64" class=" emoji nofancybox" title="link" src="/images/emojis/link.png">
+<img width="64" height="64" class=" emoji nofancybox" title="curly_loop" src="/images/emojis/curly_loop.png">
+<img width="64" height="64" class=" emoji nofancybox" title="wavy_dash" src="/images/emojis/wavy_dash.png">
+<img width="64" height="64" class=" emoji nofancybox" title="part_alternation_mark" src="/images/emojis/part_alternation_mark.png">
+<img width="64" height="64" class=" emoji nofancybox" title="trident" src="/images/emojis/trident.png">
+<img width="64" height="64" class=" emoji nofancybox" title="black_small_square" src="/images/emojis/black_small_square.png">
+<img width="64" height="64" class=" emoji nofancybox" title="white_small_square" src="/images/emojis/white_small_square.png">
+<img width="64" height="64" class=" emoji nofancybox" title="black_medium_small_square" src="/images/emojis/black_medium_small_square.png">
+<img width="64" height="64" class=" emoji nofancybox" title="white_medium_small_square" src="/images/emojis/white_medium_small_square.png">
+<img width="64" height="64" class=" emoji nofancybox" title="black_medium_square" src="/images/emojis/black_medium_square.png">
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+
+        
+        本文链接：<a href="/Hexo/hexo-tag-emojis/" target="_blank" rel="external">https://brywmzl.github.io/Hexo/hexo-tag-emojis/</a>
+        
+    </div>
+    <footer>
+        <a href="https://Brywmzl.github.io">
+            <img src="/img/avatar.jpg" alt="Brywmzl">
+            Brywmzl
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/Hexo/hexo-theme-indigo/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">indigo 主题改造</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/Rhino/Bongo/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Bongo - 犀牛动画设计插件</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+
+			
+</div>
+
+        <footer class="footer">
+    <div class="bottom">
+        <p><span>Brywmzl &copy; 2015 - 2021</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-arrow-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.0"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.0" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

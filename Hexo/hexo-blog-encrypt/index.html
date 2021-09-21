@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>hexo-blog-encrypt - 博客文章加密 | Brywmzl</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#fa3c33">
+    
+    
+    <meta name="keywords" content="Hexo">
+    <meta name="description" content="hexo-blog-encrypt 是 Hexo 生态圈中最好的博客加密插件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo-blog-encrypt - 博客文章加密">
+<meta property="og:url" content="https://brywmzl.github.io/Hexo/hexo-blog-encrypt/index.html">
+<meta property="og:site_name" content="Brywmzl">
+<meta property="og:description" content="hexo-blog-encrypt 是 Hexo 生态圈中最好的博客加密插件">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-03-26T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-09-21T04:43:09.058Z">
+<meta property="article:author" content="Brywmzl">
+<meta property="article:tag" content="Hexo">
+<meta name="twitter:card" content="summary">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.0">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Brywmzl</h5>
+          <a href="mailto:brywmzl@gmail.com" title="brywmzl@gmail.com" class="mail">brywmzl@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Start
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/Notes/Bookmark"  >
+                <i class="icon icon-lg icon-bookmark"></i>
+                Bookmark
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/gallery"  >
+                <i class="icon icon-lg icon-envira"></i>
+                Gallery
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/Hexo/Aplayer"  >
+                <i class="icon icon-lg icon-music"></i>
+                Music
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/brywmzl" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://brywmzl.gitbook.io/document/" target="_blank" >
+                <i class="icon icon-lg icon-book"></i>
+                GitBook
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://brywmzl.mybluemix.net/" target="_blank" >
+                <i class="icon icon-lg icon-hdd-o"></i>
+                OneDrive
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main" style="background-image:url(/img/background.jpg)">
+        <header class="top-header" id="header">
+    <div class="flex-row" style="background-image:url(/img/bar.jpg)">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">hexo-blog-encrypt - 博客文章加密</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image:url(/img/bar.jpg)">
+
+    <div class="container fade-scale">
+        <h1 class="title">hexo-blog-encrypt - 博客文章加密</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2021-03-26T16:00:00.000Z" itemprop="datePublished" class="page-time">
+  2021-03-27
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+<article id="post-Hexo/hexo-blog-encrypt"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">hexo-blog-encrypt - 博客文章加密</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2021-03-27 00:00:00" datetime="2021-03-26T16:00:00.000Z"  itemprop="datePublished">2021-03-27</time>
+
+            
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+			<p>hexo-blog-encrypt 是 Hexo 生态圈中最好的博客加密插件</p>
+<a id="more"></a>
+<p><a href="https://github.com/sergiolepore/hexo-tag-emojis" target="_blank" rel="noopener">hexo-blog-encrypt</a><br><a href="https://github.com/D0n9X1n/hexo-blog-encrypt/blob/master/ReadMe.zh.md" target="_blank" rel="noopener">中文说明文档</a></p>
+<figure class="highlight plain"><figcaption><span>install</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-blog-encrypt</span><br><span class="line">or yarn add hexo-blog-encrypt (require Yarn)</span><br></pre></td></tr></table></figure>
+<p><strong>都不是很好用</strong><br><a href="https://github.com/MikeCoder/hexo-blog-encrypt" target="_blank" rel="noopener">https://github.com/MikeCoder/hexo-blog-encrypt</a> （目录渲染不出来）<br><a href="https://github.com/edolphin-ydf/hexo-encrypt" target="_blank" rel="noopener">https://github.com/edolphin-ydf/hexo-encrypt</a></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+
+        
+        本文链接：<a href="/Hexo/hexo-blog-encrypt/" target="_blank" rel="external">https://brywmzl.github.io/Hexo/hexo-blog-encrypt/</a>
+        
+    </div>
+    <footer>
+        <a href="https://Brywmzl.github.io">
+            <img src="/img/avatar.jpg" alt="Brywmzl">
+            Brywmzl
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/Hexo/Dplayer/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Dplayer - 网页视频播放器</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/Hexo/hexo-theme-indigo/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">indigo 主题改造</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+
+			
+</div>
+
+        <footer class="footer">
+    <div class="bottom">
+        <p><span>Brywmzl &copy; 2015 - 2021</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-arrow-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.0"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.0" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

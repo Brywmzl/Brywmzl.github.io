@@ -28,7 +28,7 @@
 <meta property="og:description" content="dplayer是一个HTML5弹幕视频播放器，可以帮助我们轻松建立一个弹幕视频。那么如何将dplayer应用在hexo上，这里就需要借助到hexo的一个插件了。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-03-26T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-09-21T04:43:01.140Z">
+<meta property="article:modified_time" content="2022-01-23T11:30:46.042Z">
 <meta property="article:author" content="Brywmzl">
 <meta property="article:tag" content="播放器">
 <meta property="article:tag" content="Hexo">
@@ -122,7 +122,7 @@
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="https://brywmzl.mybluemix.net/" target="_blank" >
+              <a href="https://brywmzl.us-south.cf.appdomain.cloud/" target="_blank" >
                 <i class="icon icon-lg icon-hdd-o"></i>
                 OneDrive
               </a>
@@ -204,7 +204,7 @@
 <p><a href="https://dplayer.js.org/" target="_blank" rel="noopener">Homepage</a><br><a href="https://dplayer.js.org/zh/guide.html" target="_blank" rel="noopener">入门指南</a><br><a href="https://github.com/MoePlayer/hexo-tag-dplayer" target="_blank" rel="noopener">hexo-tag-dplayer</a></p>
 <h1 id="npm-install"><a href="#npm-install" class="headerlink" title="npm install"></a>npm install</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-tag-dplayer --save &#x2F;&#x2F; 安装</span><br><span class="line">或</span><br><span class="line">npm install hexo-tag-dplayer -s &#x2F;&#x2F; 安装</span><br><span class="line"></span><br><span class="line">npm uninstall hexo-tag-dplayer &#x2F;&#x2F; 卸载</span><br></pre></td></tr></table></figure>
 <h1 id="演示"><a href="#演示" class="headerlink" title="演示"></a>演示</h1><div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"theme":"#fa3c33","lang":"en","video":{"url":"https://cnbj1.fds.api.xiaomi.com/console/触屏音箱品牌视频.mp4","pic":"https://land.xiaomi.net/mcfe/ai-xiaoai-fe/static/media/sounbox.62e3351f.png"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
-<div id="dplayer1" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px; width:100%; height:400px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer1"),"theme":"#fa3c33","video":{"url":"https://brywmzl.mybluemix.net/Media/2021.%E4%BA%91%E5%8D%97%E8%99%AB%E8%B0%B7/%E4%BA%91%E5%8D%97%E8%99%AB%E8%B0%B7.2021.EP16.1080P.WEB-DL.H264.AAC.mp4","pic":"https://land.xiaomi.net/mcfe/ai-xiaoai-fe/static/media/sounbox.62e3351f.png"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+<div id="dplayer1" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px; width:100%; height:400px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer1"),"theme":"#fa3c33","video":{"url":"https://brywmzl.us-south.cf.appdomain.cloud/Media/2021.%E4%BA%91%E5%8D%97%E8%99%AB%E8%B0%B7/%E4%BA%91%E5%8D%97%E8%99%AB%E8%B0%B7.2021.EP16.1080P.WEB-DL.H264.AAC.mp4","pic":"https://land.xiaomi.net/mcfe/ai-xiaoai-fe/static/media/sounbox.62e3351f.png"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 <h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p><a href="https://dplayer.js.org/zh/guide.html#参数" target="_blank" rel="noopener">详细参数</a></p>
 <p><code>_config.yml</code>  不知道为啥不起作用</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># on _config.yml of hexo-site</span><br><span class="line">hexo-tag-dplayer:</span><br><span class="line">  js_path: &#x2F;path&#x2F;to&#x2F;your&#x2F;default&#x2F;path</span><br><span class="line">  css_path: &#x2F;sth</span><br><span class="line">  default: #default tag argument </span><br><span class="line">    id: somedefid # equals to setting id&#x3D;somedefid in all &#123;%dplayer%&#125; tags</span><br><span class="line">    api: https:&#x2F;&#x2F;api.prprpr.me&#x2F;dplayer&#x2F;</span><br><span class="line">    #and other options...</span><br></pre></td></tr></table></figure>
@@ -245,18 +245,18 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/Hexo/hexo-blog-encrypt/" id="post-prev" class="post-nav-link">
+      <a href="/Hexo/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">hexo-blog-encrypt - 博客文章加密</h4>
+        <h4 class="title">Hexo 搭建与改造</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/Hexo/hexo-theme-indigo/" id="post-next" class="post-nav-link">
+      <a href="/Hexo/hexo-blog-encrypt/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">indigo 主题改造</h4>
+        <h4 class="title">hexo-blog-encrypt - 博客文章加密</h4>
       </a>
     </div>
   

@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>FFmpeg - 视频音频编码 | Brywmzl</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#fa3c33">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="FFmpeg是一套可以用来记录、转换数字音频、视频，并能将其转化为流的开源计算机程序。采用LGPL或GPL许可证。它提供了录制、转换以及流化音视频的完整解决方案。它包含了非常先进的音频&#x2F;视频编解码库libavcodec，为了保证高可移植性和编解码质量，libavcodec里很多code都是从头开发的。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FFmpeg - 视频音频编码">
+<meta property="og:url" content="https://brywmzl.github.io/Notes/ffmpeg/index.html">
+<meta property="og:site_name" content="Brywmzl">
+<meta property="og:description" content="FFmpeg是一套可以用来记录、转换数字音频、视频，并能将其转化为流的开源计算机程序。采用LGPL或GPL许可证。它提供了录制、转换以及流化音视频的完整解决方案。它包含了非常先进的音频&#x2F;视频编解码库libavcodec，为了保证高可移植性和编解码质量，libavcodec里很多code都是从头开发的。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/4/4b/FFmpeg-Logo.svg">
+<meta property="article:published_time" content="2022-06-08T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-06-12T09:57:17.000Z">
+<meta property="article:author" content="Brywmzl">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/4/4b/FFmpeg-Logo.svg">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.0">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Brywmzl</h5>
+          <a href="mailto:brywmzl@gmail.com" title="brywmzl@gmail.com" class="mail">brywmzl@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Start
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/Notes/Bookmark"  >
+                <i class="icon icon-lg icon-bookmark"></i>
+                Bookmark
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/gallery"  >
+                <i class="icon icon-lg icon-envira"></i>
+                Gallery
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/Hexo/Aplayer"  >
+                <i class="icon icon-lg icon-music"></i>
+                Music
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/brywmzl" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://brywmzl.gitbook.io/document/" target="_blank" >
+                <i class="icon icon-lg icon-book"></i>
+                GitBook
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://brywmzl.us-south.cf.appdomain.cloud/" target="_blank" >
+                <i class="icon icon-lg icon-hdd-o"></i>
+                OneDrive
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main" style="background-image:url(/img/background.jpg)">
+        <header class="top-header" id="header">
+    <div class="flex-row" style="background-image:url(/img/bar.jpg)">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">FFmpeg - 视频音频编码</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header post-header" style="background-image:url(/img/bar.jpg)">
+
+    <div class="container fade-scale">
+        <h1 class="title">FFmpeg - 视频音频编码</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2022-06-08T16:00:00.000Z" itemprop="datePublished" class="page-time">
+  2022-06-09
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Brywmzl/">Brywmzl</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#命令选项"><span class="post-toc-number">1.</span> <span class="post-toc-text">命令选项</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#输入文件名"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">输入文件名</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#命令案例"><span class="post-toc-number">2.</span> <span class="post-toc-text">命令案例</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#元数据"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">元数据</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#官方文档"><span class="post-toc-number">3.</span> <span class="post-toc-text">官方文档</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-Notes/ffmpeg"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">FFmpeg - 视频音频编码</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2022-06-09 00:00:00" datetime="2022-06-08T16:00:00.000Z"  itemprop="datePublished">2022-06-09</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Brywmzl/">Brywmzl</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+			<p>FFmpeg是一套可以用来记录、转换数字音频、视频，并能将其转化为流的开源计算机程序。采用LGPL或GPL许可证。它提供了录制、转换以及流化音视频的完整解决方案。它包含了非常先进的音频/视频编解码库libavcodec，为了保证高可移植性和编解码质量，libavcodec里很多code都是从头开发的。</p>
+<a id="more"></a>
+<p><br><div align=center><img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/FFmpeg-Logo.svg"  width=360 height=auto ></div><br></p>
+<p><a href="http://ffmpeg.org/" target="_blank" rel="noopener">Homepage</a><br><a href="http://ffmpeg.org/download.html" target="_blank" rel="noopener">Download FFmpeg</a></p>
+<h1 id="命令选项"><a href="#命令选项" class="headerlink" title="命令选项"></a>命令选项</h1><p>参数详解<br><a href="https://zhuanlan.zhihu.com/p/429870096" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/429870096</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i [输入文件名] [参数选项] -f [输出格式] [输出文件名]</span><br></pre></td></tr></table></figure>
+<p>主要选项<br><a href="https://www.ffmpeg.org/ffmpeg-all.html#toc-Main-options" target="_blank" rel="noopener">https://www.ffmpeg.org/ffmpeg-all.html#toc-Main-options</a></p>
+<table>
+<thead>
+<tr>
+<th>基本选项</th>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-i</code></td>
+<td><a href="/Notes/ffmpeg/#输入文件名">文件名、外接列表文件</a></td>
+<td>表示输入文件</td>
+</tr>
+<tr>
+<td><code>-stats</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>-f</code></td>
+<td></td>
+<td>用来指定封装格式</td>
+</tr>
+<tr>
+<td><code>-map</code></td>
+<td><code>-map 0:1</code> （0表示文件索引 1表示流索引）</td>
+<td>映射流</td>
+</tr>
+<tr>
+<td><code>-hide_banner</code></td>
+<td></td>
+<td>禁止打印横幅（版权声明、构建选项和库版本）</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>视频选项</th>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-s</code></td>
+<td></td>
+<td>用来指定导出帧序列的大小（可缺省）</td>
+</tr>
+<tr>
+<td><code>-r</code></td>
+<td></td>
+<td>表示提取的帧率（可缺省）</td>
+</tr>
+<tr>
+<td><code>-vn</code></td>
+<td></td>
+<td>忽略视频流</td>
+</tr>
+<tr>
+<td><code>-vf</code></td>
+<td>-vf scale=640:640</td>
+<td>视频滤镜</td>
+</tr>
+<tr>
+<td><code>-b:v</code></td>
+<td></td>
+<td>视频编码</td>
+</tr>
+<tr>
+<td><code>-vcodec</code></td>
+<td>h264、h265</td>
+<td>视频编码</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>音频选项</th>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-ab</code></td>
+<td>32、64、96、128</td>
+<td>音频比特率</td>
+</tr>
+<tr>
+<td><code>-ac</code></td>
+<td></td>
+<td>声道数</td>
+</tr>
+<tr>
+<td><code>-an</code></td>
+<td></td>
+<td>忽略音频流</td>
+</tr>
+<tr>
+<td><code>-ar</code></td>
+<td>22050、441000、48000</td>
+<td>音频采样率</td>
+</tr>
+<tr>
+<td><code>-af</code></td>
+<td></td>
+<td>音频滤镜</td>
+</tr>
+<tr>
+<td><code>-c:a</code></td>
+<td>libmp3lame</td>
+<td>音频编码</td>
+</tr>
+<tr>
+<td><code>-q:a</code></td>
+<td>质量范围为0~6，0最高，6最低</td>
+<td>音频质量</td>
+</tr>
+<tr>
+<td><code>-acodec</code></td>
+<td>aac</td>
+<td>音频编码</td>
+</tr>
+</tbody>
+</table>
+<h2 id="输入文件名"><a href="#输入文件名" class="headerlink" title="输入文件名"></a>输入文件名</h2><figure class="highlight plain"><figcaption><span>filelist.txt</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">file &#39;1.mkv&#39;</span><br><span class="line">file &#39;2.mkv&#39;</span><br><span class="line">file &#39;3.mkv&#39;</span><br><span class="line">file &#39;4.mkv&#39;</span><br><span class="line">file &#39;5.mkv&#39;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -f concat -i filelist.txt -c copy output.mkv</span><br><span class="line"></span><br><span class="line"># -i filelist.txt（表示外接文件列表）</span><br><span class="line"># -f concat（表示输出格式跟随输入）</span><br></pre></td></tr></table></figure>
+<h1 id="命令案例"><a href="#命令案例" class="headerlink" title="命令案例"></a>命令案例</h1><figure class="highlight plain"><figcaption><span>编码器详细参数</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -h encoder&#x3D;libx264</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>查看流信息</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i video.mkv</span><br><span class="line">ffmpeg -i audio.mp3</span><br><span class="line">ffmpeg -i cover.png </span><br><span class="line"></span><br><span class="line"># -i（导入文件不加任何参数可查看流信息）</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>h264编码</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -y -i input.mp4 -vcodec libx264 -acodec copy output.mp4</span><br><span class="line"></span><br><span class="line"># -y（表示覆盖）</span><br><span class="line"># -vcodec libx264（选择视频编码器）</span><br><span class="line"># -acodec copy（音频编码复制）</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>提取帧</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i input.mp4 –s 1920x1080 -r 25 sequence&#x2F;%04d.jpg</span><br><span class="line"></span><br><span class="line"># –s 1920x1080（表示导出帧序列的大小）</span><br><span class="line"># -r 25（表示提取的帧率为25帧）</span><br><span class="line"># sequence&#x2F;（表示帧缓存文件夹，需要提前创建）</span><br><span class="line"># %04d.jpg（%04d 表示按索引排序，四位数补零 0001~9999）</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>加水印</span><a href="https://www.jianshu.com/p/e4ad7e1e7ed5" target="_blank" rel="noopener">使用ffmpeg命令给视频添加水印</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i input.mp4 -acodec copy -vf &quot;movie&#x3D;img.png[watermark];[in][watermark]overlay&#x3D;20:20&quot; output.mp4</span><br><span class="line"></span><br><span class="line">-vf &quot;drawtext&#x3D;fontfile&#x3D;simhei.ttf: text&#x3D;&#39;1&#39;:x&#x3D;30:y&#x3D;30:fontsize&#x3D;60:fontcolor&#x3D;yellow:shadowy&#x3D;2&quot;</span><br><span class="line">-vf &quot;drawtext&#x3D;fontsize&#x3D;60:text&#x3D;&#39;%&#123;localtime\:%T&#125;&#39;&quot;（效果 00:00:00）</span><br><span class="line">-vf &quot;drawtext&#x3D;fontsize&#x3D;60:text&#x3D;&#39;%&#123;pts\:hms&#125;&#39;&quot;（效果 00:00:00.000）</span><br><span class="line">-vf &quot;movie&#x3D;img.png[watermark];[in][watermark]overlay&#x3D;20:20&quot;</span><br><span class="line"></span><br><span class="line"># -vf &quot;movie&#x3D;img.png...overlay&#x3D;20:20&quot;（img.png为水印图片，overlay&#x3D;20:20 是XY坐标。）</span><br><span class="line"># -vf &quot;drawtext...&quot;（表示绘制文本）</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>视频中生成gif</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i input.mp4 -t 10 -s 320x240 -pix_fmt rgb24 output.gif</span><br><span class="line"></span><br><span class="line"># -t 10（表示时间）</span><br><span class="line"># -s 320x240（表示导出帧序列的大小）</span><br><span class="line"># -pix_fmt rgb24（设置视频编码器使用的图像格式，RGB还是YUV）</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>视频静帧封面</span><a href="https://www.jianshu.com/p/e8e0e47fcccb" target="_blank" rel="noopener">ffmpeg 给音频添加封面，ffmpeg对音视频metadata</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i input.mp4 -i img.png -map 0 -map 1 -c copy -c:v:1 png -disposition:v:1 attached_pic output.mp4</span><br><span class="line"></span><br><span class="line"># -c:v:1 png（指定视频编码器为 png 或 mjpeg）</span><br><span class="line"># -disposition:v:1 attached_pic（disposition 选择对应的图片）</span><br><span class="line"></span><br><span class="line">ffmpeg -i input.mp4 -i img.png -map 0:a -map 1:v output.mp4</span><br><span class="line"></span><br><span class="line"># map参数 冒号前：可以用数字定位文件索引</span><br><span class="line"># map参数 冒号后：可以用数字或a、v则分别表示视频和音频</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>给MP3加专辑封面</span><a href="https://www.ffmpeg.org/ffmpeg-all.html#mp3" target="_blank" rel="noopener">21.23 mp3</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i input.mp3 -i cover.png -c copy -map 0 -map 1</span><br><span class="line">-metadata:s:v title&#x3D;&quot;Album cover&quot; -metadata:s:v comment&#x3D;&quot;Cover (Front)&quot; out.mp3</span><br><span class="line"></span><br><span class="line">#  -c copy（表示编码复制）</span><br><span class="line"># -map 0（音频文件 input.mp3）</span><br><span class="line"># -map 1（封面图片 cover.png）</span><br><span class="line"># -metadata:s:v（给所有视频流添加元数据）</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>视频抽取音频并添加专辑封面</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i input.mp4 -i cover.png -map 0:a -map 1 -metadata:s:v comment&#x3D;&quot;Cover (Front)&quot; -id3v2_version 3 output.mp3</span><br><span class="line"></span><br><span class="line"># -map 0:a（映射视频文件的音频流）</span><br><span class="line"># -map 1（映射专辑封面）</span><br><span class="line"># -metadata:s:v title&#x3D;&quot;Album cover&quot;（给视频流元数据添加标题）</span><br><span class="line"># -metadata:s:v comment&#x3D;&quot;Cover (Front)&quot;（给视频流元数据添加封面格式）</span><br><span class="line"># -id3v2_version 3（一定要设置ID3系统，否则缩略图显示不出来）</span><br></pre></td></tr></table></figure>
+<h2 id="元数据"><a href="#元数据" class="headerlink" title="元数据"></a>元数据</h2><p><a href="https://ffmpeg.org/ffmpeg-formats.html#Metadata-1" target="_blank" rel="noopener">https://ffmpeg.org/ffmpeg-formats.html#Metadata-1</a></p>
+<p>ffmpeg 给音频添加封面，ffmpeg对音视频metadata 相关操作<br><a href="https://www.jianshu.com/p/e8e0e47fcccb" target="_blank" rel="noopener">https://www.jianshu.com/p/e8e0e47fcccb</a></p>
+<figure class="highlight plain"><figcaption><span>添加元数据</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i input.mkv -vn -metadata title&#x3D;&quot;标题&quot; -metadata artist&#x3D;&quot;作者&quot; output.mp3</span><br><span class="line"></span><br><span class="line"># -vn（表示不对视频进行处理）</span><br><span class="line"># -metadata title&#x3D;&quot;标题&quot;（表示为元数据添加标签）</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>参数（只是部分）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>title</code></td>
+<td>标题</td>
+</tr>
+<tr>
+<td><code>artist</code></td>
+<td>作者</td>
+</tr>
+<tr>
+<td><code>album</code></td>
+<td>专辑</td>
+</tr>
+<tr>
+<td><code>comment</code></td>
+<td>评论</td>
+</tr>
+<tr>
+<td><code>album_artist</code></td>
+<td>专辑作者</td>
+</tr>
+<tr>
+<td><code>year</code></td>
+<td>年</td>
+</tr>
+<tr>
+<td><code>track</code></td>
+<td>跟踪编号</td>
+</tr>
+<tr>
+<td><code>genre</code></td>
+<td>风格</td>
+</tr>
+<tr>
+<td><code>composer</code></td>
+<td>作曲家</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>作描述</td>
+</tr>
+</tbody>
+</table>
+<h1 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h1><table>
+<thead>
+<tr>
+<th>命令名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-h</code></td>
+<td>打印基本选项</td>
+</tr>
+<tr>
+<td><code>-h long</code></td>
+<td>打印更多选项</td>
+</tr>
+<tr>
+<td><code>-h full</code></td>
+<td>打印所有选项（包括所有格式和编解码器特定的选项，很长）</td>
+</tr>
+<tr>
+<td><code>-h type=name</code></td>
+<td>打印指定解码器/编码器/解复用器/复用器/过滤器/bsf/协议的所有选项</td>
+</tr>
+</tbody>
+</table>
+<p>有关选项的详细说明，请参见 man ffmpeg。</p>
+<p>全局选项影响整个程序而不单单只是文件</p>
+<table>
+<thead>
+<tr>
+<th>Global options</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-loglevel loglevel</code></td>
+<td><a href="https://www.ffmpeg.org/ffmpeg-all.html#toc-Generic-options" target="_blank" rel="noopener">设置日志级别</a></td>
+</tr>
+<tr>
+<td><code>-v loglevel</code></td>
+<td>查看日志级别</td>
+</tr>
+<tr>
+<td><code>-report</code></td>
+<td>生成报告</td>
+</tr>
+<tr>
+<td><code>-max_alloc bytes</code></td>
+<td>set maximum size of a single allocated block</td>
+</tr>
+<tr>
+<td><code>-y</code></td>
+<td>表示覆盖同名文件</td>
+</tr>
+<tr>
+<td><code>-n</code></td>
+<td>从不覆盖输出文件</td>
+</tr>
+<tr>
+<td><code>-ignore_unknown</code></td>
+<td>忽略未知类型的流</td>
+</tr>
+<tr>
+<td><code>-filter_threads</code></td>
+<td>number of non-complex filter threads</td>
+</tr>
+<tr>
+<td><code>-filter_complex_threads</code></td>
+<td>number of threads for -filter_complex</td>
+</tr>
+<tr>
+<td><code>-stats</code></td>
+<td>编码过程打印进度</td>
+</tr>
+<tr>
+<td><code>-max_error_rate</code></td>
+<td>解码的最大错误率（0.0：无错误，1.0：100% 错误），超过该比率 ffmpeg 返回错误而不是成功。</td>
+</tr>
+<tr>
+<td><code>-vol volume</code></td>
+<td>更改音频音量 (256=正常)</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Per-file main options</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-f fmt</code></td>
+<td>强制格式</td>
+</tr>
+<tr>
+<td><code>-c codec</code></td>
+<td>编码名称</td>
+</tr>
+<tr>
+<td><code>-codec codec</code></td>
+<td>编码名称</td>
+</tr>
+<tr>
+<td><code>-pre preset</code></td>
+<td>预设名称</td>
+</tr>
+<tr>
+<td><code>-map_metadata outfile[,metadata]:infile[,metadata]</code></td>
+<td>从输入文件中设置输出文件的元数据</td>
+</tr>
+<tr>
+<td><code>-t duration</code></td>
+<td>record or transcode “duration” seconds of audio/video</td>
+</tr>
+<tr>
+<td><code>-to time_stop</code></td>
+<td>record or transcode stop time</td>
+</tr>
+<tr>
+<td><code>-fs limit_size</code></td>
+<td>set the limit file size in bytes</td>
+</tr>
+<tr>
+<td><code>-ss time_off</code></td>
+<td>设置开始时间偏移</td>
+</tr>
+<tr>
+<td><code>-sseof time_off</code></td>
+<td>set the start time offset relative to EOF</td>
+</tr>
+<tr>
+<td><code>-seek_timestamp</code></td>
+<td>enable/disable seeking by timestamp with -ss</td>
+</tr>
+<tr>
+<td><code>-timestamp time</code></td>
+<td>set the recording timestamp (‘now’ to set the current time)</td>
+</tr>
+<tr>
+<td><code>-metadata string=string</code></td>
+<td>添加元数据</td>
+</tr>
+<tr>
+<td><code>-program title=string:st=number...</code></td>
+<td>add program with specified streams</td>
+</tr>
+<tr>
+<td><code>-target type</code></td>
+<td>specify target file type (“vcd”, “svcd”, “dvd”, “dv” or “dv50” with optional prefixes “pal-“, “ntsc-“ or “film-“)</td>
+</tr>
+<tr>
+<td><code>-apad</code></td>
+<td>audio pad</td>
+</tr>
+<tr>
+<td><code>-frames number</code></td>
+<td>set the number of frames to output</td>
+</tr>
+<tr>
+<td><code>-filter filter_graph</code></td>
+<td>set stream filtergraph</td>
+</tr>
+<tr>
+<td><code>-filter_script filename</code></td>
+<td>read stream filtergraph description from a file</td>
+</tr>
+<tr>
+<td><code>-reinit_filter</code></td>
+<td>reinit filtergraph on input parameter changes</td>
+</tr>
+<tr>
+<td><code>-discard</code></td>
+<td>discard</td>
+</tr>
+<tr>
+<td><code>-disposition</code></td>
+<td>disposition</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Video options</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-vframes number</code></td>
+<td>set the number of video frames to output</td>
+</tr>
+<tr>
+<td><code>-r rate</code></td>
+<td>set frame rate (Hz value, fraction or abbreviation)</td>
+</tr>
+<tr>
+<td><code>-fpsmax rate</code></td>
+<td>set max frame rate (Hz value, fraction or abbreviation)</td>
+</tr>
+<tr>
+<td><code>-s size</code></td>
+<td>设置帧尺寸 (WxH 或缩写)</td>
+</tr>
+<tr>
+<td><code>-aspect aspect</code></td>
+<td>设置纵横比 (4:3, 16:9 或 1.3333, 1.7777)</td>
+</tr>
+<tr>
+<td><code>-vn</code></td>
+<td>禁用视频</td>
+</tr>
+<tr>
+<td><code>-vcodec codec</code></td>
+<td>force video codec (‘copy’ to copy stream)</td>
+</tr>
+<tr>
+<td><code>-timecode hh:mm:ss[:;.]ff</code></td>
+<td>设置起始时间码</td>
+</tr>
+<tr>
+<td><code>-pass n</code></td>
+<td>select the pass number (1 to 3)</td>
+</tr>
+<tr>
+<td><code>-vf filter_graph</code></td>
+<td>设置视频过滤器</td>
+</tr>
+<tr>
+<td><code>-ab bitrate</code></td>
+<td>audio bitrate (please use -b:a)</td>
+</tr>
+<tr>
+<td><code>-b bitrate</code></td>
+<td>video bitrate (please use -b:v)</td>
+</tr>
+<tr>
+<td><code>-dn</code></td>
+<td>禁用数据</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Audio options</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-aframes number</code></td>
+<td>set the number of audio frames to output</td>
+</tr>
+<tr>
+<td><code>-aq quality</code></td>
+<td>设置音频质量 (codec-specific)</td>
+</tr>
+<tr>
+<td><code>-ar rate</code></td>
+<td>设置音频采样率 (in Hz)</td>
+</tr>
+<tr>
+<td><code>-ac channels</code></td>
+<td>设置音频通道数</td>
+</tr>
+<tr>
+<td><code>-an</code></td>
+<td>禁用音频</td>
+</tr>
+<tr>
+<td><code>-acodec codec</code></td>
+<td>force audio codec (‘copy’ to copy stream)</td>
+</tr>
+<tr>
+<td><code>-vol volume</code></td>
+<td>更改音量 (256=正常)</td>
+</tr>
+<tr>
+<td><code>-af filter_graph</code></td>
+<td>设置音频过滤器</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Subtitle options</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-s size</code></td>
+<td>设置帧尺寸 (WxH 或缩写)</td>
+</tr>
+<tr>
+<td><code>-sn</code></td>
+<td>禁用字幕</td>
+</tr>
+<tr>
+<td><code>-scodec codec</code></td>
+<td>force subtitle codec (‘copy’ to copy stream)</td>
+</tr>
+<tr>
+<td><code>-stag fourcc/tag</code></td>
+<td>force subtitle tag/fourcc</td>
+</tr>
+<tr>
+<td><code>-fix_sub_duration</code></td>
+<td>fix subtitles duration</td>
+</tr>
+<tr>
+<td><code>-canvas_size size</code></td>
+<td>设置画布大小 (WxH 或缩写)</td>
+</tr>
+<tr>
+<td><code>-spre preset</code></td>
+<td>set the subtitle options to the indicated preset</td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+
+        
+        本文链接：<a href="/Notes/ffmpeg/" target="_blank" rel="external">https://brywmzl.github.io/Notes/ffmpeg/</a>
+        
+    </div>
+    <footer>
+        <a href="https://Brywmzl.github.io">
+            <img src="/img/avatar.jpg" alt="Brywmzl">
+            Brywmzl
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/Rhino/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Rhinoceros - 高级曲面建模软件</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/Internet-Download-Manager/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Internet Download Manager - 著名的下载工具</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+
+			
+</div>
+
+        <footer class="footer">
+    <div class="bottom">
+        <p><span>Brywmzl &copy; 2015 - 2022</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-arrow-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.0"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.0" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
